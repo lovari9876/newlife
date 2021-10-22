@@ -34,8 +34,9 @@
 
 	<!-- Root Logger -->
 	<root>
-		<priority value="warn" />
+		<priority value="debug" /> <!-- 개발중엔 많은 정보가 나오도록 debug로 설정 -->
 		<appender-ref ref="console" />
 	</root>
+
 	
 </log4j:configuration>
