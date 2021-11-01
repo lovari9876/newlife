@@ -7,11 +7,13 @@
 	<name>newlife</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
-	<properties>
+	<!-- 각각의 버젼 선언하고서 밑에서 ${name}으로 사용 -->
+	<properties> 
 		<java-version>1.8</java-version>
 		<org.springframework-version>5.3.9</org.springframework-version> <!-- 이제 RELEASE는 붙이면 안된다 -->
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<mysql.version>8.0.21</mysql.version>
 	</properties>
 	<dependencies>
 	
@@ -36,7 +38,7 @@
 		<dependency>
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
-		    <version>8.0.25</version>
+		    <version>${mysql.version}</version>
 		</dependency>
 		 
 		<!-- log4j-remix -->
