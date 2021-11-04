@@ -1,13 +1,13 @@
-package com.nlchurch.vo;
+package com.nlchurch.dto;
 
 // 게시글
-public class RoleVO {
+public class RoleDTO {
 
 	private long id; // 권한 번호
 	private String authority; // 권한
 
 	// constructors
-	public RoleVO() {
+	public RoleDTO() {
 	}
 
 	// getters and setters

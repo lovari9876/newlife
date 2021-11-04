@@ -1,9 +1,9 @@
-package com.nlchurch.vo;
+package com.nlchurch.dto;
 
 import java.sql.Timestamp;
 
 // 게시글
-public class MemberVO {
+public class MemberDTO {
 
 	private long id; // 회원 번호
 	private long role_id; // 권한 번호
@@ -19,10 +19,10 @@ public class MemberVO {
 	private Timestamp withdraw_date; // 탈퇴일
 
 	// for resultMap
-	private RoleVO roleVO;
+	private RoleDTO roleVO;
 
 	// constructors
-	public MemberVO() {
+	public MemberDTO() {
 	}
 
 	// getters and setters
@@ -122,11 +122,11 @@ public class MemberVO {
 		this.withdraw_date = withdraw_date;
 	}
 
-	public RoleVO getRoleVO() {
+	public RoleDTO getRoleVO() {
 		return roleVO;
 	}
 
-	public void setRoleVO(RoleVO roleVO) {
+	public void setRoleVO(RoleDTO roleVO) {
 		this.roleVO = roleVO;
 	}
 

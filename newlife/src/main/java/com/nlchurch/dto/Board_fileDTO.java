@@ -1,17 +1,17 @@
-package com.nlchurch.vo;
+package com.nlchurch.dto;
 
 // 게시글
-public class Board_fileVO {
+public class Board_fileDTO {
 
 	private long file_id; // 파일 번호
 	private long board_id; // 게시글 번호
 
 	// for resultMap
-	private FileVO fileVO;
-	private BoardVO boardVO;
+	private FileDTO fileVO;
+	private BoardDTO boardVO;
 
 	// constructors
-	public Board_fileVO() {
+	public Board_fileDTO() {
 	}
 
 	// getters and setters
@@ -31,19 +31,19 @@ public class Board_fileVO {
 		this.board_id = board_id;
 	}
 
-	public FileVO getFileVO() {
+	public FileDTO getFileVO() {
 		return fileVO;
 	}
 
-	public void setFileVO(FileVO fileVO) {
+	public void setFileVO(FileDTO fileVO) {
 		this.fileVO = fileVO;
 	}
 
-	public BoardVO getBoardVO() {
+	public BoardDTO getBoardVO() {
 		return boardVO;
 	}
 
-	public void setBoardVO(BoardVO boardVO) {
+	public void setBoardVO(BoardDTO boardVO) {
 		this.boardVO = boardVO;
 	}
 

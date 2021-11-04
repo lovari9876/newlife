@@ -1,9 +1,9 @@
-package com.nlchurch.vo;
+package com.nlchurch.dto;
 
 import java.sql.Timestamp;
 
 // 게시글
-public class FileVO {
+public class FileDTO {
 
 	private long id; // 파일 번호
 	private String name; // 파일 이름
@@ -18,7 +18,7 @@ public class FileVO {
 	private Timestamp last_update; // 수정일
 
 	// constructors
-	public FileVO() {
+	public FileDTO() {
 	}
 
 	// getters and setters

@@ -1,9 +1,9 @@
-package com.nlchurch.vo;
+package com.nlchurch.dto;
 
 import java.sql.Timestamp;
 
 // 게시글
-public class CategoryVO {
+public class CategoryDTO {
 
 	private long id; // 게시판 번호
 	private long parent_id; // 상위 게시판 번호: 상위가 없으면 0
@@ -12,7 +12,7 @@ public class CategoryVO {
 	private Timestamp last_update; // 수정일
 
 	// constructors
-	public CategoryVO() {
+	public CategoryDTO() {
 	}
 
 	// getters and setters

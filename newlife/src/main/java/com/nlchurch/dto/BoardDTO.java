@@ -1,9 +1,9 @@
-package com.nlchurch.vo;
+package com.nlchurch.dto;
 
 import java.sql.Timestamp;
 
 // 게시글
-public class BoardVO {
+public class BoardDTO {
 
 	private long id; // 게시글 번호
 	private long category_id; // 게시판번호
@@ -16,11 +16,11 @@ public class BoardVO {
 	private Timestamp last_update; // 수정일
 
 	// for resultMap
-	private CategoryVO categoryVO;
-	private MemberVO memberVO;
+	private CategoryDTO categoryVO;
+	private MemberDTO memberVO;
 
 	// constructors
-	public BoardVO() {
+	public BoardDTO() {
 	}
 
 	// getters and setters
@@ -96,19 +96,19 @@ public class BoardVO {
 		this.last_update = last_update;
 	}
 
-	public CategoryVO getCategoryVO() {
+	public CategoryDTO getCategoryVO() {
 		return categoryVO;
 	}
 
-	public void setCategoryVO(CategoryVO categoryVO) {
+	public void setCategoryVO(CategoryDTO categoryVO) {
 		this.categoryVO = categoryVO;
 	}
 
-	public MemberVO getMemberVO() {
+	public MemberDTO getMemberVO() {
 		return memberVO;
 	}
 
-	public void setMemberVO(MemberVO memberVO) {
+	public void setMemberVO(MemberDTO memberVO) {
 		this.memberVO = memberVO;
 	}
 
