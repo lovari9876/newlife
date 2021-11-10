@@ -21,6 +21,7 @@ import com.nlchurch.util.paging.SearchCriteria;
 
 // 대메뉴: 말씀과 찬양
 // 중메뉴: 1. 예배 영상  2. 말씀과 나눔  3. 찬양
+// 게시판 다수
 @Controller
 public class WordPraiseController {
 
@@ -88,65 +89,6 @@ public class WordPraiseController {
 	public String praise(Model model) throws Exception {
 		return null;
 
-	}
-
-	/////////////////////////////////////////////////////////////////////
-	// 게시판 리스트
-	@RequestMapping(value = "/tlist", method = RequestMethod.GET)
-	public String tlist(Model model, /* Principal principal, */ @ModelAttribute("scri") SearchCriteria scri,
-			HttpServletRequest rq
-	/* @RequestParam(name="s_content", defaultValue = "n") String s_content, */ ) throws Exception {
-		// @RequestParam으로 받으면, 처음에 검색어 없이 /tlist로 갈때는 없는 파라미터 오류 발생
-
-		// 스프링 컨테이너가
-		// SearchCriteria scri = new SearchCriteria();
-		// model.attribute("scri", scri)
-		// 를 자동으로 해준다.
-
-		logger.info("tlist");
-
-		// 로그인 안되어있는 상태에서도 볼 수 있음
-//		if (principal != null) {
-//			String m_id = principal.getName();
-//			MemberVO memberVO = myPageService.mypage(m_id);
-//			model.addAttribute("memberVO", memberVO);
-//		}
-
-		// 한 페이지에 글 15개씩 보이도록
-		scri.setPerPageNum(15);
-
-		// 쿼리 uri로 보낸 파라미터들 확인
-		System.out.println("query: " + rq.getQueryString());
-		System.out.println("s_content: " + rq.getParameter("s_content"));
-		System.out.println("searchType: " + scri.getSearchType());
-
-//			HashMap<String, Object> search = new HashMap<>();
-//			search.put("scri", scri);
-//			
-		String s_content = rq.getParameter("s_content");
-//			search.put("s_content", s_content);
-
-		String sort = rq.getParameter("sort");
-
-		ArrayList<HashMap<String, Object>> tList = secondhandService.selectTradeList(scri, s_content, sort);
-		model.addAttribute("tList", tList);
-		model.addAttribute("s_content", s_content); // 단순히 jsp에서 select 선택 반영 위한 넘기기
-		model.addAttribute("sort", sort);
-
-		System.out.println(tList);
-
-		PageMaker pageMaker = new PageMaker();
-		pageMaker.setCri(scri);
-		pageMaker.setTotalCount(secondhandService.tradeListCount(scri, s_content));
-
-		// perPageNum 부여한 것 잘 가져오니? 네
-		// System.out.println(pageMaker.getCri().getPerPageNum());
-
-		model.addAttribute("pageMaker", pageMaker);
-
-		// System.out.println(((SearchCriteria) (pageMaker.getCri())).getSearchType());
-
-		return "secondhand/tlist";
 	}
 
 }

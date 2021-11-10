@@ -3,52 +3,60 @@ package com.nlchurch.service.impl;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.nlchurch.dto.BoardDTO;
 import com.nlchurch.mapper.BoardMapper;
 import com.nlchurch.service.BoardService;
 import com.nlchurch.util.paging.SearchCriteria;
 
+@Service("BoardService")
 public class BoardServiceImpl implements BoardService {
 
+	@Autowired
+	BoardMapper boardMapper;
+
+	// list
 	@Override
-	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, String s_content, String sort) {
-		return BoardMapper.selectTradeList(scri, s_content, sort);
+	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, String sort) {
+		return boardMapper.listBoard(scri, sort);
 	}
 
+	// list count
 	@Override
-	public int countBoardList(SearchCriteria scri, String s_content) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int countBoardList(SearchCriteria scri) {
+		return boardMapper.countBoardList(scri);
 	}
 
+	// content view
 	@Override
 	public HashMap<String, Object> getBoard(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return boardMapper.getBoard(id);
 	}
 
+	// 글 insert
 	@Override
-	public void createBoard(BoardDTO boardDTO, int m_id) {
-		// TODO Auto-generated method stub
-
+	public void createBoard(BoardDTO boardDTO) { // 나중에 파라미터로 멤버 id 들어감
+		boardMapper.createBoard(boardDTO);
 	}
 
+	// 글 update
 	@Override
 	public void update(BoardDTO boardDTO) {
-		// TODO Auto-generated method stub
-
+		boardMapper.update(boardDTO);
 	}
 
+	// 글 delete
 	@Override
 	public void deleteBoard(BoardDTO boardDTO) {
-		// TODO Auto-generated method stub
-
+		boardMapper.deleteBoard(boardDTO);
 	}
 
+	// 조회수
 	@Override
 	public void countView(long id) {
-		// TODO Auto-generated method stub
-
+		boardMapper.countView(id);
 	}
 
 }

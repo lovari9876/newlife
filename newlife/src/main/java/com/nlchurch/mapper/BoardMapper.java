@@ -9,21 +9,21 @@ import com.nlchurch.util.paging.SearchCriteria;
 public interface BoardMapper {
 
 	// list
-	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, String s_content, String sort);
+	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, String sort);
 
 	// list count
-	public int countBoardList(SearchCriteria scri, String s_content);
+	public int countBoardList(SearchCriteria scri);
 
 	// content view
 	public HashMap<String, Object> getBoard(long id);
 
 	// 글 insert
-	public void createBoard(BoardDTO boardDTO, int m_id);
+	public void createBoard(BoardDTO boardDTO);
 
 	// 글 update
 	public void update(BoardDTO boardDTO);
 
-	// delete
+	// 글 delete
 	public void deleteBoard(BoardDTO boardDTO);
 
 	// 조회수
