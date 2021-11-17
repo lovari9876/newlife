@@ -4,10 +4,12 @@
 Template Name: Constra - Construction Html5 Template
 Description: Constra - Construction Html5 Template
 -------------------------------------------------------------------*/
+
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
+
 /* Typography
 ================================================== */
 body {
@@ -664,7 +666,8 @@ ul.top-info li p.info-text {
   color: #ffb600;
 }
 
-/* Header area
+/* Header area: 
+I only use header-two
 ================================================== */
 .header {
   background: #fff;
@@ -935,6 +938,7 @@ ul.navbar-nav > li > a:focus {
 
 ul.navbar-nav > li > a i {
   font-weight: 700;
+  color: #6495ed;
 }
 
 @media (max-width: 991px) {
@@ -958,11 +962,12 @@ ul.navbar-nav > li > a:after {
   display: none;
 }
 
+/* navigation 대메뉴 */
 ul.navbar-nav > li > a {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'twayair';
   color: #fff !important;
   text-rendering: optimizeLegibility;
-  font-weight: 700 !important;
+  /* font-weight: 700 !important; */
   text-transform: uppercase;
   letter-spacing: -.2px;
   font-size: 14px;
@@ -972,9 +977,10 @@ ul.navbar-nav > li > a {
   transition: 350ms;
 }
 
+/* 대메뉴 글씨 크기 */
 .navbar-light ul.navbar-nav > li > a {
   color: #000 !important;
-  font-size: 13px;
+  font-size: 18px;
 }
 
 /* Dropdown */
@@ -1010,7 +1016,7 @@ ul.navbar-nav > li > a {
   min-width: 200px;
   border-radius: 0;
   border: 0;
-  border-top: 2px solid #ffb600;
+  border-top: 2px solid #6495ed;
   padding: 0 20px;
   margin: 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -1044,12 +1050,12 @@ ul.navbar-nav > li > a {
   background: none;
 }
 
+/* drop down 서브메뉴 */
 .dropdown-menu li a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "twayair", sans-serif;
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   text-transform: uppercase;
-  font-weight: 700;
   line-height: normal;
   text-decoration: none;
   padding: 15px 0;

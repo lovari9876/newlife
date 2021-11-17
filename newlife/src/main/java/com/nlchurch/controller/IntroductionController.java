@@ -23,35 +23,35 @@ public class IntroductionController {
 	// 인사말
 	@RequestMapping(value = "/greeting", method = RequestMethod.GET)
 	public String greeting(Model model) throws Exception {
-		return null;
+		return "introduction/greeting";
 
 	}
 
 	// 목회철학
 	@RequestMapping(value = "/statementOfFaith", method = RequestMethod.GET)
 	public String statementOfFaith(Model model) throws Exception {
-		return null;
+		return "introduction/statement-of-faith";
 
 	}
 
 	// 세 책 이야기
 	@RequestMapping(value = "/books", method = RequestMethod.GET)
 	public String books(Model model) throws Exception {
-		return null;
+		return "introduction/books";
 
 	}
 
 	// 예배시간(예배안내)
 	@RequestMapping(value = "/serviceTime", method = RequestMethod.GET)
 	public String serviceTime(Model model) throws Exception {
-		return null;
+		return "introduction/service-time";
 
 	}
 
 	// 오시는 길: 카카오맵 연동 필수
 	@RequestMapping(value = "/map", method = RequestMethod.GET)
 	public String map(Model model) throws Exception {
-		return null;
+		return "introduction/map";
 
 	}
 

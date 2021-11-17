@@ -48,7 +48,7 @@ public class HomeController {
 		 * model.addAttribute("memberVO", memberVO); }
 		 */
 
-		return "home/index";
+		return "index";
 	}
 
 }

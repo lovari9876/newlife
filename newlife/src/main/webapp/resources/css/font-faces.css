@@ -1,0 +1,250 @@
+/*!------------------------------------------------------------------
+[font-faces]
+config font-faces at </fonts/**>
+경로를 /fonts/ 로 해주지 않으면... root에서 시작하지 않고 상대경로로 가서 못찾음
+-------------------------------------------------------------------*/
+
+/* 고운 돋움, 바탕 */
+@font-face {
+	font-family: 'Gowun Dodum';
+	src: url('/fonts/gowun/GowunDodum-Regular.eot');
+	src: url('/fonts/gowun/GowunDodum-Regular.eot?#iefix')
+		format('embedded-opentype'),
+		url('/fonts/gowun/GowunDodum-Regular.woff') format('woff'),
+		url('/fonts/gowun/GowunDodum-Regular.ttf') format('truetype'),
+		url('/fonts/gowun/GowunDodum-Regular.svg#GowunDodum-Regular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gowun Batang';
+	src: url('/fonts/gowun/GowunBatang-Bold.eot');
+	src: url('/fonts/gowun/GowunBatang-Bold.eot?#iefix')
+		format('embedded-opentype'), url('/fonts/gowun/GowunBatang-Bold.woff')
+		format('woff'), url('/fonts/gowun/GowunBatang-Bold.ttf')
+		format('truetype'),
+		url('/fonts/gowun/GowunBatang-Bold.svg#GowunBatang-Bold')
+		format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gowun Batang';
+	src: url('/fonts/gowun/GowunBatang-Regular.eot');
+	src: url('/fonts/gowun/GowunBatang-Regular.eot?#iefix')
+		format('embedded-opentype'),
+		url('/fonts/gowun/GowunBatang-Regular.woff') format('woff'),
+		url('/fonts/gowun/GowunBatang-Regular.ttf') format('truetype'),
+		url('/fonts/gowun/GowunBatang-Regular.svg#GowunBatang-Regular')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* 티웨이날다, 항공 */
+@font-face {
+	font-family: 'twayfly';
+	src: url('/fonts/tway/twayfly.eot');
+	src: url('/fonts/tway/twayfly.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/tway/twayfly.woff') format('woff'),
+		url('/fonts/tway/twayfly.ttf') format('truetype'),
+		url('/fonts/tway/twayfly.svg#twayfly') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'twayair';
+	src: url('/fonts/tway/twayair.eot');
+	src: url('/fonts/tway/twayair.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/tway/twayair.woff') format('woff'),
+		url('/fonts/tway/twayair.ttf') format('truetype'),
+		url('/fonts/tway/twayair.svg#twayair') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* 경기 제목, 바탕 */
+@font-face {
+	font-family: 'GyeonggiTitle';
+	src: url('fonts/gyeonggi/GyeonggiTitleB.eot');
+	src: url('fonts/gyeonggi/GyeonggiTitleB.eot?#iefix')
+		format('embedded-opentype'), url('fonts/gyeonggi/GyeonggiTitleB.woff')
+		format('woff'), url('fonts/gyeonggi/GyeonggiTitleB.ttf')
+		format('truetype'),
+		url('fonts/gyeonggi/GyeonggiTitleB.svg#GyeonggiTitleB') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GyeonggiTitle';
+	src: url('fonts/gyeonggi/GyeonggiTitleL.eot');
+	src: url('fonts/gyeonggi/GyeonggiTitleL.eot?#iefix')
+		format('embedded-opentype'), url('fonts/gyeonggi/GyeonggiTitleL.woff')
+		format('woff'), url('fonts/gyeonggi/GyeonggiTitleL.ttf')
+		format('truetype'),
+		url('fonts/gyeonggi/GyeonggiTitleL.svg#GyeonggiTitleL') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GyeonggiTitle';
+	src: url('fonts/gyeonggi/GyeonggiTitleM.eot');
+	src: url('fonts/gyeonggi/GyeonggiTitleM.eot?#iefix')
+		format('embedded-opentype'), url('fonts/gyeonggi/GyeonggiTitleM.woff')
+		format('woff'), url('fonts/gyeonggi/GyeonggiTitleM.ttf')
+		format('truetype'),
+		url('fonts/gyeonggi/GyeonggiTitleM.svg#GyeonggiTitleM') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GyeonggiTitleV';
+	src: url('fonts/gyeonggi/GyeonggiTitleV.eot');
+	src: url('fonts/gyeonggi/GyeonggiTitleV.eot?#iefix')
+		format('embedded-opentype'), url('fonts/gyeonggi/GyeonggiTitleV.woff')
+		format('woff'), url('fonts/gyeonggi/GyeonggiTitleV.ttf')
+		format('truetype'),
+		url('fonts/gyeonggi/GyeonggiTitleV.svg#GyeonggiTitleV') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GyeonggiBatang';
+	src: url('fonts/gyeonggi/GyeonggiBatangR.eot');
+	src: url('fonts/gyeonggi/GyeonggiBatangR.eot?#iefix')
+		format('embedded-opentype'),
+		url('fonts/gyeonggi/GyeonggiBatangR.woff') format('woff'),
+		url('fonts/gyeonggi/GyeonggiBatangR.ttf') format('truetype'),
+		url('fonts/gyeonggi/GyeonggiBatangR.svg#GyeonggiBatangR')
+		format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GyeonggiBatang';
+	src: url('fonts/gyeonggi/GyeonggiBatangB.eot');
+	src: url('fonts/gyeonggi/GyeonggiBatangB.eot?#iefix')
+		format('embedded-opentype'),
+		url('fonts/gyeonggi/GyeonggiBatangB.woff') format('woff'),
+		url('fonts/gyeonggi/GyeonggiBatangB.ttf') format('truetype'),
+		url('fonts/gyeonggi/GyeonggiBatangB.svg#GyeonggiBatangB')
+		format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* 프리텐다드 */
+@font-face {
+	font-family: 'Pretendard';
+	src: url('fonts/pretendard/Pretendard-Black.eot');
+	src: url('fonts/pretendard/Pretendard-Black.eot?#iefix')
+		format('embedded-opentype'), url('fonts/pretendard/Pretendard-Black.woff')
+		format('woff'), url('fonts/pretendard/Pretendard-Black.ttf') format('truetype'),
+		url('fonts/pretendard/Pretendard-Black.svg#Pretendard-Black') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url('fonts/pretendard/Pretendard-Bold.eot');
+	src: url('fonts/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/pretendard/Pretendard-Bold.woff') format('woff'),
+		url('fonts/pretendard/Pretendard-Bold.ttf') format('truetype'),
+		url('fonts/pretendard/Pretendard-Bold.svg#Pretendard-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url('fonts/pretendard/Pretendard-ExtraBold.eot');
+	src: url('fonts/pretendard/Pretendard-ExtraBold.eot?#iefix')
+		format('embedded-opentype'), url('fonts/pretendard/Pretendard-ExtraBold.woff')
+		format('woff'), url('fonts/pretendard/Pretendard-ExtraBold.ttf')
+		format('truetype'),
+		url('fonts/pretendard/Pretendard-ExtraBold.svg#Pretendard-ExtraBold')
+		format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url('fonts/pretendard/Pretendard-ExtraLight.eot');
+	src: url('fonts/pretendard/Pretendard-ExtraLight.eot?#iefix')
+		format('embedded-opentype'), url('fonts/pretendard/Pretendard-ExtraLight.woff')
+		format('woff'), url('fonts/pretendard/Pretendard-ExtraLight.ttf')
+		format('truetype'),
+		url('fonts/pretendard/Pretendard-ExtraLight.svg#Pretendard-ExtraLight')
+		format('svg');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url('fonts/pretendard/Pretendard-Light.eot');
+	src: url('fonts/pretendard/Pretendard-Light.eot?#iefix')
+		format('embedded-opentype'), url('fonts/pretendard/Pretendard-Light.woff')
+		format('woff'), url('fonts/pretendard/Pretendard-Light.ttf') format('truetype'),
+		url('fonts/pretendard/Pretendard-Light.svg#Pretendard-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url('fonts/pretendard/Pretendard-Medium.eot');
+	src: url('fonts/pretendard/Pretendard-Medium.eot?#iefix')
+		format('embedded-opentype'), url('fonts/pretendard/Pretendard-Medium.woff')
+		format('woff'), url('fonts/pretendard/Pretendard-Medium.ttf') format('truetype'),
+		url('fonts/pretendard/Pretendard-Medium.svg#Pretendard-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url('fonts/pretendard/Pretendard-Regular.eot');
+	src: url('fonts/pretendard/Pretendard-Regular.eot?#iefix')
+		format('embedded-opentype'), url('fonts/pretendard/Pretendard-Regular.woff')
+		format('woff'), url('fonts/pretendard/Pretendard-Regular.ttf') format('truetype'),
+		url('fonts/pretendard/Pretendard-Regular.svg#Pretendard-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url('fonts/pretendard/Pretendard-SemiBold.eot');
+	src: url('fonts/pretendard/Pretendard-SemiBold.eot?#iefix')
+		format('embedded-opentype'), url('fonts/pretendard/Pretendard-SemiBold.woff')
+		format('woff'), url('fonts/pretendard/Pretendard-SemiBold.ttf')
+		format('truetype'),
+		url('fonts/pretendard/Pretendard-SemiBold.svg#Pretendard-SemiBold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	src: url('fonts/pretendard/Pretendard-Thin.eot');
+	src: url('fonts/pretendard/Pretendard-Thin.eot?#iefix') format('embedded-opentype'),
+		url('fonts/pretendard/Pretendard-Thin.woff') format('woff'),
+		url('fonts/pretendard/Pretendard-Thin.ttf') format('truetype'),
+		url('fonts/pretendard/Pretendard-Thin.svg#Pretendard-Thin') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+
+
