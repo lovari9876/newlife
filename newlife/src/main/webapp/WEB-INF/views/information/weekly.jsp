@@ -6,9 +6,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>index</title>
+<title>새생활교회</title>
 </head>
 <body>
-	홈.....welcom
+
 </body>
 </html>
