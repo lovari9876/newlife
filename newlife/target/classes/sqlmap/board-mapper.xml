@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+						"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace는 BoardMapper 인터페이스의 위치 -->
+<!-- 왜냐면 이 xml파일은 해당 interface를 통해 mapping을 설정해주는 것이기에 -->
+<!-- Namespaces were optional in previous versions of MyBatis, which was 
+	confusing and unhelpful. Namespaces are now required and have a purpose beyond 
+	simply isolating statements with longer, fully-qualified names. Namespaces 
+	enable the interface bindings as you see here, and even if you don’t think 
+	you’ll use them today, you should follow these practices laid out here in 
+	case you change your mind. Using the namespace once, and putting it in a 
+	proper Java package namespace will clean up your code and improve the usability 
+	of MyBatis in the long term. : MyBatis3 공식 설명 -->
+
+<mapper namespace="com.nlchurch.mapper.BoardMapper">
+
+	<select id="listBoard" resultType="board">
+		SELECT b.*, m.nickname
+		FROM board b LEFT JOIN member m
+		ON b.member_id = m.id
+		WHERE category_id = #{category_id}
+		ORDER BY b.id DESC
+	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
+
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ 							   "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- resultType full로 안쓰고 간단히 적기 위해 -->
+	<typeAliases>
+ 		<typeAlias alias="board" type="com.nlchurch.dto.BoardDTO"/>
+ 		<typeAlias alias="board_file" type="com.nlchurch.dto.Board_fileDTO"/>
+ 		<typeAlias alias="category" type="com.nlchurch.dto.CategoryDTO"/>
+ 		<typeAlias alias="file" type="com.nlchurch.dto.FileDTO"/>
+ 		<typeAlias alias="member" type="com.nlchurch.dto.MemberDTO"/>
+ 		<typeAlias alias="role" type="com.nlchurch.dto.RoleDTO"/>
+ 	</typeAliases>	
+ 		
+	<!-- sql mapper 설정 -->
+	<mappers>
+		<mapper resource="sqlmap/board-mapper.xml" />
+	</mappers>
+</configuration>

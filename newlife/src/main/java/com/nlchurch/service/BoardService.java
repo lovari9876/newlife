@@ -9,7 +9,7 @@ import com.nlchurch.util.paging.SearchCriteria;
 public interface BoardService {
 
 	// list
-	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, String sort);
+	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri);
 
 	// list count
 	public int countBoardList(SearchCriteria scri);

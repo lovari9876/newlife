@@ -3,12 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
-	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->	
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath*:spring/context-*.xml</param-value>
+		<param-value>classpath*:spring/*-context.xml</param-value>
 		<!-- 프로젝트 properties의 java build path에서 src/main/resources가 path중 하나로 되어있다, 즉 classpath이므로.. -->
-		<!-- 구구절절 안쓰고 이렇게 표기 가능. 왜냐면, 지금 작성중인 web.xml이 같은 classpath에 있거든 -->
 		<!-- jar 내부 xml까지 읽으려면.. classpath*:로 써야한다고 함.. -->
 	</context-param>
 	
@@ -23,7 +22,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath*:spring/appServlet/*-servlet.xml</param-value> <!-- 마찬가지 -->
+			<param-value>classpath*:spring/appServlet/servlet-*.xml</param-value> <!-- 마찬가지 -->
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>

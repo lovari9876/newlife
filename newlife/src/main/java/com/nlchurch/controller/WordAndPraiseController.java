@@ -1,31 +1,22 @@
 package com.nlchurch.controller;
 
-import java.security.Principal;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Locale;
-
-import javax.servlet.http.HttpServletRequest;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.nlchurch.service.BoardService;
-import com.nlchurch.util.paging.SearchCriteria;
 
 // 대메뉴: 말씀과 찬양
 // 중메뉴: 1. 예배 영상  2. 말씀과 나눔  3. 찬양
 // 게시판 다수
 @Controller
-public class WordPraiseController {
+public class WordAndPraiseController {
 
-	private static final Logger logger = LoggerFactory.getLogger(WordPraiseController.class);
+	private static final Logger logger = LoggerFactory.getLogger(WordAndPraiseController.class);
 
 	@Autowired
 	private BoardService boardService;
@@ -34,7 +25,7 @@ public class WordPraiseController {
 	// 주일/주중 설교 (board)(영상)
 	@RequestMapping(value = "/sermon", method = RequestMethod.GET)
 	public String sermon(Model model) throws Exception {
-		return null;
+		return "word-and-praise/sermon";
 
 	}
 

@@ -19,8 +19,8 @@ public class BoardServiceImpl implements BoardService {
 
 	// list
 	@Override
-	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, String sort) {
-		return boardMapper.listBoard(scri, sort);
+	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri) {
+		return boardMapper.listBoard(scri);
 	}
 
 	// list count

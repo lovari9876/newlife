@@ -31,9 +31,8 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	// 메인화면
-
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model, Principal principal) throws Exception {
+	public String home(Locale locale, Model model/* , Principal principal */) throws Exception {
 
 		/*
 		 * // 히트다 히트 model.addAttribute("hit", boardService.selectHitList()); // 베스트
@@ -49,7 +48,7 @@ public class HomeController {
 		 * model.addAttribute("memberVO", memberVO); }
 		 */
 
-		return "index";
+		return "home/index";
 	}
 
 }
