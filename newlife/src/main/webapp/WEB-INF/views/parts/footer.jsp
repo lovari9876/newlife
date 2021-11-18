@@ -2,62 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<!DOCTYPE html>
-<html>
-<head>
 
-	<!-- Basic Page Needs
-================================================== -->
-	<meta charset="utf-8">
-	<title>새생활교회</title>
+<!-- 중요!!!!!! -->
+<!-- 페이지 include 쓸 때는 반드시 include되는 파일 내부의 <html><head><body>을 싹 다 없앨것!!! -->
+<!-- 없애지 않으면... 온갖 에러의 근원이 된다.. -->
 
-	<!-- Mobile Specific Metas
-================================================== -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Construction Html5 Template">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-
-	<!-- Favicon
-================================================== -->
-	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-	<link rel="manifest" href="images/favicon/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
-
-  <!-- CSS
-================================================== -->
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
-  <!-- Animation -->
-  <link rel="stylesheet" href="plugins/animate-css/animate.css">
-  <!-- slick Carousel -->
-  <link rel="stylesheet" href="plugins/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-  <!-- Colorbox -->
-  <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
-  <!-- font-face -->
-  <link rel="stylesheet" href="css/font-faces.css"> 
-  <!-- Template styles-->
-  <link rel="stylesheet" href="css/style.css">
-
-</head>
-<body>
-  
 	<!-- for 주요 공지사항, 평소엔 숨겨둘것 -->
 	<!-- js에서 navbar-fixed 때문에.. 일단 남겨는 둘것 -->
     <div id="top-bar" class="top-bar">
@@ -106,7 +55,7 @@
               <nav class="navbar navbar-expand-lg navbar-light p-0">
                 
                 <div class="logo"> <!-- logo font: BC card B -->
-                    <a class="d-block" href="index-2.html">
+                    <a class="d-block" href="/">
                       <img loading="lazy" src="images/logo.png" alt="Constra">
                     </a>
                 </div><!-- logo end -->
@@ -133,7 +82,14 @@
                       <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">말씀과 찬양 <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">
-                            <li><a href="about.html">About Us</a></li>
+                          	<li class="dropdown-submenu">
+                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown">예배 영상</a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="/sermon">주일/주중 설교</a></li>
+                                  <li><a href="/timeOfHermon">헐몬의 시간</a></li>
+                                  <li><a href="/youthPlatform">청년 플랫폼</a></li>
+                                </ul>
+                            </li>
                             <li><a href="team.html">Our People</a></li>
                             <li><a href="testimonials.html">Testimonials</a></li>
                             <li><a href="faq.html">Faq</a></li>
@@ -187,7 +143,3 @@
   <!--/ Navigation end -->
 </header>
 <!--/ Header end -->
-
-  </body>
-
-  </html>

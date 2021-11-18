@@ -48,6 +48,9 @@
 	<!-- slick Carousel -->
 	<link rel="stylesheet" href="plugins/slick/slick.css">
 	<link rel="stylesheet" href="plugins/slick/slick-theme.css">
+	<!-- Fancy Box -->
+	<link href="plugins/fancybox/jquery.fancybox.pack.css" rel="stylesheet">
+  	<link href="plugins/jquery-nice-select/css/nice-select.css" rel="stylesheet">
 	<!-- Colorbox -->
 	<link rel="stylesheet" href="plugins/colorbox/colorbox.css">
 	<!-- font-face -->
@@ -60,9 +63,142 @@
 <body>
   <div class="body-inner">
 
-	<!-- header include start -->
-	<%@ include file="/WEB-INF/views/parts/header.jsp" %>
-	<!-- header include end -->
+	<!-- for 주요 공지사항, 평소엔 숨겨둘것 -->
+	<!-- js에서 navbar-fixed 때문에.. 일단 남겨는 둘것 -->
+    <div id="top-bar" class="top-bar">
+     <!--    <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-md-8">
+                <ul class="top-info text-center text-md-left">
+                    <li><i class="fas fa-map-marker-alt"></i> <p class="info-text">9051 Constra Incorporate, USA</p>
+                    </li>
+                </ul>
+              </div>
+              / Top info end
+  
+              <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+                <ul class="list-unstyled">
+                    <li>
+                      <a title="Facebook" href="https://facebbok.com/themefisher.com">
+                          <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                      </a>
+                      <a title="Twitter" href="https://twitter.com/themefisher.com">
+                          <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                      </a>
+                      <a title="Instagram" href="https://instagram.com/themefisher.com">
+                          <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                      </a>
+                      <a title="Linkdin" href="https://github.com/themefisher.com">
+                          <span class="social-icon"><i class="fab fa-github"></i></span>
+                      </a>
+                    </li>
+                </ul>
+              </div>
+              / Top social end
+          </div>
+          / Content row end
+        </div> -->
+        <!--/ Container end -->
+    </div>
+    <!--/ Topbar end -->
+    
+<!-- Header start -->
+<header id="header" class="header-two">
+  <div class="site-navigation">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-light p-0">
+                
+                <div class="logo"> <!-- logo font: BC card B -->
+                    <a class="d-block" href="/">
+                      <img loading="lazy" src="images/logo.png" alt="Constra">
+                    </a>
+                </div><!-- logo end -->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" 
+               			aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- <li class="active"> 이거는 current page에 해당하는 서브메뉴에 붙여줘.. -->
+                <div id="navbar-collapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav ml-auto align-items-center">
+                      <li class="nav-item dropdown active">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">교회 소개 <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="/greeting">인사말</a></li>
+                            <li><a href="/statementOfFaith">목회 철학</a></li>
+                            <li><a href="/books">세 책 이야기</a></li>
+                            <li><a href="/serviceTime">예배 안내</a></li>
+                            <li><a href="/map">오시는 길</a></li>
+                          </ul>
+                      </li>
+
+                      <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">말씀과 찬양 <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                          	<li class="dropdown-submenu">
+                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown">예배 영상</a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="/sermon">주일/주중 설교</a></li>
+                                  <li><a href="/timeOfHermon">헐몬의 시간</a></li>
+                                  <li><a href="/youthPlatform">청년 플랫폼</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="team.html">Our People</a></li>
+                            <li><a href="testimonials.html">Testimonials</a></li>
+                            <li><a href="faq.html">Faq</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                          </ul>
+                      </li>
+              
+                      <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">교회 학교 <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="projects.html">Projects All</a></li>
+                            <li><a href="projects-single.html">Projects Single</a></li>
+                          </ul>
+                      </li>
+              
+                      <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">교회 사역 <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="services.html">Services All</a></li>
+                            <li><a href="service-single.html">Services Single</a></li>
+                          </ul>
+                      </li>
+              
+                      <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">새생활 뉴스 <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li class="dropdown-submenu">
+                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Parent Menu</a>
+                                <ul class="dropdown-menu">
+                                  <li><a href="#!">Child Menu 1</a></li>
+                                  <li><a href="#!">Child Menu 2</a></li>
+                                  <li><a href="#!">Child Menu 3</a></li>
+                                </ul>
+                            </li>
+                          </ul>
+                      </li>
+                      
+                    </ul>
+                </div>
+              </nav>
+          </div>
+          <!--/ Col end -->
+        </div>
+        <!--/ Row end -->
+    </div>
+    <!--/ Container end -->
+
+  </div>
+  <!--/ Navigation end -->
+</header>
+<!--/ Header end -->
 
 <div class="banner-carousel banner-carousel-2 mb-0">
   <div class="banner-carousel-item" style="background-image:url(images/slider-main/main-psalm.png)">
@@ -99,6 +235,255 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="search-result bg-gray">
+					<h2>Results For "Electronics"</h2>
+					<p>123 Results on 12 December, 2017</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="col-lg-9 col-md-8">
+				<div class="category-search-filter">
+					<div class="row">
+						<div class="col-md-6">
+							<strong>Short</strong>
+							<select>
+								<option>Most Recent</option>
+								<option value="1">Most Popular</option>
+								<option value="2">Lowest Price</option>
+								<option value="4">Highest Price</option>
+							</select>
+						</div>
+						<div class="col-md-6">
+							<div class="view">
+								<strong>Views</strong>
+								<ul class="list-inline view-switcher">
+									<li class="list-inline-item">
+										<a href="category.html"><i class="fa fa-th-large"></i></a>
+									</li>
+									<li class="list-inline-item">
+										<a href="category.html" class="text-info"><i class="fa fa-reorder"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ad listing list  -->
+				<div class="ad-listing-list mt-20">
+    <div class="row p-lg-3 p-sm-5 p-4">
+        <div class="col-lg-4 align-self-center">
+            <a href="single.html">
+                <img src="images/products/products-1.jpg" class="img-fluid" alt="">
+            </a>
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-6 col-md-10">
+                    <div class="ad-listing-content">
+                        <div>
+                            <a href="single.html" class="font-weight-bold">11inch Macbook Air</a>
+                        </div>
+                        <ul class="list-inline mt-2 mb-3">
+                            <li class="list-inline-item"><a href="category.html"> <i class="fa fa-folder-open-o"></i> Electronics</a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-calendar"></i>26th December</a></li>
+                        </ul>
+                        <p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, aliquam!</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="product-ratings float-lg-right pb-3">
+                        <ul class="list-inline">
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="ad-listing-list mt-20">
+    <div class="row p-lg-3 p-sm-5 p-4">
+        <div class="col-lg-4 align-self-center">
+            <a href="single.html">
+                <img src="images/products/products-2.jpg" class="img-fluid" alt="">
+            </a>
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-6 col-md-10">
+                    <div class="ad-listing-content">
+                        <div>
+                            <a href="single.html" class="font-weight-bold">Study Table Combo</a>
+                        </div>
+                        <ul class="list-inline mt-2 mb-3">
+                            <li class="list-inline-item"><a href="category.html"> <i class="fa fa-folder-open-o"></i> Electronics</a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-calendar"></i>26th December</a></li>
+                        </ul>
+                        <p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, aliquam!</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="product-ratings float-lg-right pb-3">
+                        <ul class="list-inline">
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="ad-listing-list mt-20">
+    <div class="row p-lg-3 p-sm-5 p-4">
+        <div class="col-lg-4 align-self-center">
+            <a href="single.html">
+                <img src="images/products/products-3.jpg" class="img-fluid" alt="">
+            </a>
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-6 col-md-10">
+                    <div class="ad-listing-content">
+                        <div>
+                            <a href="single.html" class="font-weight-bold">11inch Macbook Air</a>
+                        </div>
+                        <ul class="list-inline mt-2 mb-3">
+                            <li class="list-inline-item"><a href="category.html"> <i class="fa fa-folder-open-o"></i> Electronics</a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-calendar"></i>26th December</a></li>
+                        </ul>
+                        <p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, aliquam!</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="product-ratings float-lg-right pb-3">
+                        <ul class="list-inline">
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="ad-listing-list mt-20">
+    <div class="row p-lg-3 p-sm-5 p-4">
+        <div class="col-lg-4 align-self-center">
+            <a href="single.html">
+                <img src="images/products/products-4.jpg" class="img-fluid" alt="">
+            </a>
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-6 col-md-10">
+                    <div class="ad-listing-content">
+                        <div>
+                            <a href="single.html" class="font-weight-bold">Study Table Combo</a>
+                        </div>
+                        <ul class="list-inline mt-2 mb-3">
+                            <li class="list-inline-item"><a href="category.html"> <i class="fa fa-folder-open-o"></i> Electronics</a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-calendar"></i>26th December</a></li>
+                        </ul>
+                        <p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, aliquam!</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="product-ratings float-lg-right pb-3">
+                        <ul class="list-inline">
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="ad-listing-list mt-20">
+    <div class="row p-lg-3 p-sm-5 p-4">
+        <div class="col-lg-4 align-self-center">
+            <a href="single.html">
+                <img src="images/products/products-1.jpg" class="img-fluid" alt="">
+            </a>
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-6 col-md-10">
+                    <div class="ad-listing-content">
+                        <div>
+                            <a href="single.html" class="font-weight-bold">11inch Macbook Air</a>
+                        </div>
+                        <ul class="list-inline mt-2 mb-3">
+                            <li class="list-inline-item"><a href="category.html"> <i class="fa fa-folder-open-o"></i> Electronics</a></li>
+                            <li class="list-inline-item"><a href=""><i class="fa fa-calendar"></i>26th December</a></li>
+                        </ul>
+                        <p class="pr-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, aliquam!</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="product-ratings float-lg-right pb-3">
+                        <ul class="list-inline">
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item selected"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+				<!-- ad listing list  -->
+
+				<!-- pagination -->
+				<div class="pagination justify-content-center py-4">
+					<nav aria-label="Page navigation example">
+						<ul class="pagination">
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span>
+									<span class="sr-only">Previous</span>
+								</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item active"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span>
+									<span class="sr-only">Next</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<!-- pagination -->
+			</div>
+		</div>
+	</div>
 
 <section class="call-to-action no-padding">
   <div class="container">
@@ -802,10 +1187,16 @@
   <!-- shuffle -->
   <script src="plugins/shuffle/shuffle.min.js" defer></script>
 
+
+  <!-- Google Map API Key-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+  <!-- Google Map Plugin-->
+  <script src="plugins/google-map/map.js" defer></script>
+
   <!-- Template custom -->
   <script src="js/script.js"></script>
 
   </div><!-- Body inner end -->
-  </body>
+</body>
 
-  </html>
+</html>

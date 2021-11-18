@@ -1,44 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 
-  <!-- Basic Page Needs
+	<!-- Basic Page Needs
 ================================================== -->
-  <meta charset="utf-8">
-  <title>Constra - Construction Html5 Template</title>
+	<meta charset="utf-8">
+	<title>새생활교회</title>
 
-  <!-- Mobile Specific Metas
+	<!-- Mobile Specific Metas
 ================================================== -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Construction Html5 Template">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Construction Html5 Template">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-  <!-- Favicon
+	<!-- Favicon
 ================================================== -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
-  <!-- CSS
+	<!-- CSS
 ================================================== -->
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
-  <!-- Animation -->
-  <link rel="stylesheet" href="plugins/animate-css/animate.css">
-  <!-- slick Carousel -->
-  <link rel="stylesheet" href="plugins/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-  <!-- Colorbox -->
-  <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
-  <!-- Template styles-->
-  <link rel="stylesheet" href="css/style.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+	<!-- Animation -->
+	<link rel="stylesheet" href="plugins/animate-css/animate.css">
+	<!-- slick Carousel -->
+	<link rel="stylesheet" href="plugins/slick/slick.css">
+	<link rel="stylesheet" href="plugins/slick/slick-theme.css">
+	<!-- Colorbox -->
+	<link rel="stylesheet" href="plugins/colorbox/colorbox.css">
+	<!-- font-face -->
+	<link rel="stylesheet" href="css/font-faces.css"> 
+	<!-- Template styles-->
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
+
+
 <body>
   <div class="body-inner">
   
 	<!-- header include start -->
-	<%@ include file="/WEB-INF/views/common/header.jsp" %>
+	<%@ include file="/WEB-INF/views/parts/header.jsp" %>
 	<!-- header include end -->
 	
 <div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner1.jpg)">
@@ -69,7 +93,7 @@
           <h3 class="column-title">Who We Are</h3>
           <p>when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
           <blockquote><p>Semporibus autem quibusdam et aut officiis debitis aut rerum est aut optio cumque nihil necessitatibus autemn ec tincidunt nunc posuere ut</p></blockquote>
-          <p>He lay on his armour-like  back, and if he lifted. ultrices ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn’t anything embarrassing.</p>
+          <p>He lay on his armour-like  back, and if he lifted. ultrices ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnât anything embarrassing.</p>
 
         </div><!-- Col end -->
 
