@@ -105,8 +105,16 @@
                             <li><a href="testimonials.html">예배 찬양</a></li>
                           </ul>
                       </li>
-              
+                                                 
                       <li class="nav-item dropdown">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">청년 플랫폼 <i class="fa fa-angle-down"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="services.html">청년예배</a></li>
+                            <li><a href="service-single.html">고백 찬양</a></li>
+                          </ul>
+                      </li>
+                      
+       				  <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">말씀과 나눔 <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">                
 							<li><a href="/timeOfHermon">헐몬의 시간</a></li>
@@ -115,15 +123,7 @@
 							<li><a href="/youthPlatform">생명샘 말씀</a></li>
                           </ul>
                       </li>
-              
-                      <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">청년 플랫폼 <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="services.html">청년예배</a></li>
-                            <li><a href="service-single.html">고백 찬양</a></li>
-                          </ul>
-                      </li>
-              
+                      
                       <li class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">새생활 뉴스 <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu" role="menu">

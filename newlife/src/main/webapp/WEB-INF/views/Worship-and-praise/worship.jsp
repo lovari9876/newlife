@@ -104,6 +104,10 @@
 		</div>
 		<div class="row">
 			<!-- 왼쪽 컬럼 -->
+			<!-- 월별 글 나오게 하는 검색창 -->
+			<!-- 주중/ 주일 예배 나오게 하는 검색창 -->
+			<!-- 단어  검색창 -->
+			<!-- 차후에는 성경 태그 달아서 태그 누르면 해당 설교나오게 할 것 -->
 			<div class="col-lg-3 col-md-4">
 				<div class="category-sidebar">
 					<div class="widget category-list">

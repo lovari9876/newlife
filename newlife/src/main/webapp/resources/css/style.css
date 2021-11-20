@@ -995,41 +995,21 @@ ul.navbar-nav > li > a {
   border-radius: 0;
 }
 
-.dropdown-submenu > a:after {
-/*  display: block;
-  content: "\f105";
-  font-family: "Font Awesome 5 Free";
+/* 서브메뉴 오른쪽 화살표 문제 해결  */
+/* font awesome icon 안뜬다 */
+.dropdown-submenu > a::after {
+  display: inline-block;
+  vertical-align: bottom;
   float: right;
-  margin-top: 0;
-  margin-right: -5px;
-  border: 0;
-  color: black !imortant; */
-  
-    display: block;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    float: right;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 5px 5px 5px 0;
-    border-right-color: #cccccc;
-    margin-top: 5px;
-    margin-left: -10px;
-  
-}
-
-.dropdown-submenu > a:after {
-  display: block;
   content: "\f105";
-  font-family: "Font Awesome 5 Free";
-  float: right;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; 
+  /* plugins/fontawesome/webfonts/ 에... fa-solid-900 파일들 밖에 없어서.. */
+  /* font-weight 지정 안하면... 안보인다... 이걸로 이틀작업함.. */
   margin-top: 0;
-  margin-right: -5px;
-  border: 0;
-  
-}
+  margin-right: 5px;
+  border: 0;  
+} 
 
 .dropdown-submenu:hover > a:after {
   border-left-color: #fff;
