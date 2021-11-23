@@ -21,7 +21,7 @@ public class WordAndSharingController {
 	private BoardService boardService;
 
 	// 헐몬의 시간 (board)(영상)
-	@RequestMapping(value = "/timeOfHermon", method = RequestMethod.GET)
+	@RequestMapping(value = "/time-of-hermon", method = RequestMethod.GET)
 	public String timeOfHermon(Model model) throws Exception {
 		return "word-and-sharing/time-of-hermon";
 
@@ -42,9 +42,9 @@ public class WordAndSharingController {
 	}
 
 	// 생명샘 말씀(board)
-	@RequestMapping(value = "/springOfLife", method = RequestMethod.GET)
+	@RequestMapping(value = "/spring-of-life", method = RequestMethod.GET)
 	public String springOfLife(Model model) throws Exception {
-		return "word-and-sharing/springOfLife";
+		return "word-and-sharing/spring-of-life";
 
 	}
 }

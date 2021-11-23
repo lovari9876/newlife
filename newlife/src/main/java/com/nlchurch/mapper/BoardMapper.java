@@ -3,6 +3,8 @@ package com.nlchurch.mapper;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.nlchurch.dto.BoardDTO;
 import com.nlchurch.util.paging.SearchCriteria;
 
@@ -14,10 +16,10 @@ import com.nlchurch.util.paging.SearchCriteria;
 public interface BoardMapper {
 
 	// list
-	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri);
+	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, @Param("categoryId") int categoryId);
 
 	// list count
-	public int countBoardList(SearchCriteria scri);
+	public int countBoardList(SearchCriteria scri, @Param("categoryId") int categoryId);
 
 	// content view
 	public HashMap<String, Object> getBoard(long id);

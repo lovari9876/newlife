@@ -54,6 +54,8 @@
 	<link rel="stylesheet" href="css/font-faces.css"> 
 	<!-- Template styles-->
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Table -->
+	<link rel="stylesheet" href="css/board.css">
 
 </head>
 
@@ -79,12 +81,12 @@
 	        <div class="row">
 	          <div class="col-lg-12">
 	              <div class="banner-heading">
-	                <h1 class="banner-title">세 책 이야기</h1>
+	                <h1 class="banner-title">공지사항</h1>
 	                <nav aria-label="breadcrumb">
 	                    <ol class="breadcrumb justify-content-center">
 	                      <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-	                      <li class="breadcrumb-item"><a href="#">교회 소개</a></li>
-	                      <li class="breadcrumb-item active" aria-current="page">세 책 이야기</li>
+	                      <li class="breadcrumb-item"><a href="#">새생활뉴스</a></li>
+	                      <li class="breadcrumb-item active" aria-current="page">공지사항</li>
 	                    </ol>
 	                </nav>
 	              </div>
@@ -110,24 +112,47 @@
 	    <table class="table table-hover">
 	        <thead>
 	            <tr>
-	                <th>#</th>
-	                <th>Name</th>
-	                <th>Status</th>
-	                <th>Date</th>
-	                <th>Price</th>
+	            	<!-- 번호가 필요하면 나중에.. rownum variable 만드는 걸로 sql 수정 -->
+	                <!-- <th class="no">번호</th>  -->
+	                <th class="">제목</th>
+	                <th >작성자</th>
+	                <th class="time">날짜</th>
+	                <th class="m_no">조회수</th>
 	            </tr>
 	        </thead>
 	        <tbody>
-	            <tr>
-	                <th>1</th>
-	                <td>Kolor Tea Shirt For Man</td>
-	                <td><span class="badge badge-primary px-2">Sale</span>
-	                </td>
-	                <td>January 22</td>
-	                <td class="color-primary">$21.56</td>
-	            </tr>
-	           
+	        	<c:forEach items="${noticeList}" var="notice">
+				<tr>											
+					<%-- <td> <!-- 컨텐트 뷰 링크 -->
+						<a href="/content_view?id=${notice['id']}">${notice['RNUM']}</a>
+					</td> --%>										
+					<td class="">						
+						<a href="/content-view?id=${notice['id']}">${notice['title']}</a>
+					</td>
+					<td>
+						${notice['nickname']}
+					</td>
+					
+					<td class="time">
+						<!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
+						<jsp:useBean id="today" class="java.util.Date" /> <!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
+						<fmt:formatDate value="${today}" pattern="yyyy.MM.dd" var="now"/>
+						<fmt:formatDate value="${notice['create_date']}" pattern="yyyy.MM.dd" var="date"/>
+						<c:choose>
+							<c:when test="${now ne date}">${date}</c:when> 
+							<c:otherwise>
+								<fmt:formatDate value="${notice['create_date']}" pattern="HH:mm"/>
+							</c:otherwise>
+						</c:choose>
+					</td>
+					<td class="m_no">${notice['view_tally']}</td>										
+				</tr>
+			</c:forEach>
 	        </tbody>
+			<!--  뱃지 아이템!!
+                <td><span class="badge badge-primary px-2">공지</span>
+                </td>
+	        -->
 	    </table>
         </div>
     </div>

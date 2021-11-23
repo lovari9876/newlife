@@ -54,17 +54,19 @@
 	<link rel="stylesheet" href="css/font-faces.css"> 
 	<!-- Template styles-->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/board.css">
 
 </head>
 
+
 <body>
   <div class="body-inner">
-
+  
 	<!-- header include start -->
 	<%@ include file="/WEB-INF/views/parts/header.jsp" %>
 	<!-- header include end -->
-
-<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner1.jpg)">
+	
+<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner-river.png)">
   <div class="banner-text">
     <div class="container">
         <div class="row">
@@ -84,106 +86,237 @@
     </div><!-- Container end -->
   </div><!-- Banner text end -->
 </div><!-- Banner area end --> 
+<section class="flatBoard">	<div class="m-list m-element">
+	<ul class="notice-list hide_notice on">
+				
+		<li class="no-list"><span class="notice-text">공지</span>  등록된 글이 없습니다.</li>	</ul>
+	<ul class="list">
+				<li class="clearfix">
+			<a href="https://www.dmitory.com/latest/217071147" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>요즘 좀 소홀했는지 네네 마니아 떨어졌더라고 ㅠ 다시 채워넣었다... 빨리 리뷰쓰고싶다</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">22:01</li>				<li class="hit el">조회 수 4</li>							</ul>
+					</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217071137" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>🌙YES24 달빛 스탬프🌝</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">22:01</li>				<li class="hit el">조회 수 20</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217071137&amp;hide_content=1" class="reply m-list-reply">1</a>		</li>
+				<li class="clearfix">
+			<a href="https://www.dmitory.com/latest/217071116" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=18379"><strong>패션</strong>&nbsp;</a>																																								<a href="https://www.dmitory.com/index.php?mid=latest&amp;group_srl=6662713" class="preface" style="color:#000 !important;">의류</a>										<span>코트 살말해주라~~!</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">22:00</li>				<li class="hit el">조회 수 5</li>							</ul>
+					</li>
+				<li class="clearfix">
+			<a href="https://www.dmitory.com/latest/217071033" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>리디야 실수 함만 해주라</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">22:00</li>				<li class="hit el">조회 수 29</li>							</ul>
+					</li>
+				<li class="clearfix">
+			<a href="https://www.dmitory.com/latest/217071017" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>??!!!!뭐살까!!!!??</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">22:00</li>				<li class="hit el">조회 수 20</li>							</ul>
+					</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217070929" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>언니왕비 어쩌고 이거 완결 다 되어가?</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:59</li>				<li class="hit el">조회 수 10</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217070929&amp;hide_content=1" class="reply m-list-reply">1</a>		</li>
+				<li class="clearfix">
+			<a href="https://www.dmitory.com/latest/217070870" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>몰락영주 루이센 존나 짠해..</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:59</li>				<li class="hit el">조회 수 9</li>							</ul>
+					</li>
+				<li class="clearfix">
+			<a href="https://www.dmitory.com/latest/217070781" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19565"><strong>만화</strong>&nbsp;</a>																																								<a href="https://www.dmitory.com/index.php?mid=latest&amp;group_srl=141760529" class="preface" style="color:#000 !important;">반요야샤히메</a>										<span>셋쇼마루 놀리고 싶다</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:58</li>				<li class="hit el">조회 수 8</li>							</ul>
+					</li>
+				<li class="clearfix">
+			<a href="https://www.dmitory.com/latest/217070659" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>사곰앙 다시 보니까 테오 첨부터 감긴게 보이네ㅋㅋㅋ</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:58</li>				<li class="hit el">조회 수 14</li>							</ul>
+					</li>
+				<li class="clearfix">
+			<a href="https://www.dmitory.com/latest/217070519" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=4861690"><strong>도토리숲</strong>&nbsp;</a>																																																		<span>빱이 셉투다같은 생존게임 또 해줬음 좋겠다</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:57</li>				<li class="hit el">조회 수 7</li>							</ul>
+					</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217070246" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>맠다는 몇시부터 떠?</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:56</li>				<li class="hit el">조회 수 80</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217070246&amp;hide_content=1" class="reply m-list-reply">5</a>		</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217070143" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>망국비연가 라고 아는톨있니...</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:55</li>				<li class="hit el">조회 수 27</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217070143&amp;hide_content=1" class="reply m-list-reply">3</a>		</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217069969" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19565"><strong>만화</strong>&nbsp;</a>																																								<a href="https://www.dmitory.com/index.php?mid=latest&amp;group_srl=13903313" class="preface" style="color:#000 !important;">새디스틱뷰티</a>										<span>변민호 정말 분수를 모르네 (ㅅㅍ)</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:54</li>				<li class="hit el">조회 수 47</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217069969&amp;hide_content=1" class="reply m-list-reply">1</a>		</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217069679" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>재정가 끌올봇🤖 11월 4주 차 전 장르 영업글 모집🔥 리디 11월 마크다운 대비하세요!</span>
+					<span class="extraimages"><i class="fas fa-image" title="Image"></i></span>
+				</li>
+				<li class="date el">21:53</li>				<li class="hit el">조회 수 76</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217069679&amp;hide_content=1" class="reply m-list-reply">2</a>		</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217069611" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>잇미올 vs 진저리</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:52</li>				<li class="hit el">조회 수 74</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217069611&amp;hide_content=1" class="reply m-list-reply">6</a>		</li>
+				<li class="clearfix">
+			<a href="https://www.dmitory.com/latest/217069483" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=18320"><strong>미용</strong>&nbsp;</a>																																																		<span>턱 피부 난리났는데 모낭염같아 여드름같아?(사진주의)</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:52</li>				<li class="hit el">조회 수 36</li>							</ul>
+					</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217069443" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19527"><strong>건강</strong>&nbsp;</a>																																																		<span>부천 무좀 치료하는 병원 추천좀 해주라</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:51</li>				<li class="hit el">조회 수 3</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217069443&amp;hide_content=1" class="reply m-list-reply">1</a>		</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217069437" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>연예계물 보면서 궁금한건데 방송국이 절대갑은 아니야?</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:51</li>				<li class="hit el">조회 수 65</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217069437&amp;hide_content=1" class="reply m-list-reply">3</a>		</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217069421" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19837"><strong>노벨정원</strong>&nbsp;</a>																																																		<span>내가 샀는데 안볼책 나눔하고 싶다 ㅠㅠ</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:51</li>				<li class="hit el">조회 수 90</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217069421&amp;hide_content=1" class="reply m-list-reply">8</a>		</li>
+				<li class="clearfix has-comment">
+			<a href="https://www.dmitory.com/latest/217069381" class="list-link"></a>
+			<ul class="list-element">
+				<li class="title"><a href="https://www.dmitory.com/index.php?mid=latest&amp;module_srl=19605"><strong>성우/오디오</strong>&nbsp;</a>																																								<a href="https://www.dmitory.com/index.php?mid=latest&amp;group_srl=188741612" class="preface" style="color:#000 !important;">한성우</a>										<span>야해 이 두꺼운 대본은 소설 원작이겠지?</span>
+					<span class="extraimages"></span>
+				</li>
+				<li class="date el">21:51</li>				<li class="hit el">조회 수 35</li>							</ul>
+			<img src="/modules/board/m.skins/flatBoard_latest/images/biComment@2x.png" alt="comment" width="14px" height="12px" class="comment-image"><a href="https://www.dmitory.com/index.php?mid=latest&amp;document_srl=217069381&amp;hide_content=1" class="reply m-list-reply">1</a>		</li>
+					</ul>
+</div>
+<footer class="clearfix list-footer">
+		<div class="paging">
+		<a href="https://www.dmitory.com/latest" class="prev direction">첫 페이지</a><span class="current">1</span><a href="https://www.dmitory.com/index.php?mid=latest&amp;page=2">2</a><a href="https://www.dmitory.com/index.php?mid=latest&amp;page=3">3</a><a href="https://www.dmitory.com/index.php?mid=latest&amp;page=4">4</a><a href="https://www.dmitory.com/index.php?mid=latest&amp;page=5">5</a><a href="https://www.dmitory.com/index.php?mid=latest&amp;page=6">6</a><a href="https://www.dmitory.com/index.php?mid=latest&amp;page=7">7</a><a href="https://www.dmitory.com/index.php?mid=latest&amp;page=8">8</a><a href="https://www.dmitory.com/index.php?mid=latest&amp;page=9">9</a><a href="https://www.dmitory.com/index.php?mid=latest&amp;page=10">10</a><a href="https://www.dmitory.com/index.php?mid=latest&amp;page=129" class="next direction">끝 페이지</a>
+	</div>		
+</footer>
+</section>
+			
 
 <section id="main-container" class="main-container">
   <div class="container">
     <div class="row">
+       
+        <!-- /# column: TABLE HOVER -->
         <div class="col-lg-6">
-          <h3 class="column-title">Who We Are</h3>
-          <p>when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
-          <blockquote><p>Semporibus autem quibusdam et aut officiis debitis aut rerum est aut optio cumque nihil necessitatibus autemn ec tincidunt nunc posuere ut</p></blockquote>
-          <p>He lay on his armour-like  back, and if he lifted. ultrices ultrices sapien, nec tincidunt nunc posuere ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnât anything embarrassing.</p>
-
-        </div><!-- Col end -->
-
-        <div class="col-lg-6 mt-5 mt-lg-0">
-          
-          <div id="page-slider" class="page-slider small-bg">
-
-              <div class="item" style="background-image:url(images/slider-pages/slide-page1.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Leadership</h2>
-                      </div>    
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>Table Hover</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Kolor Tea Shirt For Man</td>
+                                    <td><span class="badge badge-primary px-2">Sale</span>
+                                    </td>
+                                    <td>January 22</td>
+                                    <td class="color-primary">$21.56</td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Kolor Tea Shirt For Women</td>
+                                    <td><span class="badge badge-danger px-2">Tax</span>
+                                    </td>
+                                    <td>January 30</td>
+                                    <td class="color-success">$55.32</td>
+                                </tr>
+                                <tr>
+                                    <th>3</th>
+                                    <td>Blue Backpack For Baby</td>
+                                    <td><span class="badge badge-success px-2">Extended</span>
+                                    </td>
+                                    <td>January 25</td>
+                                    <td class="color-danger">$14.85</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-              </div><!-- Item 1 end -->
-
-              <div class="item" style="background-image:url(images/slider-pages/slide-page2.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Relationships</h2>
-                      </div>    
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-
-              <div class="item" style="background-image:url(images/slider-pages/slide-page3.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Performance</h2>
-                      </div>    
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-          </div><!-- Page slider end-->          
-        
-
-        </div><!-- Col end -->
-    </div><!-- Content row end -->
-
-  </div><!-- Container end -->
-</section><!-- Main container end -->
-
-
-<section id="facts" class="facts-area dark-bg">
-  <div class="container">
-    <div class="facts-wrapper">
-        <div class="row">
-          <div class="col-md-3 col-sm-6 ts-facts">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact1.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="1789">0</span></h2>
-                <h3 class="ts-facts-title">Total Projects</h3>
-              </div>
-          </div><!-- Col end -->
-
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact2.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="647">0</span></h2>
-                <h3 class="ts-facts-title">Staff Members</h3>
-              </div>
-          </div><!-- Col end -->
-
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact3.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="4000">0</span></h2>
-                <h3 class="ts-facts-title">Hours of Work</h3>
-              </div>
-          </div><!-- Col end -->
-
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact4.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="44">0</span></h2>
-                <h3 class="ts-facts-title">Countries Experience</h3>
-              </div>
-          </div><!-- Col end -->
-
-        </div> <!-- Facts end -->
+            </div>
+            <!-- /# card -->
+        </div>     
+       
+       
     </div>
     <!--/ Content row end -->
   </div>

@@ -62,33 +62,36 @@
 </head>
 
 <body>
-  <div class="body-inner">
+<div class="body-inner">
 
-	<!-- header include start -->
-	<%@ include file="/WEB-INF/views/parts/header.jsp" %>
-	<!-- header include end -->
+<!-- header include start -->
+<%@ include file="/WEB-INF/views/parts/header.jsp" %>
+<!-- header include end -->
 
-<!-- 배너 부분  -->
-<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner-river.png)">
-  <div class="banner-text">
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              <div class="banner-heading">
-                <h1 class="banner-title">주일 · 주중 설교</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">말씀과 찬양</a></li>
-                      <li class="breadcrumb-item"><a href="#">예배 영상</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">주일 · 주중 설교</li>
-                    </ol>
-                </nav>
-              </div>
-          </div><!-- Col end -->
-        </div><!-- Row end -->
-    </div><!-- Container end -->
-  </div><!-- Banner text end -->
-</div><!-- Banner area end --> 
+
+	<!--**********************************
+	      	배너부분
+	***********************************-->
+	<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner-river.png)">
+	  <div class="banner-text">
+	    <div class="container">
+	        <div class="row">
+	          <div class="col-lg-12">
+	              <div class="banner-heading">
+	                <h1 class="banner-title">예배 영상</h1>
+	                <nav aria-label="breadcrumb">
+	                    <ol class="breadcrumb justify-content-center">
+	                      <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
+	                      <li class="breadcrumb-item"><a href="#">예배와 찬양</a></li>
+	                      <li class="breadcrumb-item active" aria-current="page">예배 영상</li>
+	                    </ol>
+	                </nav>
+	              </div>
+	          </div><!-- Col end -->
+	        </div><!-- Row end -->
+	    </div><!-- Container end -->
+	  </div><!-- Banner text end -->
+	</div><!-- Banner area end --> 
 
 
 <!-- 소제목 파트 -->
@@ -409,27 +412,33 @@
 	</div>
 </section><!-- Main container end -->
 
-	<!-- JAVASCRIPTS
+
+<!-- footer include start -->
+<%@ include file="/WEB-INF/views/parts/footer.jsp" %>
+<!-- footerinclude end -->
+
+
+<!-- JAVASCRIPTS
 ================================================== -->
 
-	<!-- initialize jQuery Library -->
-	<script src="plugins/jQuery/jquery.min.js"></script>
-	<!-- Bootstrap jQuery -->
-	<script src="plugins/bootstrap/popper.min.js"></script>
-	<script src="plugins/bootstrap/bootstrap.min.js"></script>
-	<!-- Slick Carousel -->
-	<script src="plugins/slick/slick.min.js"></script>
-	<script src="plugins/slick/slick-animation.min.js"></script>
-	
-	<script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
-	<!-- Color box -->
-	<script src="plugins/colorbox/jquery.colorbox.js"></script>
-	<!-- shuffle -->
-	<script src="plugins/shuffle/shuffle.min.js" defer></script>	
-	<!-- Template custom -->
-	<script src="js/script.js"></script>
+<!-- initialize jQuery Library -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap jQuery -->
+<script src="plugins/bootstrap/popper.min.js"></script>
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Slick Carousel -->
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/slick/slick-animation.min.js"></script>
 
-  </div><!-- Body inner end -->
+<script src="plugins/fancybox/jquery.fancybox.pack.js"></script>
+<!-- Color box -->
+<script src="plugins/colorbox/jquery.colorbox.js"></script>
+<!-- shuffle -->
+<script src="plugins/shuffle/shuffle.min.js" defer></script>	
+<!-- Template custom -->
+<script src="js/script.js"></script>
+
+ </div><!-- Body inner end -->
 </body>
 
 </html>

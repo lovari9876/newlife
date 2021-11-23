@@ -1232,10 +1232,10 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 3.    Features
 4.    Facts
 5.    Services
-6.   Project area
-7.   Content area
-8.   Testimonial
-9.   Subscribe area
+6.    Project area
+7.    Content area
+8.    Testimonial
+9.    Subscribe area
 10.   News section
 11.   Footer
 12.   Sub Pages
@@ -3552,5 +3552,15 @@ label {
   margin-top: 30px;
   font-weight: 700;
 }
+
+
+/* Table style
+================================================== */
+
+table {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
 
 /*# sourceMappingURL=maps/style.css.map */
