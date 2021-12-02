@@ -9,10 +9,10 @@ import com.nlchurch.util.paging.SearchCriteria;
 public interface BoardService {
 
 	// list
-	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, int categoryId);
+	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, String categoryId);
 
 	// list count
-	public int countBoardList(SearchCriteria scri, int categoryId);
+	public int countBoardList(SearchCriteria scri, String categoryId);
 
 	// content view
 	public HashMap<String, Object> getBoard(long id);

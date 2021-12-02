@@ -72,94 +72,147 @@
 <!-- header include end -->
 	
 	
-	<!--**********************************
-	      	배너부분
-	***********************************-->
-	<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner-river.png)">
-	  <div class="banner-text">
-	    <div class="container">
-	        <div class="row">
-	          <div class="col-lg-12">
-	              <div class="banner-heading">
-	                <h1 class="banner-title">공지사항</h1>
-	                <nav aria-label="breadcrumb">
-	                    <ol class="breadcrumb justify-content-center">
-	                      <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-	                      <li class="breadcrumb-item"><a href="#">새생활뉴스</a></li>
-	                      <li class="breadcrumb-item active" aria-current="page">공지사항</li>
-	                    </ol>
-	                </nav>
-	              </div>
-	          </div><!-- Col end -->
-	        </div><!-- Row end -->
-	    </div><!-- Container end -->
-	  </div><!-- Banner text end -->
-	</div><!-- Banner area end --> 
+<!--**********************************
+      	배너부분
+***********************************-->
+<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner-river.png)">
+  <div class="banner-text">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="banner-heading">
+                <h1 class="banner-title">공지사항</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                      <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
+                      <li class="breadcrumb-item"><a href="#">새생활뉴스</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">공지사항</li>
+                    </ol>
+                </nav>
+              </div>
+          </div><!-- Col end -->
+        </div><!-- Row end -->
+    </div><!-- Container end -->
+  </div><!-- Banner text end -->
+</div><!-- Banner area end --> 
 
 
 <!-- 메인 컨테이너 -->
-<section id="main-container" class="main-container">
+<section id="main-container" class="main-container pb-2">
   <div class="container">
     <div class="row">
-       
-	<!--**********************************
-			테이블
-	***********************************-->
-	<div class="">
-	    <h4>Table Hover</h4>
-	</div>
-	<div class="table-responsive">
-	    <table class="table table-hover">
-	        <thead>
-	            <tr>
-	            	<!-- 번호가 필요하면 나중에.. rownum variable 만드는 걸로 sql 수정 -->
-	                <!-- <th class="no">번호</th>  -->
-	                <th class="">제목</th>
-	                <th >작성자</th>
-	                <th class="time">날짜</th>
-	                <th class="m_no">조회수</th>
-	            </tr>
-	        </thead>
-	        <tbody>
-	        	<c:forEach items="${noticeList}" var="notice">
-				<tr>											
-					<%-- <td> <!-- 컨텐트 뷰 링크 -->
-						<a href="/content_view?id=${notice['id']}">${notice['RNUM']}</a>
-					</td> --%>										
-					<td class="">						
-						<a href="/content-view?id=${notice['id']}">${notice['title']}</a>
-					</td>
-					<td>
-						${notice['nickname']}
-					</td>
-					
-					<td class="time">
-						<!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
-						<jsp:useBean id="today" class="java.util.Date" /> <!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
-						<fmt:formatDate value="${today}" pattern="yyyy.MM.dd" var="now"/>
-						<fmt:formatDate value="${notice['create_date']}" pattern="yyyy.MM.dd" var="date"/>
-						<c:choose>
-							<c:when test="${now ne date}">${date}</c:when> 
-							<c:otherwise>
-								<fmt:formatDate value="${notice['create_date']}" pattern="HH:mm"/>
-							</c:otherwise>
-						</c:choose>
-					</td>
-					<td class="m_no">${notice['view_tally']}</td>										
-				</tr>
-			</c:forEach>
-	        </tbody>
-			<!--  뱃지 아이템!!
-                <td><span class="badge badge-primary px-2">공지</span>
-                </td>
-	        -->
-	    </table>
-        </div>
-    </div>
-    <!--/ Content row end -->    
-  </div>
-  <!--/ Container end -->  
-</section><!-- Facts end -->
+
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="images/services/service1.jpg" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="images/icon-image/service-icon1.png" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">Zero Harm Everyday</a></h3>
+                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
+                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+              </div>
+            </div>
+        </div><!-- Service1 end -->
+      </div><!-- Col 1 end -->
+
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="images/services/service2.jpg" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="images/icon-image/service-icon2.png" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">Virtual Construction</a></h3>
+                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
+                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+              </div>
+            </div>
+        </div><!-- Service2 end -->
+      </div><!-- Col 2 end -->
+
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="images/services/service3.jpg" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="images/icon-image/service-icon3.png" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">Build To Last</a></h3>
+                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
+                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+              </div>
+            </div>
+        </div><!-- Service3 end -->
+      </div><!-- Col 3 end -->
+
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="images/services/service4.jpg" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="images/icon-image/service-icon4.png" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">EXTERIOR DESIGN</a></h3>
+                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
+                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+              </div>
+            </div>
+        </div><!-- Service1 end -->
+      </div><!-- Col 4 end -->
+
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="images/services/service5.jpg" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="images/icon-image/service-icon5.png" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">RENOVATION</a></h3>
+                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
+                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+              </div>
+            </div>
+        </div><!-- Service2 end -->
+      </div><!-- Col 5 end -->
+
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="ts-service-box">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="images/services/service6.jpg" alt="service-image">
+            </div>
+            <div class="d-flex">
+              <div class="ts-service-box-img">
+                  <img loading="lazy" src="images/icon-image/service-icon6.png" alt="service-icon">
+              </div>
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="service-single.html">SAFETY MANAGEMENT</a></h3>
+                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
+                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+              </div>
+            </div>
+        </div><!-- Service3 end -->
+      </div><!-- Col 6 end -->
+
+    </div><!-- Main row end -->
+  </div><!-- Conatiner end -->
+</section><!-- Main container end -->
 
 
 <!-- footer include start -->

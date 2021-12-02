@@ -27,8 +27,8 @@ public class InfomationController {
 
 	private static final Logger logger = LoggerFactory.getLogger(InfomationController.class);
 
-	private int categoryId = 0;
-	
+	private String categoryId = "";
+
 	@Autowired
 	private BoardService boardService;
 
@@ -55,16 +55,61 @@ public class InfomationController {
 	}
 
 	// 공지사항
-	@RequestMapping(value = "/notice", method = RequestMethod.GET)
-	public String notice(Model model, @ModelAttribute("scri") SearchCriteria scri, HttpServletRequest rq)
-			throws Exception {
+//	@RequestMapping(value = "/notice", method = RequestMethod.GET)
+//	public String notice(Model model, @ModelAttribute("scri") SearchCriteria scri, HttpServletRequest rq)
+//			throws Exception {
+//
+//		// 스프링 컨테이너가 // SearchCriteria scri = new SearchCriteria(); //
+//		// model.attribute("scri", scri); // 를 자동으로 해준다.
+//
+//		logger.info("notice: 공지사항");
+//		categoryId = 9;
+//
+//		// 로그인 안되어있는 상태에서도 볼 수 있음
+//		// if (principal != null) {
+//		// String m_id = principal.getName();
+//		// MemberVO memberVO = myPageService.mypage(m_id);
+//		// model.addAttribute("memberVO", memberVO);
+//		// }
+//
+//		// 한 페이지에 글 15개씩 보이도록
+//		scri.setPerPageNum(15);
+//
+//		// 쿼리 uri로 보낸 파라미터들 확인
+//		// System.out.println("query: " + rq.getQueryString());
+//		// System.out.println("s_content: " + rq.getParameter("s_content"));
+//		// System.out.println("searchType: " + scri.getSearchType());
+//
+//		ArrayList<HashMap<String, Object>> noticeList = boardService.listBoard(scri, categoryId);
+//		model.addAttribute("noticeList", noticeList);
+//		// model.addAttribute("s_content", s_content);
+//		// 단순히 jsp에서 select 선택 반영 위한 넘기기
+//
+//		PageMaker pageMaker = new PageMaker();
+//		pageMaker.setCri(scri);
+//		pageMaker.setTotalCount(boardService.countBoardList(scri, categoryId));
+//
+//		// perPageNum 부여한 것 잘 가져오니? 네
+//		logger.info("perPageNum: " + pageMaker.getCri().getPerPageNum());
+//
+//		model.addAttribute("pageMaker", pageMaker);
+//
+//		// System.out.println(((SearchCriteria)(pageMaker.getCri())).getSearchType());
+//
+//		return "information/notice";
+//
+//	}
 
+	// 새소식
+	@RequestMapping(value = "/weekly", method = RequestMethod.GET)
+	public String weekly(Model model, @ModelAttribute("scri") SearchCriteria scri, HttpServletRequest rq)
+			throws Exception {
 		// 스프링 컨테이너가 // SearchCriteria scri = new SearchCriteria(); //
 		// model.attribute("scri", scri); // 를 자동으로 해준다.
 
-		logger.info("notice: 공지사항");
-		categoryId = 9;
-		
+		logger.info("weekly: 새소식");
+		categoryId = "8 OR 9";
+
 		// 로그인 안되어있는 상태에서도 볼 수 있음
 		// if (principal != null) {
 		// String m_id = principal.getName();
@@ -80,8 +125,8 @@ public class InfomationController {
 		// System.out.println("s_content: " + rq.getParameter("s_content"));
 		// System.out.println("searchType: " + scri.getSearchType());
 
-		ArrayList<HashMap<String, Object>> noticeList = boardService.listBoard(scri, categoryId);
-		model.addAttribute("noticeList", noticeList);
+		ArrayList<HashMap<String, Object>> weeklyList = boardService.listBoard(scri, categoryId);
+		model.addAttribute("weeklyList", weeklyList);
 		// model.addAttribute("s_content", s_content);
 		// 단순히 jsp에서 select 선택 반영 위한 넘기기
 
@@ -96,13 +141,6 @@ public class InfomationController {
 
 		// System.out.println(((SearchCriteria)(pageMaker.getCri())).getSearchType());
 
-		return "information/notice";
-
-	}
-
-	// 새소식
-	@RequestMapping(value = "/weekly", method = RequestMethod.GET)
-	public String weekly(Model model) throws Exception {
 		return "information/weekly";
 
 	}

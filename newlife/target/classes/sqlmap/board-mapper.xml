@@ -15,12 +15,14 @@
 <mapper namespace="com.nlchurch.mapper.BoardMapper">
 
 	<select id="listBoard" resultType="hashmap">
-		SELECT b.*, m.nickname
+		SELECT b.*, m.nickname 
 		FROM board b LEFT JOIN member m
 		ON b.member_id = m.id
 		WHERE b.category_id = #{categoryId}
 		ORDER BY b.id DESC
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
+	
+
 	
 	<select id="countBoardList" resultType="int">
 		SELECT count(*) 

@@ -16,10 +16,10 @@ import com.nlchurch.util.paging.SearchCriteria;
 public interface BoardMapper {
 
 	// list
-	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, @Param("categoryId") int categoryId);
+	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, @Param("categoryId") String categoryId);
 
 	// list count
-	public int countBoardList(SearchCriteria scri, @Param("categoryId") int categoryId);
+	public int countBoardList(SearchCriteria scri, @Param("categoryId") String categoryId);
 
 	// content view
 	public HashMap<String, Object> getBoard(long id);
