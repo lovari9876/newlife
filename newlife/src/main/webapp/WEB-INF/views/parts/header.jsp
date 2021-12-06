@@ -124,12 +124,8 @@
                         </ul>
                     </li>
                     
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">새생활뉴스 <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="/weekly">새소식</a></li>
-                          <li><a href="/notice">공지사항</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a href="/news" class="nav-link">새생활뉴스</a>
                     </li>
                     
                   </ul>
