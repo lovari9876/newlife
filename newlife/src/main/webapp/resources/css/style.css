@@ -8,6 +8,7 @@ Description: Constra - Construction Html5 Template
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,600i,700,700i,800|Open+Sans:400,400i,600,600i,700,700i,800&display=swap);
 
 /* Typography
@@ -122,7 +123,7 @@ a:hover {
 }
 
 a.read-more {
-  color: #ffb600;
+  color: #387fff;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -135,6 +136,25 @@ section,
 .section-padding {
   padding: 70px 0;
   position: relative;
+}
+
+/* 글 + 비디오 게시판 */
+.plain-board, .video-board, .section-padding {
+  padding: 60px 0;
+  position: relative;
+  margin-bottom: 30px; /* padding-bottom이 자꾸 잡아먹혀서 .. */
+}
+
+@media (max-width: 767px) {
+	.plain-board {
+	  padding: 50px 0;
+	}
+}
+
+@media (max-width: 575px) {
+	.plain-board, .video-board {
+	  padding: 40px 0;
+	}
 }
 
 .no-padding {
@@ -261,7 +281,7 @@ a:focus {
 }
 
 .dropcap.primary {
-  background: #ffb600;
+  background: #387fff;
   color: #fff;
 }
 
@@ -348,7 +368,7 @@ a:focus {
 
 .form-control:focus {
   box-shadow: none;
-  border: 1px solid #ffb600;
+  border: 1px solid #387fff;
 }
 
 hr {
@@ -372,12 +392,12 @@ blockquote {
   margin: 20px 0;
   background: #f9f9f9;
   position: relative;
-  border-left: 3px solid #ffb600;
+  border-left: 3px solid #387fff;
   padding-left: 40px;
 }
 
 blockquote.text-center {
-  border-top: 3px solid #ffb600;
+  border-top: 3px solid #387fff;
   border-left: 0;
   padding-left: 25px;
   padding-top: 50px;
@@ -391,7 +411,7 @@ blockquote.text-center:before {
 }
 
 blockquote.text-right {
-  border-right: 3px solid #ffb600;
+  border-right: 3px solid #387fff;
   padding-right: 40px;
   border-left: 0;
   padding-left: 25px;
@@ -446,7 +466,7 @@ cite {
   font-family: "Font Awesome 5 Free";
   content: "\f138";
   margin-right: 10px;
-  color: #ffb600;
+  color: #387fff;
   font-size: 12px;
 }
 
@@ -458,7 +478,7 @@ ul.list-arrow li:before {
   font-family: "Font Awesome 5 Free";
   content: "\f105";
   margin-right: 10px;
-  color: #ffb600;
+  color: #387fff;
   font-size: 16px;
   font-weight: bold;
 }
@@ -467,7 +487,7 @@ ul.list-check li:before {
   font-family: "Font Awesome 5 Free";
   content: "\f00c";
   margin-right: 10px;
-  color: #ffb600;
+  color: #387fff;
   font-size: 14px;
 }
 
@@ -521,11 +541,11 @@ a[href^=tel] {
 
 .btn-white.btn-primary {
   background: #fff;
-  color: #ffb600;
+  color: #387fff;
 }
 
 .btn-primary {
-  background: #ffb600;
+  background: #387fff;
 }
 
 .btn-dark {
@@ -663,7 +683,7 @@ ul.top-info li p.info-text {
 }
 
 .top-bar-border ul.top-info li i {
-  color: #ffb600;
+  color: #387fff;
 }
 
 /* Header area: 
@@ -738,7 +758,7 @@ ul.navbar-nav > li > a {
 
 ul.navbar-nav > li:hover > a,
 ul.navbar-nav > li.active > a {
-  color: #ffb600 !important;
+  color: #387fff !important;
 }
 
 /*-- Logo --*/
@@ -880,7 +900,7 @@ ul.top-info-box > li.nav-search i {
   padding: 6px;
   border-radius: 0;
   font-size: 1rem;
-  background: #ffb600;
+  background: #387fff;
 }
 
 .navbar-toggler:focus {
@@ -894,7 +914,7 @@ ul.top-info-box > li.nav-search i {
 
 ul.navbar-nav > li:hover > a,
 ul.navbar-nav > li.active > a {
-  color: #ffb600;
+  color: #387fff;
   position: relative;
 }
 
@@ -953,7 +973,7 @@ ul.navbar-nav > li > a i {
   }
   .header-two ul.navbar-nav > li.active > a i,
   .header-two ul.navbar-nav > li > a.active i {
-    color: #ffb600;
+    color: #387fff;
   }
 }
 
@@ -998,17 +1018,18 @@ ul.navbar-nav > li > a {
 /* 서브메뉴 오른쪽 화살표 문제 해결  */
 /* font awesome icon 안뜬다 */
 .dropdown-submenu > a::after {
-  display: inline-block;
-  vertical-align: bottom;
-  float: right;
+  border: 0;  
+  color: #6495ed;
   content: "\f105";
+  display: inline-block;
+  float: right;
   font-family: 'Font Awesome 5 Free';
-  font-weight: 900; 
   /* plugins/fontawesome/webfonts/ 에... fa-solid-900 파일들 밖에 없어서.. */
   /* font-weight 지정 안하면... 안보인다... 이걸로 이틀작업함.. */
+  font-weight: 900; 
   margin-top: 0;
   margin-right: 5px;
-  border: 0;  
+  vertical-align: bottom;
 } 
 
 .dropdown-submenu:hover > a:after {
@@ -1022,7 +1043,7 @@ ul.navbar-nav > li > a {
   min-width: 200px;
   border-radius: 0;
   border: 0;
-  border-top: 2px solid #6495ed;
+  border-top: 2px solid #95b6f2;
   padding: 0 20px;
   margin: 0;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -1049,7 +1070,7 @@ ul.navbar-nav > li > a {
 }
 
 .dropdown-menu-large > li > ul > li.active > a {
-  color: #ffb600 !important;
+  color: #387fff !important;
 }
 
 .navbar-nav > li > .dropdown-menu a {
@@ -1082,7 +1103,7 @@ ul.navbar-nav > li > a {
 
 .dropdown-menu li a:hover,
 .dropdown-menu li a:focus {
-  color: #ffb600;
+  color: #387fff;
 }
 
 @media (min-width: 991px) {
@@ -1107,7 +1128,7 @@ ul.navbar-nav > li > a {
 .dropdown-menu > .active > a:focus,
 .dropdown-menu > .active > .dropdown-menu > .active > a {
   background: none;
-  color: #ffb600;
+  color: #387fff;
 }
 
 /*-- Nav Search start --*/
@@ -1217,7 +1238,7 @@ ul.navbar-nav > li > a {
 
 .header-get-a-quote .btn-primary:hover {
   background: #272d33;
-  color: #ffb600 !important;
+  color: #387fff !important;
 }
 
 ul.navbar-nav > li.header-get-a-quote:hover > a:after {
@@ -1276,7 +1297,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .slide-title-box {
   font-size: 16px;
   line-height: 39px;
-  background: #ffb600;
+  background: #387fff;
   color: #fff;
   display: inline-block;
   padding: 0 15px;
@@ -1372,11 +1393,11 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .slider.border {
   background: none;
-  border: 2px solid #ffb600 !important;
+  border: 2px solid #387fff !important;
 }
 
 .slider.border:hover {
-  background: #ffb600;
+  background: #387fff;
   border: 2px solid transparent;
 }
 
@@ -1417,7 +1438,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .slick-dots li button:hover:before, .slick-dots .slick-dots li button:focus:before,
 .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: #ffb600;
+  color: #387fff;
 }
 
 .slick-slide {
@@ -1451,7 +1472,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .banner-carousel .carousel-control i:hover {
-  background: #ffb600;
+  background: #387fff;
   color: #fff;
 }
 
@@ -1554,7 +1575,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .call-to-action-box .action-style-box {
-  background: #ffb600;
+  background: #387fff;
   padding: 30px;
 }
 
@@ -1625,7 +1646,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .featured-tab .nav-tabs > li.active > a {
   color: #fff;
-  background: #ffb600;
+  background: #387fff;
   position: relative;
 }
 
@@ -1638,7 +1659,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   left: 50%;
   border-width: 10px;
   border-style: solid;
-  border-color: #ffb600 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  border-color: #387fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -1695,7 +1716,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .ts-facts .ts-facts-icon i {
   font-size: 42px;
-  color: #ffb600;
+  color: #387fff;
 }
 
 .ts-facts .ts-facts-content .ts-facts-num {
@@ -1706,7 +1727,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .ts-facts .ts-facts-content .ts-facts-title {
   font-size: 16px;
-  color: #ffb600;
+  color: #387fff;
   margin: 0;
 }
 
@@ -1716,7 +1737,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .ts-service-box .ts-service-icon i {
   font-size: 36px;
   float: left;
-  color: #ffb600;
+  color: #387fff;
 }
 
 .ts-service-box .ts-service-box-content {
@@ -1749,7 +1770,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .service-box-title a:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 /* Service box bg */
@@ -1818,7 +1839,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .ts-service-icon.icon-round i {
   font-size: 24px;
   color: #fff;
-  background: #ffb600;
+  background: #387fff;
   text-align: center;
   border-radius: 100%;
   width: 60px;
@@ -1835,7 +1856,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .ts-service-box.icon-left .ts-service-box-icon i {
-  background: #ffb600;
+  background: #387fff;
   color: #fff;
 }
 
@@ -1862,7 +1883,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 /* Service Image */
 .ts-service-image-wrapper {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .ts-service-icon i {
@@ -1872,12 +1893,12 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .ts-service-info {
-  margin-left: 30px;
+  margin: 0 20px 0;
 }
 
 @media (max-width: 1200px) {
   .ts-service-info {
-    margin-left: 15px;
+    margin: 0 15px 0;
   }
 }
 
@@ -1892,7 +1913,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .ts-service-info .learn-more:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 /* Service Classic */
@@ -1900,7 +1921,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   font-size: 24px;
   float: left;
   color: #fff;
-  background: #ffb600;
+  background: #387fff;
   border-radius: 100%;
   width: 60px;
   height: 60px;
@@ -1914,7 +1935,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .ts-service-classic:hover .ts-service-icon i {
-  background: #ffb600;
+  background: #387fff;
 }
 
 /* Projects area
@@ -1924,7 +1945,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   display: inline-block;
   margin: 20px 0 50px;
   width: 100%;
-  border-bottom: 3px solid #ffb600;
+  border-bottom: 3px solid #387fff;
 }
 
 .shuffle-btn-group label {
@@ -1955,7 +1976,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 .shuffle-btn-group label.active {
   color: #212121;
-  background: #ffb600;
+  background: #387fff;
 }
 
 .shuffle-btn-group label input {
@@ -2006,7 +2027,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   right: 0;
   z-index: 1;
   padding: 5px 12px;
-  background: #ffb600;
+  background: #387fff;
   color: #fff;
   opacity: 0;
   -webkit-transform: perspective(1px) scale3d(0, 0, 0);
@@ -2047,11 +2068,11 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .shuffle-item .project-img-container .project-item-info-content .project-item-title a:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .shuffle-item .project-img-container .project-item-info-content .project-cat {
-  background: #ffb600;
+  background: #387fff;
   display: inline-block;
   padding: 2px 8px;
   font-weight: 700;
@@ -2097,7 +2118,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   bottom: -1px;
   padding: 15px 20px;
   width: 100%;
-  background: #ffb600;
+  background: #387fff;
 }
 
 .owl-theme.project-slide .owl-nav > div {
@@ -2112,7 +2133,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   display: inline-block;
   margin: 0 2px;
   font-size: 20px;
-  background: #ffb600;
+  background: #387fff;
   color: #fff;
   width: 30px;
   height: 30px;
@@ -2192,12 +2213,12 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 }
 
 .accordion-group .card-header .btn[aria-expanded="true"] {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .accordion-group .card-header .btn[aria-expanded="true"]::before {
   content: "\f106";
-  background-color: #ffb600;
+  background-color: #387fff;
 }
 
 .accordion-group.accordion-classic .card-header .btn:before {
@@ -2228,7 +2249,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 ================================================== */
 .testimonial-area {
   padding: 100px 0;
-  background-color: #ffb600;
+  background-color: #387fff;
   background-image: url(../images/parallax2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -2290,7 +2311,7 @@ img.testimonial-thumb {
   margin: 0 0 2px;
   font-weight: 700;
   display: block;
-  color: #ffb600;
+  color: #387fff;
 }
 
 .quote-item-footer {
@@ -2306,7 +2327,7 @@ img.testimonial-thumb {
 
 /* Testimonial Border */
 .quote-item.quote-border .quote-text-border {
-  border: 1px solid #ffb600;
+  border: 1px solid #387fff;
   padding: 20px;
   position: relative;
   line-height: 28px;
@@ -2318,7 +2339,7 @@ img.testimonial-thumb {
 .quote-item.quote-border .quote-text-border:before {
   border: 12px solid;
   border-color: #e1e1e1 transparent transparent;
-  border-top-color: #ffb600;
+  border-top-color: #387fff;
   bottom: -24px;
   position: absolute;
   content: "";
@@ -2362,7 +2383,7 @@ img.testimonial-thumb {
 /* Subscribe area
 ================================================== */
 .subscribe {
-  background: #ffb600;
+  background: #387fff;
   padding: 0;
 }
 
@@ -2474,7 +2495,7 @@ img.testimonial-thumb {
 }
 
 .latest-post .post-title a:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .latest-post-meta {
@@ -2506,7 +2527,7 @@ img.testimonial-thumb {
   padding-left: 15px;
   text-transform: uppercase;
   color: #fff;
-  border-left: 3px solid #ffb600;
+  border-left: 3px solid #387fff;
 }
 
 /* Footer about us */
@@ -2564,7 +2585,7 @@ img.testimonial-thumb {
 
 .footer-widget ul.list-arrow li:hover a,
 .footer-widget ul.list-arrow li:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .working-hours {
@@ -2577,7 +2598,7 @@ img.testimonial-thumb {
 
 /*-- Copyright --*/
 .copyright {
-  background: #ffb600;
+  background: #387fff;
   color: #111;
   padding: 25px 0 15px;
   position: relative;
@@ -2630,7 +2651,7 @@ img.testimonial-thumb {
   line-height: 36px;
   background: rgba(0, 0, 0, 0.9);
   border-radius: 3px;
-  color: #ffb600;
+  color: #387fff;
   font-weight: 700;
   font-size: 16px;
   padding: 0;
@@ -2659,7 +2680,7 @@ img.testimonial-thumb {
 /*-- Banner --*/
 .banner-area {
   position: relative;
-  min-height: 300px;
+  min-height: 150px;
   color: #fff;
   background-position: 50% 50%;
   background-size: cover;
@@ -2668,20 +2689,23 @@ img.testimonial-thumb {
 .banner-title {
   color: #fff;
   text-transform: uppercase;
-  font-size: 58px;
+  font-size: 43px;
   font-weight: 900;
 }
 
 @media (max-width: 767px) {
   .banner-title {
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
 @media (max-width: 575px) {
-  .banner-title {
-    font-size: 32px;
-  }
+	.banner-area {
+	  min-height: 125px;
+		
+	.banner-title {  	
+	  font-size: 32px;
+	}
 }
 
 .banner-text {
@@ -2718,6 +2742,11 @@ img.testimonial-thumb {
 
 .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   color: #fff;
+}
+
+/* 배너 높이 150px로 조정하면서 마진 없앰 */
+ol.breadcrumb.justify-content-center {
+	margin-bottom: 0;
 }
 
 /*-- About us page --*/
@@ -2757,7 +2786,7 @@ img.testimonial-thumb {
 }
 
 .page-slider .carousel-control i:hover {
-  background: #ffb600;
+  background: #387fff;
   color: #fff;
 }
 
@@ -2847,7 +2876,7 @@ img.testimonial-thumb {
 }
 
 .team-slide .carousel-control:hover {
-  background-color: #ffb600;
+  background-color: #387fff;
   color: #fff;
 }
 
@@ -2911,7 +2940,7 @@ img.testimonial-thumb {
   margin-top: 0;
   margin-bottom: 3px;
   line-height: normal;
-  color: #ffb600;
+  color: #387fff;
 }
 
 .ts-team-wrapper .ts-designation {
@@ -2929,7 +2958,7 @@ img.testimonial-thumb {
 }
 
 .ts-team-wrapper .team-social-icons a i:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .ts-team-wrapper:hover .ts-team-content {
@@ -2959,7 +2988,7 @@ img.testimonial-thumb {
 }
 
 .ts-team-content-classic .team-social-icons a i:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 /*-- Pricing table  --*/
@@ -3039,7 +3068,7 @@ img.testimonial-thumb {
 .contact-info-box i {
   float: left;
   font-size: 24px;
-  color: #ffb600;
+  color: #387fff;
 }
 
 .contact-info-box-content {
@@ -3102,7 +3131,7 @@ label {
 }
 
 .entry-header .entry-title a:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .post-single .entry-header .entry-title {
@@ -3119,7 +3148,7 @@ label {
 }
 
 .post-meta a:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .post-meta span {
@@ -3149,8 +3178,16 @@ label {
 }
 
 /* Pagination */
+.paging-row {
+	display: flex;
+}
+
+.paging-row-inner {
+	margin: 0 auto;
+}
+
 .paging {
-  margin-bottom: -5px;
+  margin: 15px 0;
 }
 
 .pagination li a {
@@ -3163,7 +3200,7 @@ label {
 .pagination > .active > a:hover,
 .pagination > li > a:hover {
   color: #fff;
-  background: #ffb600;
+  background: #387fff;
   border: 1px solid transparent;
 }
 
@@ -3183,7 +3220,7 @@ label {
 }
 
 .post-tags a:hover {
-  background: #ffb600;
+  background: #387fff;
   color: #fff;
   border: 1px solid transparent;
 }
@@ -3263,7 +3300,7 @@ label {
 }
 
 .comments-list .comment-reply:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .comments-counter {
@@ -3360,7 +3397,7 @@ label {
   margin: 0 0 30px;
   padding-left: 15px;
   text-transform: uppercase;
-  border-left: 3px solid #ffb600;
+  border-left: 3px solid #387fff;
 }
 
 /* Widget common */
@@ -3402,7 +3439,7 @@ label {
 }
 
 .sidebar .widget ul li a:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .sidebar .widget ul li i {
@@ -3438,7 +3475,7 @@ label {
 
 .sidebar ul.nav-tabs li.active a,
 .sidebar ul.nav-tabs li:hover a {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .sidebar ul.nav-tabs li {
@@ -3467,7 +3504,7 @@ label {
 
 .sidebar ul.service-menu li.active a,
 .sidebar ul.service-menu li:hover a {
-  background: #ffb600;
+  background: #387fff;
   color: #fff;
   cursor: pointer;
 }
@@ -3508,7 +3545,7 @@ label {
 }
 
 .widget.recent-posts .post-info .entry-title a:hover {
-  color: #ffb600;
+  color: #387fff;
 }
 
 .widget.recent-posts .post-date {
@@ -3533,7 +3570,7 @@ label {
 }
 
 .sidebar .widget-tags ul > li a:hover {
-  background: #ffb600;
+  background: #387fff;
   color: #fff;
   border: 1px solid transparent;
 }
@@ -3554,13 +3591,88 @@ label {
 }
 
 
+/*!------------------------------------------------------------------
+[NEWLIFE STYLESHEET]
+
+새생활교회 사이트를 위해 템플릿을 기본으로 추가하고 수정한 부분들
+-------------------------------------------------------------------*/
+
 /* Table style
 ================================================== */
-
 table {
     font-size: 13px;
     line-height: 1.5;
 }
+
+
+/* board - forum block list
+================================================== */
+
+.main-container .board-item {
+	margin-bottom: 2rem !important;
+}
+
+/* span 각각 아이콘 */
+.main-container .ts-service-info span i{
+    color: #95b6f2; /* #bbb 연회색 */
+    padding-right: 8px;
+}
+
+/* 게시판 base */
+.main-container .board-item .ts-service-box {
+    padding-top: 15px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* span으로 나눠진 본문 */
+.main-container .board-item p {
+    margin-bottom: 15px;
+}
+
+/* 작성일, 번호, 조회수 : in a line */
+/* 작성일 아이콘 */
+.main-container .board-item .board-time .small-i {
+    padding-right: 4px !important;
+}
+
+/* 작성일 */
+.main-container .board-item .board-time {	
+	border-right: 1px solid #d2d2d2;
+	color: #898989;
+	font-size: 0.9em;
+    padding-right: 6px;
+}
+
+/* 번호 */
+.main-container .ts-service-info span.board-no {
+	color: #898989;
+	border-right: 1px solid #d2d2d2 !important;
+	font-size: 0.9em;
+	padding: 0 6px 0;
+}
+
+/* 조회수 */
+.main-container .ts-service-info span.board-tally {
+	padding-left: 6px;
+	color: #898989;
+	font-size: 0.9em;
+}
+
+/* ===== 비디오 게시판 only =========== */
+
+.video-board .board-item .ts-service-box {
+    padding-top: 0;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
 
 
 /*# sourceMappingURL=maps/style.css.map */

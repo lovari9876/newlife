@@ -41,7 +41,7 @@ public class NewsController {
 		// model.attribute("scri", scri); // 를 자동으로 해준다.
 
 		logger.info("news: 새생활뉴스");
-//		categoryId = ;
+		categoryId = 8;
 
 		// 로그인 안되어있는 상태에서도 볼 수 있음
 		// if (principal != null) {

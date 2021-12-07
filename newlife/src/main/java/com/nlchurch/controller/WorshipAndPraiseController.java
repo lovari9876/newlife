@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.nlchurch.service.BoardService;
 
 // 대메뉴: 예배와 찬양
-// 게시판 1개
+// 게시판 1개: 예배 영상
+
 @Controller
 public class WorshipAndPraiseController {
 

@@ -90,7 +90,7 @@
 
 
 <!-- 메인 컨테이너 -->
-<section id="main-container" class="main-container pb-2 video-board">
+<section id="main-container" class="main-container pb-2">
   <div class="container">
     <div class="row">
     
@@ -98,7 +98,7 @@
 	  <!-- 반복 시작 -->
 	  <c:forEach items="${newsList}" var="news">
 	  
-      <div class="col-lg-4 col-md-6 mb-5 board-item">
+      <div class="col-lg-4 col-md-6 mb-5">
         <div class="ts-service-box">
             <div class="ts-service-image-wrapper">
               <img loading="lazy" class="w-100" src="images/video-thumbnails/video-thum-sample.jpg" alt="service-image">
@@ -109,8 +109,8 @@
                   <p>
                   	<span><i class="fas fa-bible"></i>데살로니가전서 1장 12-15절</span><br/>
                   	<span><i class="far fa-calendar-check"></i>주일 2부 예배</span><br/>
-                  	<span><i class="far fa-user"></i>${news['nickname']}</span><br/>
-                  	<span class="board-time"><i class="far fa-clock small-i"></i>
+                  	<span><i class="fas fa-user"></i>${news['nickname']}</span><br/>
+                  	<span><i class="far fa-clock"></i>
 	               		<!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
 						<jsp:useBean id="today" class="java.util.Date" /> 
 						<!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
@@ -122,7 +122,7 @@
 								<fmt:formatDate value="${news['create_date']}" pattern="HH:mm"/>
 							</c:otherwise>
 						</c:choose>
-                  	</span>
+                  	</span><br/>
                   	<span class="board-no">번호 0<!-- ${news['RNUM']} --></span><span class="board-tally">조회수 500</span>
                   </p>              
               </div>
@@ -130,24 +130,9 @@
         </div><!-- Service end -->
       </div><!-- Col end -->
       </c:forEach>
-	</div><!-- Main row end -->
- 
-<!-- paging 페이지 처리 -->
-<!-- pc는 10까지, 모바일은 5까지 -->
-<div class="row paging-row">
-  <div class="paging-row-inner" >
-	<nav class="paging" aria-label="Page navigation example">
-	  <ul class="pagination">
-	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-	    <li class="page-item"><a class="page-link" href="#">1</a></li>
-	    <li class="page-item"><a class="page-link" href="#">2</a></li>
-	    <li class="page-item"><a class="page-link" href="#">3</a></li>
-	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-	  </ul>
-	</nav>
-  </div>
-</div><!-- end paging -->
- 
+
+     
+    </div><!-- Main row end -->
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
 
