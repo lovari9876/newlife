@@ -53,7 +53,7 @@
 	<!-- font-face -->
 	<link rel="stylesheet" href="css/font-faces.css"> 
 	<!-- Template styles-->
-	<link rel="stylesheet" href="css/style.css?version=44">
+	<link rel="stylesheet" type="text/css" title="newlife Styles" href="/css/style.css">
 </head>
 
 <body>
