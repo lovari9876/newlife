@@ -77,8 +77,8 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-                      <li class="breadcrumb-item"><a href="#">교회 소개</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">인사말</li>
+                      <li class="breadcrumb-item"><a href="#">새생활뉴스</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">공지사항</li>
                     </ol>
                 </nav>
               </div>
@@ -90,65 +90,62 @@
 
 
 <!-- 메인 컨테이너 -->
-<section id="main-container" class="main-container">
+<section id="main-container" class="main-container pb-2 plain-board">
   <div class="container">
     <div class="row">
-        <div class="col-lg-6">
-          <h3 class="column-title">welcome</h3>
-          <blockquote><p class="large-quote">이전에 없었던 노래로 나 주님을 경배해!!</p></blockquote>
-          <p>지금까지의 역사에 없던, 어쩌면 지금까지의 모든 역사를 '갈무리하는 마지막 시대'가, 마지막 대전환이 올 것을 정말 작은 심령으로 담대히 외쳤습니다!!!
-          <br/>그런데 마침내 실제로, 우리나라뿐만 아니라, 전 세계 사람들이 인정하는 전 세계적인 대전환이 2020년에 일어났습니다!!
-          <br/>앞으로 이 2020년은 전 세계의 모든 역사책에 크고 상세하게 기록될 것입니다.
-          <br/>이렇게 하나님께서 주도하신 대전환에 분명히 하나님의 크신 목적이 있습니다.
-          <br/>구약의 애굽에서 신약의 광야를 지나온 바로 지금 이때야말로...
-          <br/>하나님의 구원 역사를 완성하시는 "가나안의 시대"라고 확신합니다!!!
-          <br/>세상의 종말과도 맞물린 때이지만, 하나님의 성도들에게는 구원 역사가 완성되는 역사적인 장막절입니다!!!
-          <br/>'열매 맺는 이때', '주 예수의 신부로 서는 이때'에 우리 모두 힘차게 노래하며, '지혜롭고 사랑스러운 다음세대'와 함께 같이 걷기를 기도합니다!!!</p>
-          
-          <p>He lay on hng.</p>
-
-        </div><!-- Col end -->
-
-        <div class="col-lg-6 mt-5 mt-lg-0">
-          
-          <div id="page-slider" class="page-slider small-bg">
-			  <!-- 이미지 사이즈: 555x330 -->
-              <div class="item" style="background-image:url(images/slider-pages/slide-page1.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Leadership</h2>
-                      </div>    
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-
-              <div class="item" style="background-image:url(images/slider-pages/slide-page2.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Relationships</h2>
-                      </div>    
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-
-              <div class="item" style="background-image:url(images/slider-pages/slide-page3.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Performance</h2>
-                      </div>    
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-          </div><!-- Page slider end-->         
-        
-
-        </div><!-- Col end -->
-    </div><!-- Content row end -->
-
-  </div><!-- Container end -->
+    
+	  <!-- 게시판 item -->
+	  <!-- 맨앞에 한두개는 공지 띄우기!! -->
+	  
+	  <!-- 반복 시작 -->
+	  <c:forEach items="${springOfLifeList}" var="spring">
+	  
+      <div class="col-lg-4 col-md-6 mb-5 board-item">
+        <div class="ts-service-box">
+            <div class="d-flex">              
+              <div class="ts-service-info">
+                  <h3 class="service-box-title"><a href="/content_view?id=${spring['id']}">${spring['title']}</a></h3>
+                  <p>
+                  	<span><i class="far fa-user"></i>${spring['nickname']}</span><br/>
+                  	<span class="board-time"><i class="far fa-clock small-i"></i>
+	               		<!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
+						<jsp:useBean id="today" class="java.util.Date" /> 
+						<!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
+						<fmt:formatDate value="${today}" pattern="yyyy.MM.dd" var="now"/>
+						<fmt:formatDate value="${spring['create_date']}" pattern="yyyy.MM.dd" var="date"/>
+						<c:choose>
+							<c:when test="${now ne date}">${date}</c:when> 
+							<c:otherwise>
+								<fmt:formatDate value="${spring['create_date']}" pattern="HH:mm"/>
+							</c:otherwise>
+						</c:choose>
+                  	</span>
+                  	<span class="board-no">번호 0<!-- ${spring['RNUM']} --></span><span class="board-tally">조회수 ${spring['view_tally']}</span>
+                  </p>              
+              </div>
+            </div>
+        </div><!-- Service end -->
+      </div><!-- Col end -->
+      </c:forEach>     
+    </div><!-- Main row end -->
+    
+<!-- paging 페이지 처리 -->
+<!-- pc는 10까지, 모바일은 5까지 -->
+<div class="row paging-row">
+  <div class="paging-row-inner" >
+	<nav class="paging" aria-label="Page navigation example">
+	  <ul class="pagination">
+	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
+	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
+	  </ul>
+	</nav>
+  </div>
+</div><!-- end paging -->
+    
+  </div><!-- Conatiner end -->
 </section><!-- Main container end -->
 
 

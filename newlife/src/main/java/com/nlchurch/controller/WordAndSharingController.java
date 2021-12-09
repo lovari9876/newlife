@@ -32,21 +32,21 @@ public class WordAndSharingController {
 	// 헐몬의 시간 (board)(영상)
 	@RequestMapping(value = "/time-of-hermon", method = RequestMethod.GET)
 	public String timeOfHermon(Model model) throws Exception {
-		return "word-and-sharing/time-of-hermon";
+		return "wordAndSharing/timeOfHermon";
 
 	}
 
 	// 용디기의 생각(board)
 	@RequestMapping(value = "/yongdigi", method = RequestMethod.GET)
 	public String yongdigi(Model model) throws Exception {
-		return "word-and-sharing/yongdigi";
+		return "wordAndSharing/yongdigi";
 
 	}
 
 	// 매일 묵상(board)
 	@RequestMapping(value = "/meditation", method = RequestMethod.GET)
 	public String meditation(Model model) throws Exception {
-		return "word-and-sharing/meditation";
+		return "wordAndSharing/meditation";
 
 	}
 
@@ -91,7 +91,7 @@ public class WordAndSharingController {
 
 		// System.out.println(((SearchCriteria)(pageMaker.getCri())).getSearchType());
 
-		return "word-and-sharing/spring-of-life";
+		return "wordAndSharing/springOfLife";
 
 	}
 

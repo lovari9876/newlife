@@ -53,7 +53,7 @@
 	<!-- font-face -->
 	<link rel="stylesheet" href="css/font-faces.css"> 
 	<!-- Template styles-->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" title="newlife Styles" href="/css/style.css">
 </head>
 
 <body>
@@ -90,49 +90,61 @@
 
 
 <!-- 메인 컨테이너 -->
-<section id="main-container" class="main-container pb-2">
+<section id="main-container" class="main-container pb-2 plain-board">
   <div class="container">
     <div class="row">
     
 	  <!-- 게시판 item -->
-	  <!-- 반복 시작 -->
-	  <c:forEach items="${newsList}" var="news">
+	  <!-- 맨앞에 한두개는 공지 띄우기!! -->
 	  
-      <div class="col-lg-4 col-md-6 mb-5">
+	  <!-- 반복 시작 -->
+	  <c:forEach items="${springOfLifeList}" var="spring">
+	  
+      <div class="col-lg-4 col-md-6 mb-5 board-item">
         <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/video-thumbnails/video-thum-sample.jpg" alt="service-image">
-            </div>
             <div class="d-flex">              
               <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="/content_view?id=${news['id']}">${news['title']}</a></h3>
+                  <h3 class="service-box-title"><a href="/content_view?id=${spring['id']}">${spring['title']}</a></h3>
                   <p>
-                  	<span><i class="fas fa-bible"></i>데살로니가전서 1장 12-15절</span><br/>
-                  	<span><i class="far fa-calendar-check"></i>주일 2부 예배</span><br/>
-                  	<span><i class="fas fa-user"></i>${news['nickname']}</span><br/>
-                  	<span><i class="far fa-clock"></i>
+                  	<span><i class="far fa-user"></i>${spring['nickname']}</span><br/>
+                  	<span class="board-time"><i class="far fa-clock small-i"></i>
 	               		<!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
 						<jsp:useBean id="today" class="java.util.Date" /> 
 						<!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
 						<fmt:formatDate value="${today}" pattern="yyyy.MM.dd" var="now"/>
-						<fmt:formatDate value="${news['create_date']}" pattern="yyyy.MM.dd" var="date"/>
+						<fmt:formatDate value="${spring['create_date']}" pattern="yyyy.MM.dd" var="date"/>
 						<c:choose>
 							<c:when test="${now ne date}">${date}</c:when> 
 							<c:otherwise>
-								<fmt:formatDate value="${news['create_date']}" pattern="HH:mm"/>
+								<fmt:formatDate value="${spring['create_date']}" pattern="HH:mm"/>
 							</c:otherwise>
 						</c:choose>
-                  	</span><br/>
-                  	<span class="board-no">번호 0<!-- ${news['RNUM']} --></span><span class="board-tally">조회수 500</span>
+                  	</span>
+                  	<span class="board-no">번호 0<!-- ${spring['RNUM']} --></span><span class="board-tally">조회수 ${spring['view_tally']}</span>
                   </p>              
               </div>
             </div>
         </div><!-- Service end -->
       </div><!-- Col end -->
-      </c:forEach>
-
-     
+      </c:forEach>     
     </div><!-- Main row end -->
+    
+<!-- paging 페이지 처리 -->
+<!-- pc는 10까지, 모바일은 5까지 -->
+<div class="row paging-row">
+  <div class="paging-row-inner" >
+	<nav class="paging" aria-label="Page navigation example">
+	  <ul class="pagination">
+	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
+	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
+	  </ul>
+	</nav>
+  </div>
+</div><!-- end paging -->
+    
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
 
