@@ -23,7 +23,7 @@ body {
 }
 
 body, p {
-	font-family: "Open Sans", sans-serif;
+	font-family: 'twayair', sans-serif;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased !important;
 	line-height: 26px;
@@ -32,8 +32,8 @@ body, p {
 
 h1, h2, h3, h4, h5, h6 {
 	color: #212121;
-	font-weight: 700;
-	font-family: 'Montserrat', sans-serif;
+	font-weight: normal; /* twayair는 이미 굵어-굵기 조절 시 깨짐 */
+	font-family: 'twayair', sans-serif;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased !important;
 }
@@ -391,8 +391,47 @@ blockquote {
 	padding-left: 40px;
 }
 
+/* 작은 크기의 강조 글귀들 */
+blockquote.green-quote {
+	padding: 5px 10px;
+	margin: 0 0 1rem 0; /* bottom만 */
+	background: #28a7451a;
+	position: relative;
+	border-left: 3px solid #28a745;
+	font-style: normal;
+	font-family: ;
+}
+
+blockquote.blue-quote {
+	padding: 5px 10px;
+	margin: 0 0 1rem 0; /* bottom만 */
+	background: #3c98e421;
+	position: relative;
+	border-left: 3px solid #3c98e4;
+	font-style: normal;
+	font-family: ;
+}
+
+blockquote.red-quote {
+	padding: 5px 10px;
+	margin: 0 0 1rem 0; /* bottom만 */
+	background: #ef7c8e1f;
+	position: relative;
+	border-left: 3px solid #EF7C8E;
+	font-style: normal;
+	font-family: ;
+}
+
+/* 큰따옴표 아이콘 없애기 */
+blockquote.green-quote:before 
+, blockquote.blue-quote:before
+, blockquote.red-quote:before {
+	content:none;
+}
+
 blockquote p.large-quote {
 	font-size:20px;
+	font-style: normal;
 }
 
 blockquote.text-center {
@@ -1742,6 +1781,7 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
 
 .service-box-title a {
 	color: #333;
+	font-weight: normal; /* twayair로 font 정하면 원래 굵은데 굵기 주면..깨진다 */
 }
 
 .service-box-title a:hover {
@@ -2659,16 +2699,16 @@ img.testimonial-thumb {
 .banner-area {
 	position: relative;
 	min-height: 150px;
-	color: #fff;
+	color: #525252;
 	background-position: 50% 50%;
 	background-size: cover;
 }
 
 .banner-title {
-	color: #fff;
+	color: #525252;
 	text-transform: uppercase;
 	font-size: 43px;
-	font-weight: 900;
+	font-weight: normal;
 }
 
 @media ( max-width : 767px) {
@@ -2707,18 +2747,18 @@ img.testimonial-thumb {
 .breadcrumb {
 	padding: 0;
 	background: none;
-	font-weight: 700;
+	font-weight: normal;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .breadcrumb li a, .breadcrumb .breadcrumb-item, .breadcrumb li a:focus,
 	.breadcrumb li a:hover {
-	color: #fff !important;
+	color: #343434 !important;
 }
 
-.breadcrumb .breadcrumb-item+.breadcrumb-item::before {
-	color: #fff;
+.breadcrumb .breadcrumb-item+.breadcrumb-item::before { /* slash */
+	color: #37373;
 }
 
 /* 배너 높이 150px로 조정하면서 마진 없앰 */
@@ -2728,6 +2768,7 @@ ol.breadcrumb.justify-content-center {
 
 /*-- About us page --*/
 /* Slider pages */
+/* 사진 슬라이더임.. */
 .page-slider .carousel-control {
 	position: absolute;
 	top: 50%;
@@ -2743,6 +2784,15 @@ ol.breadcrumb.justify-content-center {
 	border: 0;
 }
 
+.slick-slide {
+   height:200px;
+}
+
+.slick-slide img {
+   height:200px;
+}
+
+/* 양 옆 화살표 버튼 */
 .page-slider .carousel-control.left {
 	left: 0;
 }
@@ -2752,7 +2802,6 @@ ol.breadcrumb.justify-content-center {
 }
 
 .page-slider .carousel-control i {
-	background: rgba(0, 0, 0, 0.3);
 	color: #fff;
 	line-height: 70px;
 	width: 40px;
@@ -2763,13 +2812,21 @@ ol.breadcrumb.justify-content-center {
 }
 
 .page-slider .carousel-control i:hover {
-	background: #387fff;
-	color: #fff;
+	color: #343a40;
 }
 
+/* 인사말 이미지 */
 .page-slider.small-bg .item {
-	min-height: 330px;
+	height: 43vw; /* 보이는 화면의 0.43 */
+    max-height: 600px; /* 사진 원본크기 */
 	background-size: cover;
+}
+
+/* 이미지 아래로 내려간 다음 */
+@media ( max-width : 991px) {
+	.page-slider.small-bg .item {
+		height: 85vw; /* 보이는 화면의 0.9 */
+	}
 }
 
 .page-slider.small-bg .box-slider-content {
@@ -2786,6 +2843,24 @@ ol.breadcrumb.justify-content-center {
 	color: #fff;
 	font-weight: 900;
 }
+
+/* 이미지 아래의 이름칸 */
+.who-i-am {
+	margin: 20px;
+    text-align: right;
+    
+}
+
+.who-i-am p {
+	font-size: 17px;
+}
+
+.who-i-am p .who {
+	font-size: 22px;
+    color: black;
+    margin-left: 10px;
+}
+
 
 /*-- Get a quote page --*/
 .page-quote-form {
@@ -3639,4 +3714,11 @@ table {
 	background-color: white;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* ===== 상세페이지 =========== */
+.text-green {
+	color: #028900;	
+}
+
+
 

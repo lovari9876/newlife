@@ -94,57 +94,34 @@
   <div class="container">
     <div class="row">
         <div class="col-lg-6">
-          <h3 class="column-title">welcome</h3>
-          <blockquote><p class="large-quote">이전에 없었던 노래로 나 주님을 경배해!!</p></blockquote>
+          <h3 class="column-title">이전에 없었던 노래로 나 주님을 경배해!!</h3>
           <p>지금까지의 역사에 없던, 어쩌면 지금까지의 모든 역사를 '갈무리하는 마지막 시대'가, 마지막 대전환이 올 것을 정말 작은 심령으로 담대히 외쳤습니다!!!
-          <br/>그런데 마침내 실제로, 우리나라뿐만 아니라, 전 세계 사람들이 인정하는 전 세계적인 대전환이 2020년에 일어났습니다!!
-          <br/>앞으로 이 2020년은 전 세계의 모든 역사책에 크고 상세하게 기록될 것입니다.
-          <br/>이렇게 하나님께서 주도하신 대전환에 분명히 하나님의 크신 목적이 있습니다.
-          <br/>구약의 애굽에서 신약의 광야를 지나온 바로 지금 이때야말로...
-          <br/>하나님의 구원 역사를 완성하시는 "가나안의 시대"라고 확신합니다!!!
-          <br/>세상의 종말과도 맞물린 때이지만, 하나님의 성도들에게는 구원 역사가 완성되는 역사적인 장막절입니다!!!
-          <br/>'열매 맺는 이때', '주 예수의 신부로 서는 이때'에 우리 모두 힘차게 노래하며, '지혜롭고 사랑스러운 다음세대'와 함께 같이 걷기를 기도합니다!!!</p>
-          
-          <p>He lay on hng.</p>
+          <br><br/>그런데 마침내 실제로, 우리나라뿐만 아니라, 전 세계 사람들이 인정하는 전 세계적인 대전환이 2020년에 일어났습니다!!</p>
+          <blockquote class="green-quote"><p>앞으로 이 2020년은 전 세계의 모든 역사책에 크고 상세하게 기록될 것입니다.</p></blockquote>
+          <br/><p>이렇게 하나님께서 주도하신 대전환에 분명히 하나님의 크신 목적이 있습니다.</p>
+          <br><blockquote class="blue-quote"><p>구약의 애굽에서 신약의 광야를 지나온 바로 지금 이때야말로...
+          <br/>하나님의 구원 역사를 완성하시는 "가나안의 시대"라고 확신합니다!!!</p></blockquote>
+          <br><p>세상의 종말과도 맞물린 때이지만, 하나님의 성도들에게는 구원 역사가 완성되는 역사적인 장막절입니다!!!</p>
+          <br><blockquote class="red-quote"><p>'열매 맺는 이때', '주 예수의 신부로 서는 이때'에 우리 모두 힘차게 노래하며, '지혜롭고 사랑스러운 다음세대'와 함께 같이 걷기를 기도합니다!!!</p></blockquote>
+		</div><!-- Col end -->
 
-        </div><!-- Col end -->
-
-        <div class="col-lg-6 mt-5 mt-lg-0">
-          
+		<!-- 이미지 carrousel -->
+        <div class="col-lg-6 mt-5 mt-lg-0">          
           <div id="page-slider" class="page-slider small-bg">
 			  <!-- 이미지 사이즈: 555x330 -->
-              <div class="item" style="background-image:url(images/slider-pages/slide-page1.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Leadership</h2>
-                      </div>    
-                    </div>
-                </div>
+              <div class="item" style="background-image:url(images/introduction/yongduck1.png)">
               </div><!-- Item 1 end -->
 
-              <div class="item" style="background-image:url(images/slider-pages/slide-page2.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Relationships</h2>
-                      </div>    
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
+              <div class="item" style="background-image:url(images/introduction/yongduck2.png)">
+              </div><!-- Item 2 end -->
 
-              <div class="item" style="background-image:url(images/slider-pages/slide-page3.jpg)">
-                <div class="container">
-                    <div class="box-slider-content">
-                      <div class="box-slider-text">
-                          <h2 class="box-slide-title">Performance</h2>
-                      </div>    
-                    </div>
-                </div>
-              </div><!-- Item 1 end -->
-          </div><!-- Page slider end-->         
-        
-
+              <div class="item" style="background-image:url(images/introduction/yongduck3.png)">
+              </div><!-- Item 3 end -->
+          </div><!-- Page slider end-->        
+          <div class="who-i-am">
+          	<p><span>새생활 예배 섬김이</span><span class="who">김용덕 목사</span></p>
+          </div>
+          
         </div><!-- Col end -->
     </div><!-- Content row end -->
 
