@@ -29,9 +29,9 @@ public class IntroductionController {
 	}
 
 	// 목회철학
-	@RequestMapping(value = "/statementOfFaith", method = RequestMethod.GET)
+	@RequestMapping(value = "/statement-of-faith", method = RequestMethod.GET)
 	public String statementOfFaith(Model model) throws Exception {
-		return "introduction/statement-of-faith";
+		return "introduction/statementOfFaith";
 
 	}
 
@@ -43,9 +43,9 @@ public class IntroductionController {
 	}
 
 	// 예배시간(예배안내)
-	@RequestMapping(value = "/serviceTime", method = RequestMethod.GET)
+	@RequestMapping(value = "/service-time", method = RequestMethod.GET)
 	public String serviceTime(Model model) throws Exception {
-		return "introduction/service-time";
+		return "introduction/serviceTime";
 
 	}
 

@@ -26,8 +26,8 @@ body, p {
 	font-family: 'twayair', sans-serif;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased !important;
-	line-height: 26px;
-	font-size: 15px;
+	line-height: 25px;
+	font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -473,8 +473,7 @@ blockquote:before {
 }
 
 blockquote p {
-	font-size: 14px;
-	line-height: 22px;
+	line-height: 24px;
 	position: relative;
 	z-index: 1;
 	font-style: italic;
@@ -1917,7 +1916,7 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
 }
 
 .ts-service-info h3 {
-	font-size: 16px;
+	font-size: 17px;
 }
 
 .ts-service-info .learn-more {
@@ -2702,6 +2701,12 @@ img.testimonial-thumb {
 	color: #525252;
 	background-position: 50% 50%;
 	background-size: cover;
+	background: url('../images/banner/banner-river.png') no-repeat center;
+}
+
+/* parallax: background image fix */
+banner-fixed {	
+	background-attachment : fixed;
 }
 
 .banner-title {
@@ -2852,11 +2857,11 @@ ol.breadcrumb.justify-content-center {
 }
 
 .who-i-am p {
-	font-size: 17px;
+	font-size: 19px;
 }
 
 .who-i-am p .who {
-	font-size: 22px;
+	font-size: 24px;
     color: black;
     margin-left: 10px;
 }
@@ -3676,6 +3681,7 @@ table {
 /* span으로 나눠진 본문 */
 .board-item p {
 	margin-bottom: 15px;
+	line-height: 23px;
 }
 
 /* 작성일, 번호, 조회수 : in a line */
@@ -3721,4 +3727,60 @@ table {
 }
 
 
+/* mission-box - for mission...
+================================================== */
 
+.faith-container, .mission-container {
+	color: #6f6f6f;
+}
+
+.faith-container .title, .mission-container .title {
+	color: #585858;
+}
+
+@media ( max-width : 767px) {
+	.faith-container .title, .mission-container .title {
+		font-size: 26px;
+	}	
+}
+
+@media ( max-width : 575px) {
+	.faith-container .title, .mission-container .title {
+		font-size: 23px;
+	}	
+}
+
+/* mission-container에만 배경색 연하게 */
+section.mission-container {
+    background-color: #6495ed21;
+}
+
+/* mission-box */
+.mission-box {
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    position: relative;
+ 	margin-bottom:30px;
+}
+
+.mission-box .small-title {
+	color: #6495ed;
+	font-size: 23px;
+	margin-bottom: 5px;
+	
+}
+
+@media ( max-width : 767px) {
+	.mission-box .small-title {
+		font-size: 20px;
+	}
+}
+
+
+.mission-box .sub-title {
+	color: #99beff;
+	margin-bottom: 18px;
+}

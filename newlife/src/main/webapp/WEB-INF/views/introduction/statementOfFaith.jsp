@@ -53,13 +53,8 @@
 	<!-- font-face -->
 	<link rel="stylesheet" href="css/font-faces.css"> 
 	<!-- Template styles-->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Table -->
-	<link rel="stylesheet" href="css/board.css">
-
+	<link rel="stylesheet" type="text/css" title="newlife Styles" href="/css/style.css">
 </head>
-
-<!-- services view -->
 
 <body>
 <div class="body-inner">
@@ -72,18 +67,18 @@
 <!--**********************************
       	배너부분
 ***********************************-->
-<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner-river.png)">
+<div id="banner-area" class="banner-area banner-fixed">
   <div class="banner-text">
     <div class="container">
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">공지사항</h1>
+                <h1 class="banner-title">목회 철학</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-                      <li class="breadcrumb-item"><a href="#">새생활뉴스</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">공지사항</li>
+                      <li class="breadcrumb-item"><a href="#">교회 소개</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">목회 철학</li>
                     </ol>
                 </nav>
               </div>
@@ -93,192 +88,65 @@
   </div><!-- Banner text end -->
 </div><!-- Banner area end --> 
 
-<script type="text/javascript">
-	$(function () {
-	
-	    // Initate masonry grid
-	    var $grid = $('.gallery-wrapper').masonry({
-	        temSelector: '.grid-item',
-	        columnWidth: '.grid-sizer',
-	        percentPosition: true,
-	    });
-	
-	    // Initate imagesLoaded
-	    $grid.imagesLoaded().progress( function() {
-	        $grid.masonry('layout');
-	    });
-	    
-	});
-</script>
 
-<!-- 메인 컨테이너 -->
-<section class="pb-5">
-    <div class="container text-center">
-<!--     <div class="row" >
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-        	글에 딸린 썸네일 이미지
-            
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service1.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              글 앞에 아이콘!!  
-              
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon1.png" alt="service-icon">
-              </div> 
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">Zero Harm Everyday</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div>Service1 end
-      </div>Col 1 end
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service2.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon2.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">Virtual Construction</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div>Service2 end
-      </div>Col 2 end
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service3.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon3.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">Build To Last</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div>Service3 end
-      </div>Col 3 end
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service4.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon4.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">EXTERIOR DESIGN</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div>Service1 end
-      </div>Col 4 end
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service5.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon5.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">RENOVATION</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div>Service2 end
-      </div>Col 5 end
-
-      <div class="col-lg-4 col-md-6 mb-5">
-        <div class="ts-service-box">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/services/service6.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">
-              <div class="ts-service-box-img">
-                  <img loading="lazy" src="images/icon-image/service-icon6.png" alt="service-icon">
-              </div>
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="service-single.html">SAFETY MANAGEMENT</a></h3>
-                  <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                  <a class="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
-              </div>
-            </div>
-        </div>Service3 end
-      </div>Col 6 end
-
-    </div>Main row end -->
+<!-- 교회소개 컨테이너 -->
+<section class="faith-container">
+  <div class="container">  
+  	<!-- 교회소개 row -->
+    <div class="row text-center">
+      <div class="col-12">
+        <div class="title column-title">새생활교회는</div>
+        <p>이땅에 아름다운 하나님의 나라를 세우기 위하여 1985년 2월 10일에 창립된 교회입니다. 우리 교회는 성경을 정확무오한 하나님의 말씀으로 믿으며, 그 성경을 바탕으로 하여 하나님을 신실하게 예배하며, 예수 그리스도께서 우리를 위하여 십자가에 죽으심과 우리를 위하여 부활하심 위에 세워진 그리스도의 제자 공동체입니다.</p>
+      </div><!-- Col end -->		
+    </div><!-- Content row end -->
+  </div>
+</section>
     
-           <!-- Masonry grid -->
-        <div class="gallery-wrapper">
-            <!-- Grid sizer -->
-            <div class="grid-sizer col-lg-4 col-md-6"></div>
-            
-            <!-- Grid item -->
-            <div class="col-lg-4 col-md-6 grid-item mb-4">
-                <img class="img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="https://bootstrapious.com/i/snippets/sn-masonry/grid-item-1.png" alt="">
-                <h2 class="h4">Masonry grid item</h2>
-                <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<section class="mission-container">
+  <div class="container">
+  	<!-- title row -->  
+    <div class="row text-center">
+       <div class="col-12">
+          <div class="title column-title">우리 교회가 소망하며 이루고자 하는 정체성과 목적은</div>
+       </div>
+    </div>
+    <!--/ Title row end -->
+	
+	<!-- mission row -->
+    <div class="row">    
+      <div class="col-lg-4 col-md-6">  
+        <div class="mission-box">
+           <div>             	
+	          <div class="small-title">새생활</div>
+	          <div class="sub-title">New Jesus Life</div>                
+               <div>세상적인 흐름대로 사는 삶 보다는 넓고 깊고 높은 예수 그리스도 뜻을 생활 속에서 구체적으로 실현하는 삶을 살고자 합니다.</div>
             </div>
-            
-            <!-- Grid item -->
-            <div class="col-lg-4 col-md-6 grid-item mb-4">
-                <img class="img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="https://bootstrapious.com/i/snippets/sn-masonry/grid-item-2.png" alt="">
-                <h2 class="h4">Masonry grid item</h2>
-                <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div><!-- Quote item end -->
+       </div><!-- End col md 4 -->
+
+       <div class="col-lg-4 col-md-6">
+          <div class="mission-box">
+             <div>
+      		   <div class="small-title">새비전</div>
+               <div class="sub-title">New Jesus Vision</div>
+			   <div>내 인생의 목적만을 이루는 삶 보다는 나와 가정과 이웃에게 공통적인 유익을 줄 수 있는 목적을 이루기 위하여, 인간의 전인적 구원을 추구하고, 화평한 믿음의 가정, 희망적이고도 거룩한 문화 를 이 세대에 이루어 가고자 합니다.</div>
             </div>
-            
-            <!-- Grid item -->
-            <div class="col-lg-4 col-md-6 grid-item mb-4">
-                <img class="img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="https://bootstrapious.com/i/snippets/sn-masonry/grid-item-3.png" alt="">
-                <h2 class="h4">Masonry grid item</h2>
-                <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div><!-- Quote item end -->
+       </div><!-- End col md 4 -->
+       
+       <div class="col-lg-4 col-md-6">
+          <div class="mission-box">
+             <div>
+               <div class="small-title">새세대</div>
+               <div class="sub-title">New Jesus Generation</div>
+               <div>우리 세대만이 아닌 우리의 다음 세대도 하나님의 복과 은혜, 약속, 사명을 계승하여 더욱 더 발전되고 창대케 되는 하나님의 나라를 만들어 가는 것을 소원합니다.</div>
             </div>
-            
-            <!-- Grid item -->
-            <div class="col-lg-4 col-md-6 grid-item mb-4">
-                <img class="img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="https://bootstrapious.com/i/snippets/sn-masonry/grid-item-4.png" alt="">
-                <h2 class="h4">Masonry grid item</h2>
-                <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            
-            <!-- Grid item -->
-            <div class="col-lg-4 col-md-6 grid-item mb-4">
-                <img class="img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="https://bootstrapious.com/i/snippets/sn-masonry/grid-item-5.png" alt="">
-                <h2 class="h4">Masonry grid item</h2>
-                <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            
-            <!-- Grid item -->
-            <div class="col-lg-4 col-md-6 grid-item mb-4">
-                <img class="img-fluid w-100 mb-3 img-thumbnail shadow-sm rounded-0" src="https://bootstrapious.com/i/snippets/sn-masonry/grid-item-6.png" alt="">
-                <h2 class="h4">Masonry grid item</h2>
-                <p class="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
-    
-  </div><!-- Conatiner end -->
+         </div><!-- Quote item end -->
+       </div><!-- End col md 4 -->
+       
+    </div><!-- Content row end -->
+  </div><!-- Container end -->
 </section><!-- Main container end -->
 
 
@@ -301,13 +169,6 @@
 <script src="plugins/colorbox/jquery.colorbox.js"></script>
 <!-- shuffle -->
 <script src="plugins/shuffle/shuffle.min.js" defer></script>
-
-
-
-<!-- Google Map API Key-->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
-<!-- Google Map Plugin-->
-<script src="plugins/google-map/map.js" defer></script>
 
 <!-- Template custom -->
 <script src="js/script.js"></script>

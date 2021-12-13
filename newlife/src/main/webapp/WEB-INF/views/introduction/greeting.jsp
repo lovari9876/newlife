@@ -73,7 +73,7 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">공지사항</h1>
+                <h1 class="banner-title">인사말</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
