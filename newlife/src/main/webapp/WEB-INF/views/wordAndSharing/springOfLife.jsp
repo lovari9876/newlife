@@ -101,7 +101,7 @@
 	  <c:forEach items="${springOfLifeList}" var="spring">
 	  
       <div class="col-lg-4 col-md-6 mb-5 board-item">
-        <div class="ts-service-box">
+        <div class="ts-service-box h-100">
             <div class="d-flex">              
               <div class="ts-service-info">
                   <h3 class="service-box-title"><a href="/content_view?id=${spring['id']}">${spring['title']}</a></h3>

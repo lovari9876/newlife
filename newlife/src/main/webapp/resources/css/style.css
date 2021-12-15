@@ -3661,7 +3661,7 @@ label {
 새생활교회 사이트를 위해 템플릿을 기본으로 추가하고 수정한 부분들
 -------------------------------------------------------------------*/
 
-/* 이미지 아래의 이름칸 
+/* 이미지 아래의 이름칸 , small-title 박스
 ================================================== */
 .who-i-am {
 	margin: 20px;
@@ -3678,6 +3678,11 @@ label {
 	font-size: 22px;
     color: black;
     margin-left: 10px;
+}
+
+.small-title {
+	font-size: 23px;
+	margin-bottom: 5px;	
 }
 
 
@@ -3815,6 +3820,10 @@ table {
 
 
 /* mission-box */
+.mission-box-wrap {	
+ 	margin-bottom:30px;	
+}
+
 .mission-box {
     display: block;
     border-radius: 4px;
@@ -3822,12 +3831,6 @@ table {
     background: #fff;
     padding: 20px;
     position: relative;
- 	margin-bottom:30px;
-}
-
-.small-title {
-	font-size: 23px;
-	margin-bottom: 5px;	
 }
 
 /* books container typography */
@@ -3906,4 +3909,20 @@ table {
 .call-wrap p {
 	color: #666;
 }
+
+/* ==================================================
+	for Map page
+================================================== */
+
+/* kakao map custom overlay 박스 */
+.map-overlay {
+	padding: 0 5px;
+    background: #adcaff;
+    color: #333;
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;	
+}
+
+
+
 

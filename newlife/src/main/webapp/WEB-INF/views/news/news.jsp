@@ -73,12 +73,11 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">공지사항</h1>
+                <h1 class="banner-title">새생활뉴스</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-                      <li class="breadcrumb-item"><a href="#">새생활뉴스</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">공지사항</li>
+                      <li class="breadcrumb-item active" aria-current="page">새생활뉴스</li>
                     </ol>
                 </nav>
               </div>
@@ -99,7 +98,7 @@
 	  <c:forEach items="${newsList}" var="news">
 	  
       <div class="col-lg-4 col-md-6 mb-5 board-item">
-        <div class="ts-service-box">
+        <div class="ts-service-box h-100">
             <div class="ts-service-image-wrapper">
               <img loading="lazy" class="w-100" src="images/video-thumbnails/video-thum-sample.jpg" alt="service-image">
             </div>

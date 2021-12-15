@@ -115,8 +115,8 @@
 	
 	<!-- mission row -->
     <div class="row">    
-      <div class="col-lg-4 col-md-6">  
-        <div class="mission-box">
+      <div class="col-lg-4 col-md-6 mission-box-wrap">  
+         <div class="mission-box h-100"> <!-- h-100은 마법의 bootstrap 클래스..높이를 맞춰준다 ㅠㅠ -->
            <div>             	
 	          <div class="small-title cornflowerblue">새생활</div>
 	          <div class="sub-title">New Jesus Life</div>                
@@ -125,8 +125,8 @@
           </div><!-- Quote item end -->
        </div><!-- End col md 4 -->
 
-       <div class="col-lg-4 col-md-6">
-          <div class="mission-box">
+       <div class="col-lg-4 col-md-6 mission-box-wrap">
+          <div class="mission-box h-100">
              <div>
       		   <div class="small-title cornflowerblue">새비전</div>
                <div class="sub-title">New Jesus Vision</div>
@@ -135,8 +135,8 @@
           </div><!-- Quote item end -->
        </div><!-- End col md 4 -->
        
-       <div class="col-lg-4 col-md-6">
-          <div class="mission-box">
+       <div class="col-lg-4 col-md-6 mission-box-wrap">
+          <div class="mission-box h-100">
              <div>
                <div class="small-title cornflowerblue">새세대</div>
                <div class="sub-title">New Jesus Generation</div>
@@ -152,7 +152,7 @@
 
 <!-- footer include start -->
 <%@ include file="/WEB-INF/views/parts/footer.jsp" %>
-<!-- footerinclude end -->
+<!-- footer include end -->
 
 
 <!-- Javascript Files

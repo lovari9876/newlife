@@ -206,7 +206,7 @@
 
 <!-- footer include start -->
 <%@ include file="/WEB-INF/views/parts/footer.jsp" %>
-<!-- footerinclude end -->
+<!-- footer include end -->
 
 
 <!-- Javascript Files
