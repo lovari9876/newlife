@@ -67,7 +67,7 @@
 <!--**********************************
       	배너부분
 ***********************************-->
-<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner-river.png)">
+<div id="banner-area" class="banner-area">
   <div class="banner-text">
     <div class="container">
         <div class="row">
@@ -90,10 +90,10 @@
 
 
 <!-- 메인 컨테이너 -->
-<section id="main-container" class="main-container">
+<section id="main-container" class="main-container greeting-container">
   <div class="container">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-8">
           <h3 class="column-title">이전에 없었던 노래로 나 주님을 경배해!!</h3>
           <p>지금까지의 역사에 없던, 어쩌면 지금까지의 모든 역사를 '갈무리하는 마지막 시대'가, 마지막 대전환이 올 것을 정말 작은 심령으로 담대히 외쳤습니다!!!
           <br><br/>그런데 마침내 실제로, 우리나라뿐만 아니라, 전 세계 사람들이 인정하는 전 세계적인 대전환이 2020년에 일어났습니다!!</p>
@@ -106,16 +106,16 @@
 		</div><!-- Col end -->
 
 		<!-- 이미지 carrousel -->
-        <div class="col-lg-6 mt-5 mt-lg-0">          
+        <div class="col-lg-4 mt-5 mt-lg-0">          
           <div id="page-slider" class="page-slider small-bg">
 			  <!-- 이미지 사이즈: 555x330 -->
-              <div class="item" style="background-image:url(images/introduction/yongduck1.png)">
+              <div class="item" style="background-image:url(images/introduction/greeting/yongduck1.png)">
               </div><!-- Item 1 end -->
 
-              <div class="item" style="background-image:url(images/introduction/yongduck2.png)">
+              <div class="item" style="background-image:url(images/introduction/greeting/yongduck2.png)">
               </div><!-- Item 2 end -->
 
-              <div class="item" style="background-image:url(images/introduction/yongduck3.png)">
+              <div class="item" style="background-image:url(images/introduction/greeting/yongduck3.png)">
               </div><!-- Item 3 end -->
           </div><!-- Page slider end-->        
           <div class="who-i-am">

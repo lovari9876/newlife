@@ -156,7 +156,7 @@ jQuery(function ($) {
 		// pageSlider
 		function pageSlider() {
 			$('.page-slider').slick({
-				adaptiveHeight: true,
+				variablewidth: true,
 				fade: true,
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -169,8 +169,6 @@ jQuery(function ($) {
 			});
 			
 		}
-		
-		
 		pageSlider();
 
 

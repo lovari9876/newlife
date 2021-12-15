@@ -73,6 +73,11 @@ h5 {
 	margin-right: 15px;
 }
 
+mark {
+	background-color: #6495ed3d;
+	color: #333;
+}
+
 /* Global styles
 ================================================== */
 html {
@@ -2790,11 +2795,13 @@ ol.breadcrumb.justify-content-center {
 }
 
 .slick-slide {
-   height:200px;
+   width: 100%;
+   height: auto;
 }
 
 .slick-slide img {
-   height:200px;
+   width: 100%;   
+   height: auto;
 }
 
 /* 양 옆 화살표 버튼 */
@@ -2821,18 +2828,39 @@ ol.breadcrumb.justify-content-center {
 }
 
 /* 인사말 이미지 */
-.page-slider.small-bg .item {
-	height: 43vw; /* 보이는 화면의 0.43 */
+.greeting-container .page-slider.small-bg .item {
+	height: 25vw; /* 보이는 화면의 0.30 */
     max-height: 600px; /* 사진 원본크기 */
 	background-size: cover;
 }
 
 /* 이미지 아래로 내려간 다음 */
 @media ( max-width : 991px) {
-	.page-slider.small-bg .item {
+	.greeting-container .page-slider.small-bg .item {
+		height: 70vw; /* 보이는 화면의 0.9 */
+	}
+}
+
+@media ( max-width : 767px) {
+	.greeting-container .page-slider.small-bg .item {
 		height: 85vw; /* 보이는 화면의 0.9 */
 	}
 }
+
+
+/* books slider: 안쓸거.. 개빡침 */
+/*
+.slick-slider {
+	height: auto;
+	max-height: 300%;
+}
+
+.item.slick-slide {
+	height: calc((33vw - 45px) * 1.3825);
+	width: calc(33vw - 45px);	
+	background-size: cover;
+}
+*/
 
 .page-slider.small-bg .box-slider-content {
 	left: 20%;
@@ -2848,24 +2876,6 @@ ol.breadcrumb.justify-content-center {
 	color: #fff;
 	font-weight: 900;
 }
-
-/* 이미지 아래의 이름칸 */
-.who-i-am {
-	margin: 20px;
-    text-align: right;
-    
-}
-
-.who-i-am p {
-	font-size: 19px;
-}
-
-.who-i-am p .who {
-	font-size: 24px;
-    color: black;
-    margin-left: 10px;
-}
-
 
 /*-- Get a quote page --*/
 .page-quote-form {
@@ -3651,6 +3661,61 @@ label {
 새생활교회 사이트를 위해 템플릿을 기본으로 추가하고 수정한 부분들
 -------------------------------------------------------------------*/
 
+/* 이미지 아래의 이름칸 
+================================================== */
+.who-i-am {
+	margin: 20px;
+	margin-right: 0;
+    text-align: right;
+    font-size: 18px;
+}
+
+.who-i-am p {
+	font-size: 18px;
+}
+
+.who-i-am .who {
+	font-size: 22px;
+    color: black;
+    margin-left: 10px;
+}
+
+
+/* background colors
+================================================== */
+.background-light-gray {
+	background-color: #e3e3e67a;
+}
+
+/* mission-container에만 배경색 연하게 */
+.background-ice-blue {
+    background-color: #6495ed21;
+}
+
+.background-bride-pink {
+	background-color: #d8bfd83d; /* 연분홍 */
+}
+
+
+/* font colors
+================================================== */
+.call-gray {
+	color: #6c757d !important;	
+}
+
+.bride-pink { 
+	color: #b17fb1 !important;
+}
+
+.hermon-green {
+	color: #28a745 !important;
+}
+
+.cornflowerblue {
+	color: #6495ed !important;
+}
+
+
 /* Table style
 ================================================== */
 table {
@@ -3721,13 +3786,11 @@ table {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* ===== 상세페이지 =========== */
-.text-green {
-	color: #028900;	
-}
 
-
-/* mission-box - for mission...
+/* ==================================================
+	mission-container
+    faith-container
+    books-container
 ================================================== */
 
 .faith-container, .mission-container {
@@ -3750,10 +3813,6 @@ table {
 	}	
 }
 
-/* mission-container에만 배경색 연하게 */
-section.mission-container {
-    background-color: #6495ed21;
-}
 
 /* mission-box */
 .mission-box {
@@ -3766,21 +3825,85 @@ section.mission-container {
  	margin-bottom:30px;
 }
 
-.mission-box .small-title {
-	color: #6495ed;
+.small-title {
 	font-size: 23px;
-	margin-bottom: 5px;
-	
+	margin-bottom: 5px;	
 }
 
-@media ( max-width : 767px) {
-	.mission-box .small-title {
-		font-size: 20px;
+/* books container typography */
+.books-container .title {
+	text-align: center;
+	color: #585858;
+}
+
+.books-container .small-title {
+	margin-bottom: 25px;	
+}
+
+@media ( max-width : 991px) {
+	.books-container .small-title {
+	    font-size: 20px;
+	    margin-bottom: 15px;
 	}
 }
 
+@media ( max-width : 767px) {
+	.mission-box .small-title .books-container .small-title {
+		font-size: 20px;
+	}
+}
 
 .mission-box .sub-title {
 	color: #99beff;
 	margin-bottom: 18px;
 }
+
+/* for book image */
+.books-container .book-img-wrap {
+   	padding-right: 30px;
+    margin-bottom: 40px;
+}
+
+.books-container .book-img {
+    width: -webkit-fill-available;
+}
+
+@media ( max-width : 767px) {
+	.books-container .book-img-wrap {
+		text-align: center;
+    	padding-right: 15px; /* 부트스트랩 설정대로 돌아가기 */
+	}
+
+}
+
+@media ( max-width : 576px) {
+	.books-container .book-img {
+	    width: 256px; /* 보기에 나쁘지 않은 정도 */
+	}		
+}
+
+@media ( max-width: 350px ) { /* 작은 폰.. */
+	.books-container .book-img {
+	    width: 80vw;
+	}
+}
+
+.bible-where {
+    font-size: 14px;
+    color: #5a8ce6;
+}
+
+
+/* call-box */
+.call-wrap {
+	padding: 30px 40px;
+	margin: 30px 0;
+	background-color: #fff;	
+	border: 2px solid  rgba(0, 0, 0, 0.1);
+	box-shadow: -10px -9px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.call-wrap p {
+	color: #666;
+}
+

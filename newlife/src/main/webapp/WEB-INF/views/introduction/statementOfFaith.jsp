@@ -103,7 +103,7 @@
 </section>
     
 
-<section class="mission-container">
+<section class="mission-container background-ice-blue">
   <div class="container">
   	<!-- title row -->  
     <div class="row text-center">
@@ -118,7 +118,7 @@
       <div class="col-lg-4 col-md-6">  
         <div class="mission-box">
            <div>             	
-	          <div class="small-title">새생활</div>
+	          <div class="small-title cornflowerblue">새생활</div>
 	          <div class="sub-title">New Jesus Life</div>                
                <div>세상적인 흐름대로 사는 삶 보다는 넓고 깊고 높은 예수 그리스도 뜻을 생활 속에서 구체적으로 실현하는 삶을 살고자 합니다.</div>
             </div>
@@ -128,7 +128,7 @@
        <div class="col-lg-4 col-md-6">
           <div class="mission-box">
              <div>
-      		   <div class="small-title">새비전</div>
+      		   <div class="small-title cornflowerblue">새비전</div>
                <div class="sub-title">New Jesus Vision</div>
 			   <div>내 인생의 목적만을 이루는 삶 보다는 나와 가정과 이웃에게 공통적인 유익을 줄 수 있는 목적을 이루기 위하여, 인간의 전인적 구원을 추구하고, 화평한 믿음의 가정, 희망적이고도 거룩한 문화 를 이 세대에 이루어 가고자 합니다.</div>
             </div>
@@ -138,7 +138,7 @@
        <div class="col-lg-4 col-md-6">
           <div class="mission-box">
              <div>
-               <div class="small-title">새세대</div>
+               <div class="small-title cornflowerblue">새세대</div>
                <div class="sub-title">New Jesus Generation</div>
                <div>우리 세대만이 아닌 우리의 다음 세대도 하나님의 복과 은혜, 약속, 사명을 계승하여 더욱 더 발전되고 창대케 되는 하나님의 나라를 만들어 가는 것을 소원합니다.</div>
             </div>
