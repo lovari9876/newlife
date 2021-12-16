@@ -3723,14 +3723,6 @@ label {
 }
 
 
-/* Table style
-================================================== */
-table {
-	font-size: 13px;
-	line-height: 1.5;
-}
-
-
 /* 이미지 아래의 이름칸
 ================================================== */
 .who-i-am {
@@ -3904,8 +3896,8 @@ table {
 
 @media ( max-width : 576px) {
 	.books-container .book-img {
-	    width: 256px; /* 보기에 나쁘지 않은 정도 */
-	}		
+		width: 256px; /* 보기에 나쁘지 않은 정도 */
+	}
 }
 
 @media ( max-width: 350px ) { /* 작은 폰.. */
@@ -3981,8 +3973,109 @@ table {
 }
 
 
+/* Table style
+================================================== */
+table {
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.time-table-wrap {
+	margin: 0 -5px;
+}
+
+.time-table {
+	margin-bottom: 0;
+}     
+
+.time-table td {
+	width: 50vw;
+	padding: 0.75rem 1.5rem;
+}
+
+@media ( max-width : 991px) {
+	.time-table td {
+		padding: 0.6rem 1.0rem;	
+	}
+}	
+
+@media ( max-width : 500px) {
+	.time-table td {
+		padding: 0.4rem 0.6rem;	
+	}
+}	
+
+/* 화면 클 때 테이블 양 옆으로 */
+@media ( min-width : 768px) {
+	/* border 만들기... */
+	.time-table-wrap table:first-child {
+		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
+	    border-top: 8px solid rgb(0 123 255 / 22%);
+	    border-left: 8px solid rgb(0 123 255 / 22%);
+	    border-bottom: 8px solid rgb(0 123 255 / 22%);
+	}
+	
+	.time-table-wrap table:nth-child(2) {
+		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
+	    border-top: 8px solid rgb(0 123 255 / 22%);
+	    border-right: 8px solid rgb(0 123 255 / 22%);
+	    border-bottom: 8px solid rgb(0 123 255 / 22%);
+	}
+	
+	.time-table-wrap table tr:first-child td:nth-child(-n+2) {
+		border-top: 0 !important;
+	}
+	 
+	 /* 중간 선 하늘색 */
+	.time-table-wrap table td:nth-child(2n) {
+		border-right: 1px solid rgb(0 123 255 / 22%);	
+	} 
+	
+	/* 중간 선 연회색 */
+	.time-table-wrap table td:first-child {
+		border-right: 1px solid #dee2e6;	
+	} 
+	
+	/* 마지막 공백칸 border 지우기 */
+	.time-table-wrap table:nth-child(2) tr:last-child td:first-child {
+		border-right: 0;	
+	} 
+}
 
 
+/* 화면 작을 때, 테이블 하나인 것처럼.. */
+@media ( max-width : 767px) {
+	
+	/* border 만들기... */
+	.time-table-wrap table:first-child {
+		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
+	    border-top: 8px solid rgb(0 123 255 / 22%);
+	    border-left: 8px solid rgb(0 123 255 / 22%);
+	    border-right: 8px solid rgb(0 123 255 / 22%);
+	}
+	
+	.time-table-wrap table:nth-child(2) tr:nth-child(-n+7) {
+		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
+	    border-left: 8px solid rgb(0 123 255 / 22%);
+	    border-right: 8px solid rgb(0 123 255 / 22%);
+	}
+	
+	.time-table-wrap table:nth-child(2) tr:last-child {
+		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
+	    border-top: 8px solid rgb(0 123 255 / 22%);
+	}
+	
+	/* 중간 선 하늘색 */
+	.time-table-wrap table td:first-child {
+		border-right: 1px solid rgb(0 123 255 / 22%);	
+	} 
+	
+	/* 마지막 공백칸 border 지우기 */
+	.time-table-wrap table:nth-child(2) tr:last-child td:first-child {
+		border-right: 0;	
+	} 
+	
+} 
 
 
 

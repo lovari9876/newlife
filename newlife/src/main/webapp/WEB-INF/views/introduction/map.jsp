@@ -99,8 +99,9 @@
 		  <div class="call-wrap">	          
 	          <h4 class="fa-wrap"><i class="fas fa-map-marker-alt"></i></h4>
 	          <p class="contact-detail"> 새생활교회 (예장 합신)
-	          <br/> 서울 구로구 구로중앙로28길 53-12 (우)08294
-	          <br/><span class="address2">지번<span class="text-bar"></span>구로동 111-44</span></p>
+	          <br/> 서울 구로구 구로중앙로28길 53-12
+	          <br/><span class="address2">지번<span class="text-bar"></span>구로동 111-44</span>
+	          <br/><span class="address2">우편번호<span class="text-bar"></span>08294</span></p>
 	          <h4 class="fa-wrap"><i class="fas fa-phone-alt"></i></h4>
 	          <p class="contact-detail"> 02-859-0691</p>
 	          <h4 class="fa-wrap"><i class="fas fa-fax"></i></h4>

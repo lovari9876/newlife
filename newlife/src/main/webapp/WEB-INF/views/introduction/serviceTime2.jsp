@@ -73,12 +73,12 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">예배 안내</h1>
+                <h1 class="banner-title">인사말</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
                       <li class="breadcrumb-item"><a href="#">교회 소개</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">예배 안내</li>
+                      <li class="breadcrumb-item active" aria-current="page">인사말</li>
                     </ol>
                 </nav>
               </div>
@@ -93,82 +93,58 @@
 <!-- 메인 컨테이너 -->
 <section class="time-container">
   <div class="container">
-    <div class="row time-table-wrap justify-content-center">
-      <table class="table time-table col-lg-5 col-md-6 col-12 ">
-        <tbody>
-          <tr>
-            <td>주일예배 1부</td>
-            <td>주일 오전 8시</td>
-          </tr>
-          <tr>
-            <td>주일예배 2부</td>
-            <td>주일 오전 11시</td>
-          </tr>
-          <tr>
-            <td>수요 청년 예배</td>
-            <td>수요 저녁 8시</td>
-          </tr>
-          <tr>
-            <td>금요 새찬양 예배</td>
-            <td>금요 저녁 8시</td>
-          </tr>
-          <tr>
-            <td>유아부</td>
-            <td>주일 오전 11시</td>
-          </tr>
-          <tr>
-            <td>유치부</td>
-            <td>주일 오전 11시</td>
-          </tr>
-          <tr>
-            <td>초등부</td>
-            <td>주일 오전 11시</td>
-          </tr>
-          <tr>
-            <td>중고등부</td>
-            <td>주일 오전 11시</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <!-- 테이블 미디어쿼리 적용하려고 자름 -->
-      <table class="table time-table col-lg-5 col-md-6 col-12 ">
-        <tbody>
-          <tr>
-            <td>청년부</td>
-            <td>주일 오후 2시</td>
-          </tr>
-          <tr>
-            <td>청년2부</td>
-            <td>주일 오후 2시</td>
-          </tr>
-          <tr>
-            <td>청장년부</td>
-            <td>주일 오후 1시 30분</td>
-          </tr>
-          <tr>
-            <td>형제1부</td>
-            <td>주일 오후 1시 30분</td>
-          </tr>
-          <tr>
-            <td>형제마당</td>
-            <td>주일 오후 1시 30분</td>
-          </tr>
-          <tr>
-            <td>자매부</td>
-            <td>주일 오후 1시 30분</td>
-          </tr>
-          <tr>
-            <td>에덴마당부</td>
-            <td>주일 오후 1시 30분</td>
-          </tr>
-          <tr>
-            <td>&nbsp;&nbsp;</td>
-            <td>&nbsp;&nbsp;</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table class="table time-table text-center">
+      <tbody>
+        <tr>
+          <td>주일예배 1부</td>
+          <td>주일 오전 8시</td>
+          <td>주일예배 2부</td>
+          <td>주일 오전 11시</td>
+        </tr>
+        <tr>
+          <td>수요 청년 예배</td>
+          <td>수요 저녁 8시</td>
+          <td>금요 새찬양 예배</td>
+          <td>금요 저녁 8시</td>
+        </tr>
+        <tr>
+          <td>유아부</td>
+          <td>주일 오전 11시</td>
+          <td>유치부</td>
+          <td>주일 오전 11시</td>
+        </tr>
+        <tr>
+          <td>초등부</td>
+          <td>주일 오전 11시</td>
+          <td>중고등부</td>
+          <td>주일 오전 11시</td>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+          <td>청년부</td>
+          <td>주일 오후 2시</td>
+          <td>청년2부</td>
+          <td>주일 오후 2시</td>
+        </tr>
+        <tr>
+          <td>청장년부</td>
+          <td>주일 오후 1시 30분</td>
+          <td>형제1부</td>
+          <td>주일 오후 1시 30분</td>
+        </tr>
+        <tr>
+          <td>형제마당</td>
+          <td>주일 오후 1시 30분</td>
+          <td>자매부</td>
+          <td>주일 오후 1시 30분</td>
+        </tr>
+        <tr>
+          <td>에덴마당부</td>
+          <td>주일 오후 1시 30분</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
