@@ -67,86 +67,88 @@
 <!--**********************************
       	배너부분
 ***********************************-->
-<div id="banner-area" class="banner-area">
+<div id="banner-area" class="banner-area banner-fixed">
   <div class="banner-text">
     <div class="container">
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">인사말</h1>
+                <h1 class="banner-title">쥬빌리 유치부</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
                       <li class="breadcrumb-item"><a href="#">교회 소개</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">인사말</li>
+                      <li class="breadcrumb-item"><a href="#">교회 학교</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">쥬빌리 유치부</li>
                     </ol>
                 </nav>
               </div>
           </div><!-- Col end -->
         </div><!-- Row end -->
-        
     </div><!-- Container end -->
   </div><!-- Banner text end -->
-</div><!-- Banner area end -->
+</div><!-- Banner area end --> 
 
 
-<!-- 메인 컨테이너 -->
-<section class="time-container">
-  <div class="container">
-    <table class="table time-table text-center">
-      <tbody>
-        <tr>
-          <td>주일예배 1부</td>
-          <td>주일 오전 8시</td>
-          <td>주일예배 2부</td>
-          <td>주일 오전 11시</td>
-        </tr>
-        <tr>
-          <td>수요 청년 예배</td>
-          <td>수요 저녁 8시</td>
-          <td>금요 새찬양 예배</td>
-          <td>금요 저녁 8시</td>
-        </tr>
-        <tr>
-          <td>유아부</td>
-          <td>주일 오전 11시</td>
-          <td>유치부</td>
-          <td>주일 오전 11시</td>
-        </tr>
-        <tr>
-          <td>초등부</td>
-          <td>주일 오전 11시</td>
-          <td>중고등부</td>
-          <td>주일 오전 11시</td>
-        </tr>
-        <tr>
-        </tr>
-        <tr>
-          <td>청년부</td>
-          <td>주일 오후 2시</td>
-          <td>청년2부</td>
-          <td>주일 오후 2시</td>
-        </tr>
-        <tr>
-          <td>청장년부</td>
-          <td>주일 오후 1시 30분</td>
-          <td>형제1부</td>
-          <td>주일 오후 1시 30분</td>
-        </tr>
-        <tr>
-          <td>형제마당</td>
-          <td>주일 오후 1시 30분</td>
-          <td>자매부</td>
-          <td>주일 오후 1시 30분</td>
-        </tr>
-        <tr>
-          <td>에덴마당부</td>
-          <td>주일 오후 1시 30분</td>
-        </tr>
-      </tbody>
-    </table>
+<!-- 교회소개 컨테이너 -->
+<section class="faith-container">
+  <div class="container">  
+  	<!-- 교회소개 row -->
+    <div class="row text-center">
+      <div class="col-12">
+        <div class="title column-title">새생활교회는</div>
+        <p>이땅에 아름다운 하나님의 나라를 세우기 위하여 1985년 2월 10일에 창립된 교회입니다. 우리 교회는 성경을 정확무오한 하나님의 말씀으로 믿으며, 그 성경을 바탕으로 하여 하나님을 신실하게 예배하며, 예수 그리스도께서 우리를 위하여 십자가에 죽으심과 우리를 위하여 부활하심 위에 세워진 그리스도의 제자 공동체입니다.</p>
+      </div><!-- Col end -->		
+    </div><!-- Content row end -->
   </div>
 </section>
+    
+
+<section class="mission-container background-ice-blue">
+  <div class="container">
+  	<!-- title row -->  
+    <div class="row text-center">
+       <div class="col-12">
+          <div class="title column-title">우리 교회가 소망하며 이루고자 하는 정체성과 목적은</div>
+       </div>
+    </div>
+    <!--/ Title row end -->
+	
+	<!-- mission row -->
+    <div class="row">    
+      <div class="col-lg-4 col-md-6 mission-box-wrap">  
+         <div class="mission-box h-100"> <!-- h-100은 마법의 bootstrap 클래스..높이를 맞춰준다 ㅠㅠ -->
+           <div>             	
+	          <div class="small-title cornflowerblue">새생활</div>
+	          <div class="sub-title">New Jesus Life</div>                
+               <div>세상적인 흐름대로 사는 삶 보다는 넓고 깊고 높은 예수 그리스도 뜻을 생활 속에서 구체적으로 실현하는 삶을 살고자 합니다.</div>
+            </div>
+          </div><!-- Quote item end -->
+       </div><!-- End col md 4 -->
+
+       <div class="col-lg-4 col-md-6 mission-box-wrap">
+          <div class="mission-box h-100">
+             <div>
+      		   <div class="small-title cornflowerblue">새비전</div>
+               <div class="sub-title">New Jesus Vision</div>
+			   <div>내 인생의 목적만을 이루는 삶 보다는 나와 가정과 이웃에게 공통적인 유익을 줄 수 있는 목적을 이루기 위하여, 인간의 전인적 구원을 추구하고, 화평한 믿음의 가정, 희망적이고도 거룩한 문화 를 이 세대에 이루어 가고자 합니다.</div>
+            </div>
+          </div><!-- Quote item end -->
+       </div><!-- End col md 4 -->
+       
+       <div class="col-lg-4 col-md-6 mission-box-wrap">
+          <div class="mission-box h-100">
+             <div>
+               <div class="small-title cornflowerblue">새세대</div>
+               <div class="sub-title">New Jesus Generation</div>
+               <div>우리 세대만이 아닌 우리의 다음 세대도 하나님의 복과 은혜, 약속, 사명을 계승하여 더욱 더 발전되고 창대케 되는 하나님의 나라를 만들어 가는 것을 소원합니다.</div>
+            </div>
+         </div><!-- Quote item end -->
+       </div><!-- End col md 4 -->
+       
+    </div><!-- Content row end -->
+  </div><!-- Container end -->
+</section><!-- Main container end -->
 
 
 <!-- footer include start -->

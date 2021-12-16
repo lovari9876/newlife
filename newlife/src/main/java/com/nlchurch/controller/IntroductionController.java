@@ -49,7 +49,7 @@ public class IntroductionController {
 
 	}
 
-	// 오시는 길: 카카오맵 연동 필수
+	// 오시는 길: 카카오맵 연동
 	@RequestMapping(value = "/map", method = RequestMethod.GET)
 	public String map(Model model) throws Exception {
 		return "introduction/map";

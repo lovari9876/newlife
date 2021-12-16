@@ -67,7 +67,7 @@
 <!--**********************************
       	배너부분
 ***********************************-->
-<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner-river.png)">
+<div id="banner-area" class="banner-area banner-fixed">
   <div class="banner-text">
     <div class="container">
         <div class="row">

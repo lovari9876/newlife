@@ -2706,9 +2706,20 @@ img.testimonial-thumb {
 	position: relative;
 	min-height: 150px;
 	color: #525252;
+	background-color: transparent; 
+	/* 	개발자는 항상 백그라운드 이미지가 존재할 때도 인터넷이 안될때라든지를 대비해서..  */
+	/* 	백그라운드컬러를 줘야한대 from mozila doc */
+}
+
+/* 투명도를 위해서 배경 이미지를 따로 설정하기 */
+.banner-area::after {
+	width: 100%;
+	min-height: 150px;
+	content: "";
 	background-position: 50% 50%;
-	background-size: cover;
 	background: url('../images/banner/banner-river.png') no-repeat center;
+	position: absolute;
+	opacity: 0.65 !important;
 }
 
 /* parallax: background image fix */
@@ -2717,7 +2728,7 @@ banner-fixed {
 }
 
 .banner-title {
-	color: #525252;
+	color: #688994;
 	text-transform: uppercase;
 	font-size: 43px;
 	font-weight: normal;
@@ -2766,11 +2777,7 @@ banner-fixed {
 
 .breadcrumb li a, .breadcrumb .breadcrumb-item, .breadcrumb li a:focus,
 	.breadcrumb li a:hover {
-	color: #343434 !important;
-}
-
-.breadcrumb .breadcrumb-item+.breadcrumb-item::before { /* slash */
-	color: #37373;
+	color: #46636c !important;
 }
 
 /* 배너 높이 150px로 조정하면서 마진 없앰 */
@@ -4010,16 +4017,16 @@ table {
 	/* border 만들기... */
 	.time-table-wrap table:first-child {
 		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
-	    border-top: 8px solid rgb(0 123 255 / 22%);
-	    border-left: 8px solid rgb(0 123 255 / 22%);
-	    border-bottom: 8px solid rgb(0 123 255 / 22%);
+	    border-top: 8px solid rgba(0, 123, 255, 0.22);
+	    border-left: 8px solid rgba(0, 123, 255, 0.22);
+	    border-bottom: 8px solid rgba(0, 123, 255, 0.22);
 	}
 	
 	.time-table-wrap table:nth-child(2) {
 		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
-	    border-top: 8px solid rgb(0 123 255 / 22%);
-	    border-right: 8px solid rgb(0 123 255 / 22%);
-	    border-bottom: 8px solid rgb(0 123 255 / 22%);
+	    border-top: 8px solid rgba(0, 123, 255, 0.22);
+	    border-right: 8px solid rgba(0, 123, 255, 0.22);
+	    border-bottom: 8px solid rgba(0, 123, 255, 0.22);
 	}
 	
 	.time-table-wrap table tr:first-child td:nth-child(-n+2) {
@@ -4028,7 +4035,7 @@ table {
 	 
 	 /* 중간 선 하늘색 */
 	.time-table-wrap table td:nth-child(2n) {
-		border-right: 1px solid rgb(0 123 255 / 22%);	
+		border-right: 1px solid rgba(0, 123, 255, 0.22);	
 	} 
 	
 	/* 중간 선 연회색 */
@@ -4049,25 +4056,25 @@ table {
 	/* border 만들기... */
 	.time-table-wrap table:first-child {
 		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
-	    border-top: 8px solid rgb(0 123 255 / 22%);
-	    border-left: 8px solid rgb(0 123 255 / 22%);
-	    border-right: 8px solid rgb(0 123 255 / 22%);
+	    border-top: 8px solid rgba(0, 123, 255, 0.22);
+	    border-left: 8px solid rgba(0, 123, 255, 0.22);
+	    border-right: 8px solid rgba(0, 123, 255, 0.22);
 	}
 	
 	.time-table-wrap table:nth-child(2) tr:nth-child(-n+7) {
 		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
-	    border-left: 8px solid rgb(0 123 255 / 22%);
-	    border-right: 8px solid rgb(0 123 255 / 22%);
+	    border-left: 8px solid rgba(0, 123, 255, 0.22);
+	    border-right: 8px solid rgba(0, 123, 255, 0.22);
 	}
 	
 	.time-table-wrap table:nth-child(2) tr:last-child {
 		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
-	    border-top: 8px solid rgb(0 123 255 / 22%);
+	    border-top: 8px solid rgba(0, 123, 255, 0.22);
 	}
 	
 	/* 중간 선 하늘색 */
 	.time-table-wrap table td:first-child {
-		border-right: 1px solid rgb(0 123 255 / 22%);	
+		border-right: 1px solid rgba(0, 123, 255, 0.22);	
 	} 
 	
 	/* 마지막 공백칸 border 지우기 */
