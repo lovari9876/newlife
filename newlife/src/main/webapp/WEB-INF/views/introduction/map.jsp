@@ -74,12 +74,12 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">인사말</h1>
+                <h1 class="banner-title">오시는 길</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
                       <li class="breadcrumb-item"><a href="#">교회 소개</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">인사말</li>
+                      <li class="breadcrumb-item active" aria-current="page">오시는 길</li>
                     </ol>
                 </nav>
               </div>
@@ -94,18 +94,32 @@
 <!-- contact 컨테이너 -->
 <section class="contact-container">
   <div class="container">
-    <div class="row">
-    	<div id="map" class="col-12" style="width: 60vw; height: 55vh; position: relative;">
-        </div><!-- Col end -->
-    </div><!-- Content row end -->
+    <div class="row justify-content-center"> <!-- justify-content-center 이거는 무조건 내부 박스친구를 center align !-->    
+		<div class="col-lg-6 col-sm-10 col-12">
+		  <div class="call-wrap">	          
+	          <h4 class="fa-wrap"><i class="fas fa-map-marker-alt"></i></h4>
+	          <p class="contact-detail"> 새생활교회 (예장 합신)
+	          <br/> 서울 구로구 구로중앙로28길 53-12 (우)08294
+	          <br/><span class="address2">지번<span class="text-bar"></span>구로동 111-44</span></p>
+	          <h4 class="fa-wrap"><i class="fas fa-phone-alt"></i></h4>
+	          <p class="contact-detail"> 02-859-0691</p>
+	          <h4 class="fa-wrap"><i class="fas fa-fax"></i></h4>
+	          <p class="contact-detail"> 02-865-2970<span class="address2 smaller-text">&nbsp;&nbsp;FAX</span></p>
+		  </div>
+		</div><!-- Col end -->
+	</div><!-- Content row end -->
   </div><!-- Container end -->
-</section><!-- Main container end -->
+</section><!-- contact-container end -->
 
 
-<!-- 지도 컨테이너 -->
+<!-- 지도 컨테이너 --> 
+<!-- 컨테이너 말고 그냥 한 row안에서 col-lg-8 정도로 나누면 지도가 모바일화면에서 잘려.. vw 때문인거 같은데.. 그냥 지도는 크게보자-->
 <section class="map-container">
-  <div class="container">
-    <div class="row">
+  <div class="container">  	
+    <div class="row ">
+    	<div></div>
+    </div>
+    <div class="row ">
     	<div id="map" class="col-12" style="width: 60vw; height: 55vh; position: relative;">
         </div><!-- Col end -->
     </div><!-- Content row end -->

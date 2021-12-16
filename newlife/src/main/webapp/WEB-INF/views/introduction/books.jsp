@@ -200,7 +200,7 @@
 		</div><!-- Col end -->
 	</div><!-- Content row end -->
   </div><!-- Container end -->
-</section><!-- Main container end -->
+</section><!-- books-container end -->
 
 
 

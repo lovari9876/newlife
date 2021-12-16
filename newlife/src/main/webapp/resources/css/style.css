@@ -22,8 +22,10 @@ body {
 	color: #555;
 }
 
+/* Exo 2는 600으로 font-weight 해놀고 써야 숫자랑 영문 굵기가 twayair랑 맞음... */
+/* 영문이랑 숫자가 Exo 2 600으로 되도록 했기때문에.. 영문만 있는 아이템은 따로 font-family: 'Exo 2' 설정할 것 */
 body, p {
-	font-family: 'twayair', sans-serif;
+	font-family: 'Exo 2 600', 'twayair', sans-serif;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased !important;
 	line-height: 25px;
@@ -33,7 +35,7 @@ body, p {
 h1, h2, h3, h4, h5, h6 {
 	color: #212121;
 	font-weight: normal; /* twayair는 이미 굵어-굵기 조절 시 깨짐 */
-	font-family: 'twayair', sans-serif;
+	font-family: 'Exo 2 600', 'twayair', sans-serif;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased !important;
 }
@@ -1006,7 +1008,7 @@ ul.navbar-nav>li>a:after, ul.navbar-nav>li>a:after {
 
 /* navigation 대메뉴 */
 ul.navbar-nav>li>a {
-	font-family: 'twayair';
+	font-family: 'Exo 2 600', 'twayair';
 	color: #fff !important;
 	text-rendering: optimizeLegibility;
 	/* font-weight: 700 !important; */
@@ -3661,29 +3663,29 @@ label {
 새생활교회 사이트를 위해 템플릿을 기본으로 추가하고 수정한 부분들
 -------------------------------------------------------------------*/
 
-/* 이미지 아래의 이름칸 , small-title 박스
+/* text
 ================================================== */
-.who-i-am {
-	margin: 20px;
-	margin-right: 0;
-    text-align: right;
-    font-size: 18px;
-}
-
-.who-i-am p {
-	font-size: 18px;
-}
-
-.who-i-am .who {
-	font-size: 22px;
-    color: black;
-    margin-left: 10px;
-}
-
 .small-title {
 	font-size: 23px;
 	margin-bottom: 5px;	
 }
+
+.text-bar {
+	display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #bbb;
+    margin: 4px 7px 0;
+}
+
+.smaller-text {
+	font-size: 0.8rem;
+}
+
+/* 숫자 굵기 때문에 못썼던거.. */
+.only-english {
+	font-family: 'Exo 2';
+}	
 
 
 /* background colors
@@ -3728,6 +3730,27 @@ table {
 	line-height: 1.5;
 }
 
+
+/* 이미지 아래의 이름칸
+================================================== */
+.who-i-am {
+	margin: 20px;
+	margin-right: 0;
+    text-align: right;
+    font-size: 18px;
+}
+
+.who-i-am p {
+	font-size: 18px;
+}
+
+.who-i-am .who {
+	font-size: 22px;
+    color: black;
+    margin-left: 10px;
+}
+
+
 /* board - forum block list
 ================================================== */
 .board-item {
@@ -3736,7 +3759,7 @@ table {
 
 /* span 각각 아이콘 */
 .ts-service-info span i {
-	color: #95b6f2; /* #bbb 연회색 */
+	color: #95b6f2; 
 	padding-right: 8px;
 }
 
@@ -3900,7 +3923,7 @@ table {
 /* call-box */
 .call-wrap {
 	padding: 30px 40px;
-	margin: 30px 0;
+	margin: 30px 10px;
 	background-color: #fff;	
 	border: 2px solid  rgba(0, 0, 0, 0.1);
 	box-shadow: -10px -9px 0px 0px rgba(0, 0, 0, 0.1);
@@ -3914,6 +3937,36 @@ table {
 	for Map page
 ================================================== */
 
+.contact-container {
+    padding-bottom: 0;
+}
+
+.contact-container .call-wrap {
+	border-radius: 10px;
+}
+
+/* 주소랑 연락처 - 아이콘 부분 */
+.fa-wrap {
+	float: left;
+}
+
+.fa-wrap i {
+	color: #6495ed;
+}
+
+.contact-detail {
+	padding: 0 10px 0 26px;
+}
+
+.address2 {
+	color: #888;
+}
+
+/* 안쪽에 margin을 주면 지도 크기에 변화가 생겨서 컨트롤하기 어려움..  */
+.map-container {
+    margin-bottom: 40px;
+}
+
 /* kakao map custom overlay 박스 */
 .map-overlay {
 	padding: 0 5px;
@@ -3922,6 +3975,15 @@ table {
     box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
     border-radius: 6px;	
 }
+
+.map-overlay:hover  {
+	background: #6199ff;
+}
+
+
+
+
+
 
 
 
