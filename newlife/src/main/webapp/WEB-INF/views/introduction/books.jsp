@@ -73,12 +73,12 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">세 책 이야기</h1>
+                <h1 class="banner-title">네 책 이야기</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
                       <li class="breadcrumb-item"><a href="#">교회 소개</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">세 책 이야기</li>
+                      <li class="breadcrumb-item active" aria-current="page">네 책 이야기</li>
                     </ol>
                 </nav>
               </div>
@@ -165,7 +165,7 @@
     
     <div class="row">
     	<div class="col-lg-4 col-sm-5 col-12 book-img-wrap">
-		  <img class="book-img" alt="" src="images/introduction/books/book-hermon2.png">
+		  <img class="book-img" alt="" src="images/introduction/books/book-hermon.png">
 		</div>        
 		<div class="col-lg-8 col-sm-7 col-12">
           <p class="small-title hermon-green">헐몬의 이슬이 내려 흐르는 시냇물을 찾는 사슴이야기...</p>
@@ -186,16 +186,55 @@
   </div><!-- Container end -->
 </section><!-- Main container end -->
 
+
+<!-- 책 4 -->
+<!--  #3b5998 (59,89,152)
+      #8b9dc3 (139,157,195)
+      #dfe3ee (223,227,238)
+      #f7f7f7 (247,247,247)
+      #ffffff -->
+<section class="books-container dew background-dew-lightblue">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          <h3 class="title column-title">말씀 이슬</h3>
+      </div>
+    </div>    
+    <div class="row">
+      <div class="col-lg-4 col-sm-5 col-12 book-img-wrap">
+      <img class="book-img" alt="" src="images/introduction/books/book-dew.png">
+    </div>        
+    <div class="col-lg-8 col-sm-7 col-12">
+      <p class="small-title dew-blue">The Lord’s Word Dew from my soul to...</p>
+      <br>
+      <p>부끄러운 ‘새벽날개’ 묵상집으로 시작해서,
+      ‘헐몬의 이슬’로 어여쁘게 단장을 마친 후에
+              마침내 “말씀 이슬”로 나오게 되었습니다!!
+	     이 길을 같이 걸어가는 예배자들이 계시기에 할 수 있었습니다!!</p>
+	  <br><p>주의 하늘에서 내려오는 말씀 이슬로 
+              곧 말씀 묵상을 통하여
+              이제는 다시는 우리의 영혼이 목마르지 않게 되길 소원합니다.</p>
+      <br><p>이제는 정말 말씀 이슬로 나의 영혼에서 샘물이 나길 원합니다.</p>
+      <blockquote class="dew-blue-quote"><p>그 샘물이 강으로, 바다로 흘러가기를 소원합니다!!</p></blockquote>
+    </div><!-- Col end -->
+  </div><!-- Content row end -->
+  </div><!-- Container end -->
+</section><!-- Main container end -->
+
+
 <!-- 문의 -->
 <section class="books-container background-light-gray">
   <div class="container">
     <div class="row justify-content-center">      
-		<div class="">
+		<div>
 		  <div class="call-wrap">
 	          <p class="small-title text-center call-gray">문의 전화</p>
-	          <p class="text-center"><i class="fas fa-phone-alt"></i> 02-859-0691&nbsp;&nbsp;
-	          <br/><i class="fas fa-mobile-alt"></i> 010-6888-5138
-	          <br/><i class="fas fa-mobile-alt"></i> 010-4511-3587</p>
+	          <h4 class="fa-wrap"><i class="fas fa-phone-alt"></i></h4>
+              <p class="contact-detail">02-859-0691</p>
+	          <h4 class="fa-wrap"><i class="fas fa-mobile-alt"></i></h4>
+              <p class="contact-detail">010-6888-5138</p> 
+	          <h4 class="fa-wrap"><i class="fas fa-mobile-alt"></i></h4>
+              <p class="contact-detail">010-4511-3587</p>
 		  </div>
 		</div><!-- Col end -->
 	</div><!-- Content row end -->

@@ -75,7 +75,7 @@
                         <ul class="dropdown-menu" role="menu">                          
                           <li><a href="/greeting">인사말</a></li>
                           <li><a href="/statement-of-faith">목회 철학</a></li>
-                          <li><a href="/books">세 책 이야기</a></li>
+                          <li><a href="/books">네 책 이야기</a></li>
                           <li><a href="/service-time">예배 안내</a></li>
                           <li><a href="/map">오시는 길</a></li>       
                           <li class="dropdown-submenu">
@@ -84,7 +84,7 @@
                                 <li><a href="/kindergarten">쥬빌리 유치부</a></li>
                                 <li><a href="/elementary">푸른초장 초등부</a></li>                                  
                                 <li><a href="/adolescent">시온의 영광 중고등부</a></li>
-                                <li><a href="/youth1">많은 물소리 청년1부</a></li>
+                                <li><a href="/youth1">많은 물 소리 청년부</a></li>
                                 <li><a href="/youth2">다윗의 열쇠 청년2부</a></li>
                               </ul>
                           </li>

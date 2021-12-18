@@ -73,13 +73,13 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">쥬빌리 유치부</h1>
+                <h1 class="banner-title">많은 물 소리 청년부</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item">새생활교회</li>
                       <li class="breadcrumb-item">교회 소개</li>
                       <li class="breadcrumb-item">교회 학교</li>
-                      <li class="breadcrumb-item active" aria-current="page">쥬빌리 유치부</li>
+                      <li class="breadcrumb-item active" aria-current="page">많은 물 소리 청년부</li>
                     </ol>
                 </nav>
               </div>
@@ -90,60 +90,49 @@
 </div><!-- Banner area end --> 
 
 
-<!-- 교회학교 컨테이너: 주제 -->
-<section class="school-container kid">
+<!--  #b2d8d8  (178,216,216)
+      #66b2b2 (102,178,178)
+      #008080 (0,128,128)
+      #006666 (0,102,102)
+      #004c4c (0,76,76) -->
+<!-- 교회학교 컨테이너 -->
+<section class="school-container youth1">
   <div class="container">
-    <div class="row justify-content-center"> <!-- justify-content-center 이거는 무조건 내부 박스친구를 center align !-->    
-    <div class="col-lg-4 col-md-7 col-sm-8 col-11"> <!-- 박스크기 설정 -->
-      <div class="call-wrap text-center">           
-        <div class="title column-title">주제</div>
-        <p>하나님의 사람, 세상의 빛!!</p>
-      </div>
-    </div><!-- Col end -->
-  </div><!-- Content row end -->
-  </div><!-- Container end -->
-</section><!-- contact-container end -->
-
-<!-- 교회학교 컨테이너: 교육목표 -->
-<section class="school-container kid background-kid-yellowgreen">
-  <div class="container">
-    <div class="row justify-content-center"> <!-- justify-content-center 이거는 무조건 내부 박스친구를 center align !-->    
-    <div class="col-xl-6 col-lg-7 col-sm-9 col-12"> <!-- 박스크기 설정 -->
-      <div class="call-wrap green-line">
-        <div class="title column-title text-center">교육 목표</div>
-        <div class="call-text">
-          <h4 class="fa-wrap"><i class="fas fa-apple-alt"></i></h4>
-            <p class="contact-detail">예배를 통해 하나님을 더 알아갑니다</p>
-          <h4 class="fa-wrap"><i class="fas fa-apple-alt"></i></h4>
-            <p class="contact-detail">눈높이에 맞는 예배를 드립니다</p> 
-          <h4 class="fa-wrap"><i class="fas fa-apple-alt"></i></h4>
-            <p class="contact-detail">바른 예배의 좋은 습관을 익힙니다</p>
-          <h4 class="fa-wrap"><i class="fas fa-apple-alt"></i></h4>
-            <p class="contact-detail">세계를 향한 비전을 가집니다</p>
-        </div>        
-      </div>
-    </div><!-- Col end -->
-  </div><!-- Content row end -->
-  </div><!-- Container end -->
-</section><!-- contact-container end -->
-
-<!-- 교회학교 컨테이너: 부서소개 -->
-<section class="school-container kid">
-  <div class="container">
-    <div class="row justify-content-center"> <!-- justify-content-center 이거는 무조건 내부 박스친구를 center align !-->    
-    <div class="col-lg-8 col-md-10 col-sm-11 col-12"> <!-- 박스크기 설정 -->
-      <div class="call-wrap">                 
-        <div class="title column-title text-center">부서 소개</div>
-        <div class="call-text">
-          <p>유치부는 만 3세부터 7세까지의 아이들로 이루어진 공동체입니다. 아이들이 예수님을 믿고 말씀 안에서 믿음이 성장하도록 하며, 신나는 신체 활동을 통해 발달하도록 돕습니다.
-          <br/>왕의 자녀들이 뛰고 있는 유치부 예배에 어린이 여러분을 초대합니다.</p>
-        </div>
-      </div>
-    </div><!-- Col end -->
-  </div><!-- Content row end -->
-  </div><!-- Container end -->
-</section><!-- contact-container end -->
+    <div class="row"> 
+      <div class="col-lg-6">
+        <blockquote class="blockquote">
+          <p>내가 하늘에서 나는 소리를 들으니 많은 물 소리와도 같고 큰 우렛소리와도 같은데 내가 들은 소리는 거문고 타는 자들이 그 거문고를 타는 것 같더라</p>
+          <div class="bible-box"><cite title="Source Title"><i class="fas fa-bible"></i>&nbsp;요한계시록 14장 2절</cite></div>
+        </blockquote>            
+        <p>이곳 저곳에서 흐르는 시냇물들이 모여 강물이 되고 바다가 되듯이 각자의 삶 속에서 주를 찬양하며, 함께 모여 주를 찬양할 때 각자의 소리가 모여 “많은 물 소리”가 됩니다.
+        <br>
+        <br>내일을 향해 열심히 달려가야 하는 청년들이지만 우리 많은 물 소리 청년부는 세상의 흐름이 아닌 하나님의 흐름에 우리들의 삶을 맡겼습니다. 
+        <br>
+        <br>그러기에 더 평안합니다! 더 안전합니다! 찬송이 터져 나옵니다!
+        <br>
+        <br>언제나 찬송과 웃음이 끊이지 않는 많은 물 소리 청년부입니다!!</p>  
+      </div><!-- Col end -->
     
+      <!-- 이미지 carrousel -->
+      <!-- 이미지: 600 x 450 -->
+      <div class="col-lg-6 mt-5 mt-lg-0">          
+        <div id="page-slider" class="page-slider small-bg">
+          <div class="item" style="background-image:url(images/introduction/youth/youth1.png)">
+          </div><!-- Item 1 end -->
+
+          <div class="item" style="background-image:url(images/introduction/youth/youth2.png)">
+          </div><!-- Item 2 end -->
+
+          <div class="item" style="background-image:url(images/introduction/youth/youth3.png)">
+          </div><!-- Item 3 end -->
+        </div><!-- Page slider end-->    
+        
+      </div><!-- Col end -->
+    </div><!-- Content row end -->
+
+  </div><!-- Container end -->
+</section><!-- Main container end --> 
+
 
 <!-- footer include start -->
 <%@ include file="/WEB-INF/views/parts/footer.jsp" %>

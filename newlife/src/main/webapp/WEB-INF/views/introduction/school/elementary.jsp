@@ -73,13 +73,13 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">쥬빌리 유치부</h1>
+                <h1 class="banner-title">푸른초장 초등부</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item">새생활교회</li>
                       <li class="breadcrumb-item">교회 소개</li>
                       <li class="breadcrumb-item">교회 학교</li>
-                      <li class="breadcrumb-item active" aria-current="page">쥬빌리 유치부</li>
+                      <li class="breadcrumb-item active" aria-current="page">푸른초장 초등부</li>
                     </ol>
                 </nav>
               </div>
@@ -90,53 +90,20 @@
 </div><!-- Banner area end --> 
 
 
-<!-- 교회학교 컨테이너: 주제 -->
-<section class="school-container kid">
-  <div class="container">
-    <div class="row justify-content-center"> <!-- justify-content-center 이거는 무조건 내부 박스친구를 center align !-->    
-    <div class="col-lg-4 col-md-7 col-sm-8 col-11"> <!-- 박스크기 설정 -->
-      <div class="call-wrap text-center">           
-        <div class="title column-title">주제</div>
-        <p>하나님의 사람, 세상의 빛!!</p>
-      </div>
-    </div><!-- Col end -->
-  </div><!-- Content row end -->
-  </div><!-- Container end -->
-</section><!-- contact-container end -->
-
-<!-- 교회학교 컨테이너: 교육목표 -->
-<section class="school-container kid background-kid-yellowgreen">
-  <div class="container">
-    <div class="row justify-content-center"> <!-- justify-content-center 이거는 무조건 내부 박스친구를 center align !-->    
-    <div class="col-xl-6 col-lg-7 col-sm-9 col-12"> <!-- 박스크기 설정 -->
-      <div class="call-wrap green-line">
-        <div class="title column-title text-center">교육 목표</div>
-        <div class="call-text">
-          <h4 class="fa-wrap"><i class="fas fa-apple-alt"></i></h4>
-            <p class="contact-detail">예배를 통해 하나님을 더 알아갑니다</p>
-          <h4 class="fa-wrap"><i class="fas fa-apple-alt"></i></h4>
-            <p class="contact-detail">눈높이에 맞는 예배를 드립니다</p> 
-          <h4 class="fa-wrap"><i class="fas fa-apple-alt"></i></h4>
-            <p class="contact-detail">바른 예배의 좋은 습관을 익힙니다</p>
-          <h4 class="fa-wrap"><i class="fas fa-apple-alt"></i></h4>
-            <p class="contact-detail">세계를 향한 비전을 가집니다</p>
-        </div>        
-      </div>
-    </div><!-- Col end -->
-  </div><!-- Content row end -->
-  </div><!-- Container end -->
-</section><!-- contact-container end -->
-
-<!-- 교회학교 컨테이너: 부서소개 -->
-<section class="school-container kid">
+<!-- 교회학교 컨테이너: 초등부서소개 -->
+<section class="school-container elementary">
   <div class="container">
     <div class="row justify-content-center"> <!-- justify-content-center 이거는 무조건 내부 박스친구를 center align !-->    
     <div class="col-lg-8 col-md-10 col-sm-11 col-12"> <!-- 박스크기 설정 -->
-      <div class="call-wrap">                 
-        <div class="title column-title text-center">부서 소개</div>
+      <div class="call-wrap">   
         <div class="call-text">
-          <p>유치부는 만 3세부터 7세까지의 아이들로 이루어진 공동체입니다. 아이들이 예수님을 믿고 말씀 안에서 믿음이 성장하도록 하며, 신나는 신체 활동을 통해 발달하도록 돕습니다.
-          <br/>왕의 자녀들이 뛰고 있는 유치부 예배에 어린이 여러분을 초대합니다.</p>
+          <p>성경을 통해 하나님을 만나고 자신의 정체성을 발견하며
+                             살아계신 하나님의 말씀으로 믿음의 뿌리를 내려</p>
+          <blockquote class="green-quote"><p>말씀의 반석 위에서 싱그럽게 자라나는 초등부입니다.</p></blockquote>
+          <br>
+          <p>하나님의 생명 시냇가에 심긴 어린 감람나무인 초등부는
+                             언제 어디서나 예배와 찬양을 드리며</p>
+          <blockquote class="blue-quote"><p>마지막 때에 주님의 은혜의 희년을 이루는 쥬빌리 리더로 자라납니다.</p></blockquote>
         </div>
       </div>
     </div><!-- Col end -->

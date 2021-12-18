@@ -406,7 +406,6 @@ blockquote.green-quote {
 	position: relative;
 	border-left: 3px solid #28a745;
 	font-style: normal;
-	font-family: ;
 }
 
 blockquote.blue-quote {
@@ -416,7 +415,6 @@ blockquote.blue-quote {
 	position: relative;
 	border-left: 3px solid #3c98e4;
 	font-style: normal;
-	font-family: ;
 }
 
 blockquote.red-quote {
@@ -426,13 +424,22 @@ blockquote.red-quote {
 	position: relative;
 	border-left: 3px solid #EF7C8E;
 	font-style: normal;
-	font-family: ;
+}
+
+blockquote.dew-blue-quote {
+    padding: 5px 10px;
+    margin: 0 0 1rem 0;
+    background: #a2b6e05e;
+    position: relative;
+    border-left: 3px solid #8b9dc3;
+    font-style: normal;
 }
 
 /* 큰따옴표 아이콘 없애기 */
 blockquote.green-quote:before 
 , blockquote.blue-quote:before
-, blockquote.red-quote:before {
+, blockquote.red-quote:before
+, blockquote.dew-blue-quote:before {
 	content:none;
 }
 
@@ -761,7 +768,7 @@ I only use header-two
 
 .header-two {
 	background: #fff;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2)
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 	padding: 15px 0;
 }
 
@@ -784,6 +791,10 @@ ul.navbar-nav>li>a {
 	}
 }
 
+/* 대메뉴 hover 색깔... 근데 작동 안됨. 왜인지 모름 .. 어이업다*/
+ul.navbar-nav>li:hover, ul.navbar-nav>li.active {
+	color: #387fff !important;
+}
 ul.navbar-nav>li:hover>a, ul.navbar-nav>li.active>a {
 	color: #387fff !important;
 }
@@ -2836,27 +2847,6 @@ ol.breadcrumb.justify-content-center {
 	color: #343a40;
 }
 
-/* 인사말 이미지 */
-.greeting-container .page-slider.small-bg .item {
-	height: 25vw; /* 보이는 화면의 0.30 */
-    max-height: 600px; /* 사진 원본크기 */
-	background-size: cover;
-}
-
-/* 이미지 아래로 내려간 다음 */
-@media ( max-width : 991px) {
-	.greeting-container .page-slider.small-bg .item {
-		height: 70vw; /* 보이는 화면의 0.9 */
-	}
-}
-
-@media ( max-width : 767px) {
-	.greeting-container .page-slider.small-bg .item {
-		height: 85vw; /* 보이는 화면의 0.9 */
-	}
-}
-
-
 /* books slider: 안쓸거.. 개빡침 */
 /*
 .slick-slider {
@@ -3701,7 +3691,6 @@ label {
 	background-color: #e3e3e67a;
 }
 
-/* mission-container에만 배경색 연하게 */
 .background-ice-blue {
     background-color: #6495ed21;
 }
@@ -3710,6 +3699,13 @@ label {
 	background-color: #d8bfd83d; /* 연분홍 */
 }
 
+.background-dew-lightblue {
+	background-color: #dfe3ee;
+}
+
+.background-kid-yellowgreen {
+    background-color: #adff2f21;
+}
 
 /* font colors
 ================================================== */
@@ -3725,13 +3721,64 @@ label {
 	color: #28a745 !important;
 }
 
+.dew-blue {
+	color: #3b5998 !important;
+}
+
 .cornflowerblue {
 	color: #6495ed !important;
 }
 
 
-/* 이미지 아래의 이름칸
+/* greeting page slick
 ================================================== */
+
+/* 인사말 이미지 */
+/* 첨엔 그냥 대충 잘려도 height을 vw로 했는데..  */
+/* 청년부 페이지 작업하면서 알아버림.. */
+/* bootstrap에서 이미지 크기를 정해두고 padding을 조절한다는걸... */
+/* 그래서 이제 완벽하게 사이즈 맞출 수 있다. */
+.greeting-container .page-slider.small-bg .item {
+	height: 350px;
+    max-height: 350px;
+	background-size: cover;
+}
+
+@media ( max-width : 1199px) {
+	.greeting-container .page-slider.small-bg .item {
+		height: 290px;
+	    max-height: 290px;
+	}
+}
+
+/* 이미지 아래로 내려간 다음 */
+@media ( max-width : 991px) {
+	.greeting-container .page-slider.small-bg .item {
+		height: 690px;
+	    max-height: 690px;
+	}
+}
+
+@media ( max-width : 767px) {
+	.greeting-container .page-slider.small-bg .item {
+		height: 510px;
+	    max-height: 510px;
+	}
+}
+
+@media ( max-width : 575px) {
+	.greeting-container .page-slider.small-bg .item {
+		height: calc(100vw - 30px);
+	    max-height: calc(100vw - 30px);
+	}
+}
+
+/* 이미지 테두리 */
+.books-container .book-img {
+    box-shadow: 0 0 0 1px #ddd;
+}
+
+/* 이미지 아래의 이름칸 */
 .who-i-am {
 	margin: 20px;
 	margin-right: 0;
@@ -3898,7 +3945,6 @@ label {
 		text-align: center;
     	padding-right: 15px; /* 부트스트랩 설정대로 돌아가기 */
 	}
-
 }
 
 @media ( max-width : 576px) {
@@ -3918,6 +3964,21 @@ label {
     color: #5a8ce6;
 }
 
+/* 말씀 이슬 부분 */
+/* 개행을 큰 화면일땐 많이, 작은 화면일땐 안하기 */
+.books-container.dew p {
+	white-space: pre-line;	
+}
+	
+@media (max-width: 520px) {
+	.books-container.dew p {
+		white-space: normal;	
+	}
+}
+
+.small-title.dew-blue {
+	font-size: 25px;
+}
 
 /* call-box */
 .call-wrap {
@@ -3931,6 +3992,22 @@ label {
 .call-wrap p {
 	color: #666;
 }
+
+.books-container .call-wrap p.contact-detail {
+	font-size: 17px;
+    margin-bottom: 5px;
+    font-family: 'twayair', sans-serif; /* 이부분은 숫자가 티웨이가 더이쁨.. */
+}
+
+.books-container .call-wrap h4 {
+	margin: 0px;
+}
+
+.books-container .call-wrap h4.fa-wrap i {
+    font-size: 17px;
+	color: #666;	
+}
+
 
 /* ==================================================
 	for Map page
@@ -3980,7 +4057,8 @@ label {
 }
 
 
-/* Table style
+/* ==================================================
+	for Service time table page
 ================================================== */
 table {
 	font-size: 16px;
@@ -4016,7 +4094,7 @@ table {
 @media ( min-width : 768px) {
 	/* border 만들기... */
 	.time-table-wrap table:first-child {
-		/* 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
+		/* table에 각각 주고 투명도 주면 모서리가 겹쳐서 예쁘다.. */
 	    border-top: 8px solid rgba(0, 123, 255, 0.22);
 	    border-left: 8px solid rgba(0, 123, 255, 0.22);
 	    border-bottom: 8px solid rgba(0, 123, 255, 0.22);
@@ -4083,6 +4161,169 @@ table {
 	} 
 	
 } 
+
+
+/* ==================================================
+	for School pages
+================================================== */
+
+/* kids ================================================== */
+
+.school-container.kid .call-wrap {
+	border-radius: 10px;
+	border: 3px solid #a5d200b5;
+	box-shadow: -10px -9px 0px 0px #a5d20070;
+}
+
+/* 2번째 박스 */
+.school-container.kid .call-wrap.green-line {	
+    border: 0;    
+	padding: 30px 20px;
+    box-shadow: 0px 0px 0px 6px #e0ff713d;
+}
+
+/* 2번째 텍스트 박스 가운데 정렬 */
+.school-container .call-wrap.green-line .call-text {
+    padding-left: 20%;
+}
+
+@media (max-width: 991px) {
+	.school-container .call-wrap.green-line .call-text {
+	    padding-left: 24%;
+	}
+}
+
+@media (max-width: 767px) {
+	.school-container .call-wrap.green-line .call-text {
+	    padding-left: 5%;
+	}
+}
+
+@media (max-width: 420px) {
+	.school-container .call-wrap.green-line .call-text {
+	    padding-left: 0;
+	}
+	
+	.school-container .call-wrap.green-line .contact-detail {
+    	padding: 0 0 0 26px;
+	}
+	
+	/* for 3번째 박스 */
+	.school-container .call-wrap {	
+		padding: 30px 20px;
+	}
+}
+
+.school-container.kid .title {
+	color: #236a23;
+}
+
+/* 2번째 박스 아이콘 색깔 */
+.school-container.kid .call-wrap.green-line .fa-wrap i {
+	color: #97ca28;
+}
+
+
+/* 초등부 elementary ================================================== */
+	
+.school-container.elementary .call-wrap {
+    border: 2px solid #429b9045;
+    box-shadow: -10px -9px 0px 0px #429b9030;
+}
+
+@media (max-width: 520px) {
+	.school-container.elementary .call-wrap {
+    	padding: 30px 20px;
+	}
+}
+
+/* 개행을 큰 화면일땐 많이, 작은 화면일땐 안하기 */
+.school-container.elementary .call-text>p {
+	white-space: pre-line;	
+}
+	
+@media (max-width: 520px) {
+	.school-container.elementary .call-text>p {
+		white-space: normal;	
+	}
+}
+
+.school-container.elementary .call-wrap p {
+    color: #555;
+}
+
+
+/* 청년부 youth1 ================================================== */
+	
+.bible-box cite {
+	font-style: normal;
+}	
+	
+.school-container.youth1 .blockquote  {
+	
+}
+
+/* 아니.. 이미지 크기 계산 원래 이렇게... 머리아프게 하는거 맞아..? 이건 아닌거같아... */
+/* 이미지 */
+.youth1 .page-slider.small-bg .item {
+	/* 화면이 아무리 커져도 width >= 1200 에선 사진 width가 540 고정 */
+	height: 405px; /* 600:450 = 540:x */
+    max-height: 405px; /* 사진 원본비율에 맞는 크기 */
+	background-size: cover;
+}
+
+/* 이미지 크기.. */
+@media ( max-width : 1199px) {
+	.youth1 .page-slider.small-bg .item {
+		/* 화면이 아무리 작아져도 992 <= width < 1200 에선 사진 width가 450 고정 */
+		height: 337.5px; /* 600:450 = 450:x */	
+    	max-height: 337.5px; /* 사진 원본비율에 맞는 크기 */
+	}
+}
+
+/* 여기부터 밑으로 내려가: col-lg-6니까.. */
+@media ( max-width : 991px) {
+	.youth1 .page-slider.small-bg .item {
+		/* 화면이 아무리 작아져도 768 <= width < 992 에선 사진 width가 690 고정 */
+		height: 517.5px; /* 600:450 = 690:x */
+    	max-height: 517.5px; /* 사진 원본비율에 맞는 크기 */
+	}
+}
+
+@media ( max-width : 767px) {
+	.youth1 .page-slider.small-bg .item {
+		/* 화면이 아무리 작아져도  576 <= width < 768 에선 사진 width가 510 고정 */
+		height: 382.5px; /* 600:450 = 510:x */
+    	max-height: 382.5px; /* 사진 원본비율에 맞는 크기 */
+	}
+}
+
+/* 이제부턴 그냥 1px씩 화면 작아질때마다 이미지 width도 1px씩 작아짐 */
+@media ( max-width : 575px) {
+	.youth1 .page-slider.small-bg .item {
+		/* 양 옆 패딩이 15px임: width = 100vw-30px */
+		height: calc((100vw - 30px) * 0.75); /* 600:450 = 100vw-30px:x */
+    	max-height: calc((100vw - 30px) * 0.75); /* 사진 원본비율에 맞는 크기 */
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
