@@ -4262,7 +4262,6 @@ table {
     border-radius: 10px;
 }
 
-
 .school-container.adolescent .blockquote:before {
 	    color: #5588ff45;
 }
@@ -4271,11 +4270,23 @@ table {
 	color: #253c7e;
 }
 
+.school-container.adolescent blockquote.blue-quote {
+    margin: 1rem 0;
+    color: #444;
+	font-style: normal;
+	background: #3366ff24;
+    border-left: 3px solid #3366ffbf;
+}
+
+.school-container.adolescent blockquote.blue-quote p {
+    font-style: normal;
+}
+
 .school-container.adolescent .text-box {
     padding: 30px 40px;
     border-radius: 10px;
     box-shadow: 0px 0px 19px 0px #77aaff69;
-    background-color: #77aaff1a;
+    background-color: #fff;
 }
 
 @media (max-width: 575px) {

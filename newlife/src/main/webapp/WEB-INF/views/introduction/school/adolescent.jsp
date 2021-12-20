@@ -104,11 +104,13 @@
         <p>할렐루야 우리 하나님을 찬양하는 일이 선함이여 찬송하는 일이 아름답고 마땅하도다.</p>
         <div class="bible-box"><cite title="Source Title"><i class="fas fa-bible"></i>&nbsp;시편 147편 1절</cite></div>
       </blockquote>
-      <p class="text-box">시온의 영광 중고등부는 
+      <div class="text-box">시온의 영광 중고등부는 
               다윗과 같이 하나님만을 사랑하고 찬송하며 
               하나님이 주신 언약의 말씀들이 삶을 통해 열매 맺는 예배 공동체입니다.<br><br>청소년시기의 다윗과 요셉 그리고 다니엘과 같이 
               하나님을 예배하고 찬송함으로 
-              마지막 때에 메시아 게이트로 준비되고 있습니다!!<br><br>주님만을 기쁘게 찬양하는 다윗<br>주를 경외함으로 열방을 형통케 하는 요셉<br>어떤 상황에도 주님께 기도하는 다니엘<br><br>여러분이 바로 그 주인공입니다.<br>다음세대 여러분을 환영합니다.</p>
+              마지막 때에 메시아 게이트로 준비되고 있습니다!!<br>
+      <blockquote class="blue-quote"><p>주님만을 기쁘게 찬양하는 다윗<br>주를 경외함으로 열방을 형통케 하는 요셉<br>어떤 상황에도 주님께 기도하는 다니엘</p></blockquote>
+              여러분이 바로 그 주인공입니다.<br>다음세대 여러분을 환영합니다.</div>
     </div><!-- Col end -->
   </div><!-- Content row end -->
   </div><!-- Container end -->
