@@ -4253,14 +4253,77 @@ table {
 }
 
 
-/* 청년부 youth1 ================================================== */
+/* 중고등부 adolescent ================================================== */
 	
-.bible-box cite {
-	font-style: normal;
+.school-container.adolescent .blockquote {
+    margin: 20px 0 40px 0;
+    background: #99ccff2b;
+    border-left: 3px solid #5588ff6b;
+    border-radius: 10px;
+}
+
+
+.school-container.adolescent .blockquote:before {
+	    color: #5588ff45;
+}
+
+.school-container.adolescent .blockquote cite {
+	color: #253c7e;
+}
+
+.school-container.adolescent .text-box {
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 19px 0px #77aaff69;
+    background-color: #77aaff1a;
+}
+
+@media (max-width: 575px) {
+	.school-container.adolescent .text-box {
+		padding: 25px;
+	}
 }	
+
+/* 개행을 큰 화면일땐 많이, 작은 화면일땐 안하기 */
+.school-container.adolescent .text-box {
+	white-space: pre-line;	
+}
 	
-.school-container.youth1 .blockquote  {
+@media (max-width: 520px) {
+	.school-container.adolescent .text-box {
+		white-space: normal;	
+	}
+}
+
+
+/* 청년부 youth1 ================================================== */
+		
+.school-container.youth1 .blockquote {
+	background: #daf8e34f;
+    border-left: 3px solid #0086ad5e;
+    color: #225b6b;
+    margin-bottom: 30px;
+}
 	
+.school-container.youth1 .blockquote:before {
+	color: #aff0c375;
+}
+
+.school-container.youth1 .blockquote cite {
+    color: #3b96a7;
+    font-style: normal;
+}
+
+/* quote에는 margin-top있으니깐.. 맞춰주기 */
+.school-container.youth1 .page-slider {
+    margin-top: 20px;
+}
+
+.text-box {
+	padding: 25px;
+    border-radius: 10px;
+    box-shadow: -5px 5px 0px 0px #72b1a561;
+    background-color: #72b1a514;
 }
 
 /* 아니.. 이미지 크기 계산 원래 이렇게... 머리아프게 하는거 맞아..? 이건 아닌거같아... */
@@ -4270,6 +4333,7 @@ table {
 	height: 405px; /* 600:450 = 540:x */
     max-height: 405px; /* 사진 원본비율에 맞는 크기 */
 	background-size: cover;
+	border-radius: 10px;
 }
 
 /* 이미지 크기.. */
@@ -4287,6 +4351,10 @@ table {
 		/* 화면이 아무리 작아져도 768 <= width < 992 에선 사진 width가 690 고정 */
 		height: 517.5px; /* 600:450 = 690:x */
     	max-height: 517.5px; /* 사진 원본비율에 맞는 크기 */
+	}
+	
+	.school-container.youth1 .page-slider {
+	    margin-top: 0;
 	}
 }
 
