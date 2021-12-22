@@ -73,12 +73,12 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">쥬빌리 유치부</h1>
+                <h1 class="banner-title">생명샘 말씀</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-                      <li class="breadcrumb-item"><a href="#">교회 소개</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">쥬빌리 유치부</li>
+                      <li class="breadcrumb-item"><a href="#">말씀과 나눔</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">생명샘 말씀</li>
                     </ol>
                 </nav>
               </div>

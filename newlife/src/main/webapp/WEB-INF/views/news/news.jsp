@@ -59,6 +59,7 @@
 <body>
 <div class="body-inner">
   
+  
 <!-- header include start -->
 <%@ include file="/WEB-INF/views/parts/header.jsp" %>
 <!-- header include end -->
@@ -131,21 +132,21 @@
       </c:forEach>
 	</div><!-- Main row end -->
  
-<!-- paging 페이지 처리 -->
-<!-- pc는 10까지, 모바일은 5까지 -->
-<div class="row paging-row">
-  <div class="paging-row-inner" >
-	<nav class="paging" aria-label="Page navigation example">
-	  <ul class="pagination">
-	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-	    <li class="page-item"><a class="page-link" href="#">1</a></li>
-	    <li class="page-item"><a class="page-link" href="#">2</a></li>
-	    <li class="page-item"><a class="page-link" href="#">3</a></li>
-	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-	  </ul>
-	</nav>
-  </div>
-</div><!-- end paging -->
+    <!-- paging 페이지 처리 -->
+    <!-- pc는 10까지, 모바일은 5까지 -->
+    <div class="row paging-row">
+      <div class="paging-row-inner" >
+    	<nav class="paging" aria-label="Page navigation example">
+    	  <ul class="pagination">
+    	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
+    	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
+    	  </ul>
+    	</nav>
+      </div>
+    </div><!-- end paging -->
  
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
@@ -153,7 +154,7 @@
 
 <!-- footer include start -->
 <%@ include file="/WEB-INF/views/parts/footer.jsp" %>
-<!-- footerinclude end -->
+<!-- footer include end -->
 
 
 <!-- Javascript Files

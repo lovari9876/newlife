@@ -53,12 +53,11 @@
 	<!-- font-face -->
 	<link rel="stylesheet" href="css/font-faces.css"> 
 	<!-- Template styles-->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" title="newlife Styles" href="/css/style.css">
 </head>
 
 <body>
 <div class="body-inner">
-  
   
 <!-- header include start -->
 <%@ include file="/WEB-INF/views/parts/header.jsp" %>
@@ -74,12 +73,13 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">청년 예배</h1>
+                <h1 class="banner-title">중보 기관 및 선교사</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-                      <li class="breadcrumb-item"><a href="#">청년 플랫폼</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">청년 예배</li>
+                      <li class="breadcrumb-item">새생활교회</li>
+                      <li class="breadcrumb-item">교회 소개</li>
+                      <li class="breadcrumb-item">교회 사역</li>
+                      <li class="breadcrumb-item active" aria-current="page">중보 기관 및 선교사</li>
                     </ol>
                 </nav>
               </div>
@@ -89,67 +89,27 @@
   </div><!-- Banner text end -->
 </div><!-- Banner area end --> 
 
-<!-- 메인 컨테이너 -->
-<section id="main-container" class="main-container pb-2 video-board">
+
+<!--  #b2d8d8  (178,216,216)
+      #66b2b2 (102,178,178)
+      #008080 (0,128,128)
+      #006666 (0,102,102)
+      #004c4c (0,76,76) -->
+<!-- 교회학교 컨테이너 -->
+<section class="school-container youth1">
   <div class="container">
-    <div class="row">
-    
-	  <!-- 게시판 item -->
-	  <!-- 반복 시작 -->
-	  <c:forEach items="${newsList}" var="news">
-	  
-      <div class="col-lg-4 col-md-6 mb-5 board-item">
-        <div class="ts-service-box h-100">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/video-thumbnails/video-thum-sample.jpg" alt="service-image">
-            </div>
-            <div class="d-flex">              
-              <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="/content_view?id=${news['id']}">${news['title']}</a></h3>
-                  <p>
-                  	<span><i class="fas fa-bible"></i>데살로니가전서 1장 12-15절</span><br/>
-                  	<span><i class="far fa-calendar-check"></i>주일 2부 예배</span><br/>
-                  	<span><i class="far fa-user"></i>${news['nickname']}</span><br/>
-                  	<span class="board-time"><i class="far fa-clock small-i"></i>
-	               		<!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
-						<jsp:useBean id="today" class="java.util.Date" /> 
-						<!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
-						<fmt:formatDate value="${today}" pattern="yyyy.MM.dd" var="now"/>
-						<fmt:formatDate value="${news['create_date']}" pattern="yyyy.MM.dd" var="date"/>
-						<c:choose>
-							<c:when test="${now ne date}">${date}</c:when> 
-							<c:otherwise>
-								<fmt:formatDate value="${news['create_date']}" pattern="HH:mm"/>
-							</c:otherwise>
-						</c:choose>
-                  	</span>
-                  	<span class="board-no">번호 0<!-- ${news['RNUM']} --></span><span class="board-tally">조회수 500</span>
-                  </p>              
-              </div>
-            </div>
-        </div><!-- Service end -->
+    <div class="row"> 
+      <div class="col-lg-6">
+        <blockquote class="blockquote">
+          <p>준비중</p>
+          
+        </blockquote>            
+        <p>준비중  </p>  
       </div><!-- Col end -->
-      </c:forEach>
-	</div><!-- Main row end -->
- 
-    <!-- paging 페이지 처리 -->
-    <!-- pc는 10까지, 모바일은 5까지 -->
-    <div class="row paging-row">
-      <div class="paging-row-inner" >
-    	<nav class="paging" aria-label="Page navigation example">
-    	  <ul class="pagination">
-    	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-    	    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    	    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    	    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-    	  </ul>
-    	</nav>
-      </div>
-    </div><!-- end paging -->
- 
-  </div><!-- Conatiner end -->
-</section><!-- Main container end -->
+    </div><!-- Content row end -->
+
+  </div><!-- Container end -->
+</section><!-- Main container end --> 
 
 
 <!-- footer include start -->

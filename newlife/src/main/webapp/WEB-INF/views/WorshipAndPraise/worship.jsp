@@ -59,6 +59,7 @@
 <body>
 <div class="body-inner">
   
+  
 <!-- header include start -->
 <%@ include file="/WEB-INF/views/parts/header.jsp" %>
 <!-- header include end -->
@@ -67,13 +68,13 @@
 <!--**********************************
       	배너부분
 ***********************************-->
-<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner-river.png)">
+<div id="banner-area" class="banner-area banner-fixed">
   <div class="banner-text">
     <div class="container">
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">공지사항</h1>
+                <h1 class="banner-title">예배 영상</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
@@ -99,7 +100,7 @@
 	  <c:forEach items="${newsList}" var="news">
 	  
       <div class="col-lg-4 col-md-6 mb-5 board-item">
-        <div class="ts-service-box">
+        <div class="ts-service-box h-100">
             <div class="ts-service-image-wrapper">
               <img loading="lazy" class="w-100" src="images/video-thumbnails/video-thum-sample.jpg" alt="service-image">
             </div>
@@ -132,21 +133,21 @@
       </c:forEach>
 	</div><!-- Main row end -->
  
-<!-- paging 페이지 처리 -->
-<!-- pc는 10까지, 모바일은 5까지 -->
-<div class="row paging-row">
-  <div class="paging-row-inner" >
-	<nav class="paging" aria-label="Page navigation example">
-	  <ul class="pagination">
-	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-	    <li class="page-item"><a class="page-link" href="#">1</a></li>
-	    <li class="page-item"><a class="page-link" href="#">2</a></li>
-	    <li class="page-item"><a class="page-link" href="#">3</a></li>
-	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-	  </ul>
-	</nav>
-  </div>
-</div><!-- end paging -->
+    <!-- paging 페이지 처리 -->
+    <!-- pc는 10까지, 모바일은 5까지 -->
+    <div class="row paging-row">
+      <div class="paging-row-inner" >
+    	<nav class="paging" aria-label="Page navigation example">
+    	  <ul class="pagination">
+    	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
+    	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
+    	  </ul>
+    	</nav>
+      </div>
+    </div><!-- end paging -->
  
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
@@ -154,7 +155,7 @@
 
 <!-- footer include start -->
 <%@ include file="/WEB-INF/views/parts/footer.jsp" %>
-<!-- footerinclude end -->
+<!-- footer include end -->
 
 
 <!-- Javascript Files

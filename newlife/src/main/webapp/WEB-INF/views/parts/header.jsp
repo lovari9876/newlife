@@ -92,7 +92,8 @@
                               <a href="#!" class="dropdown-toggle" data-toggle="dropdown">교회 사역 </a>
                               <ul class="dropdown-menu">
                                 <li><a href="/intercessory">중보 기관 및 선교사</a></li>
-                                <li><a href="/">크리스천 싱글즈</a></li><!-- 링크 걸어서 새 창 띄우기 -->    
+                                <li><a href="https://csingles.co.kr/" target="_blank">크리스천 싱글즈</a></li>
+                                <!-- 링크 걸어서 새 창 띄우기  target="_blank" 는 새창 띄우는 거! -->    
                               </ul>
                           </li>
                         </ul>
