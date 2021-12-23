@@ -380,6 +380,14 @@ hr {
 	margin: 40px 0;
 }
 
+hr.hr-m-10 {
+	margin: 10px 0;	
+}
+
+hr.hr-m-20 {
+	margin: 20px 0;	
+}
+
 .alert hr {
 	background: initial;
 	margin: initial;
@@ -2756,11 +2764,25 @@ banner-fixed {
 		min-height: 125px;
 	}
 	
+	.banner-area::after {
+    	min-height: 125px;
+	}
+	
 	.banner-title {
 		font-size: 32px;
 	}
+	
+	ol.breadcrumb {
+    	line-height: normal;
+	}
 }
 
+@media ( max-width : 388px) {
+	.banner-title {    
+		margin-bottom: 3px;
+	}	
+}	
+	
 .banner-text {
 	position: absolute;
 	top: 50%;
@@ -3230,7 +3252,8 @@ label {
 	margin-right: 3px;
 }
 
-.post-meta .post-comment {
+/* 맨 끝 요소는 오른쪽 border 없어 */
+.post-meta .post-comment, .post-meta .post-view {
 	border-right: 0;
 }
 
@@ -3277,7 +3300,7 @@ label {
 
 .post-tags a {
 	border: 1px solid #dadada;
-	color: #7c7c7c;
+	color: #666;
 	display: inline-block;
 	font-size: 12px;
 	padding: 3px 10px;
@@ -4387,14 +4410,32 @@ table {
 }
 
 
+/* 청년2부 youth2 ================================================== */
+
+/* 연두 테두리 */
+.school-container.youth2 .call-wrap {
+	border: 2px solid #bade70a3;
+    box-shadow: -10px -9px 0px 0px #bade706e;
+}
+
+/* 개행을 큰 화면일땐 많이, 작은 화면일땐 안하기 */
+.school-container.youth2 .call-text p {
+	white-space: pre-line;	
+}
+	
+@media (max-width: 520px) {
+	.school-container.youth2 .call-text p {
+		white-space: normal;	
+	}
+}
 
 
-
-
-
-
-
-
+/* ==================================================
+	content view
+================================================== */
+.content-view-hr {
+	margin: 20px 0;
+}
 
 
 

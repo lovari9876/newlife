@@ -102,7 +102,5 @@ public class IntroductionController {
 
 	}
 
-	// 크리스천 싱글즈 (only link)
-	// 아마 그냥 view에서 링크로 걸듯..
 
 }

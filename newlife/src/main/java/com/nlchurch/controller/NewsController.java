@@ -78,26 +78,6 @@ public class NewsController {
 
 	}
 
-	// content view
-	@RequestMapping(value = "/content", method = RequestMethod.GET)
-	public String home(Locale locale, Model model/* , Principal principal */) throws Exception {
 
-		/*
-		 * // 히트다 히트 model.addAttribute("hit", boardService.selectHitList()); // 베스트
-		 * model.addAttribute("best", boardService.selectBestList()); // 랭킹(글 많이 쓴)
-		 * model.addAttribute("rankW", boardService.rankWrite()); // 랭킹(댓글 많이 쓴)
-		 * model.addAttribute("rankWC", boardService.rankWriteCo()); // 랭킹(신고많이받은)
-		 * model.addAttribute("rankRe", boardService.rankReport());
-		 */
-
-		/*
-		 * // 후원하기 위한 후원자 정보 if (principal != null) { String m_id = principal.getName();
-		 * MemberVO memberVO = myPageService.mypage(m_id);
-		 * model.addAttribute("memberVO", memberVO); }
-		 */
-
-		return "content/content-view";
-		// 디미토리 보니까 직장인 게시판 글이면 "work/글번호" 이렇게 되어있다.
-	}
 
 }

@@ -19,39 +19,39 @@
 
 	<!-- Favicon
 ================================================== -->
-	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-	<link rel="manifest" href="images/favicon/manifest.json">
+	<link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/images/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+	<meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 
 	<!-- CSS
 ================================================== -->
 	<!-- Bootstrap -->
-	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
 	<!-- FontAwesome -->
-	<link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
 	<!-- Animation -->
-	<link rel="stylesheet" href="plugins/animate-css/animate.css">
+	<link rel="stylesheet" href="/plugins/animate-css/animate.css">
 	<!-- slick Carousel -->
-	<link rel="stylesheet" href="plugins/slick/slick.css">
-	<link rel="stylesheet" href="plugins/slick/slick-theme.css">
+	<link rel="stylesheet" href="/plugins/slick/slick.css">
+	<link rel="stylesheet" href="/plugins/slick/slick-theme.css">
 	<!-- Colorbox -->
-	<link rel="stylesheet" href="plugins/colorbox/colorbox.css">
+	<link rel="stylesheet" href="/plugins/colorbox/colorbox.css">
 	<!-- font-face -->
-	<link rel="stylesheet" href="css/font-faces.css"> 
+	<link rel="stylesheet" href="/css/font-faces.css"> 
 	<!-- Template styles-->
 	<link rel="stylesheet" type="text/css" title="newlife Styles" href="/css/style.css">
 </head>
@@ -126,19 +126,19 @@
 ================================================== -->
 
 <!-- initialize jQuery Library -->
-<script src="plugins/jQuery/jquery.min.js"></script>
+<script src="/plugins/jQuery/jquery.min.js"></script>
 <!-- Bootstrap jQuery -->
-<script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+<script src="/plugins/bootstrap/bootstrap.min.js" defer></script>
 <!-- Slick Carousel -->
-<script src="plugins/slick/slick.min.js"></script>
-<script src="plugins/slick/slick-animation.min.js"></script>
+<script src="/plugins/slick/slick.min.js"></script>
+<script src="/plugins/slick/slick-animation.min.js"></script>
 <!-- Color box -->
-<script src="plugins/colorbox/jquery.colorbox.js"></script>
+<script src="/plugins/colorbox/jquery.colorbox.js"></script>
 <!-- shuffle -->
-<script src="plugins/shuffle/shuffle.min.js" defer></script>
+<script src="/plugins/shuffle/shuffle.min.js" defer></script>
 
 <!-- Template custom -->
-<script src="js/script.js"></script>
+<script src="/js/script.js"></script>
 
 </div><!-- Body inner end -->
 </body>

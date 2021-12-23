@@ -22,13 +22,20 @@
 		ORDER BY b.id DESC
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
-
-	
 	<select id="countBoardList" resultType="int">
 		SELECT count(*) 
 		FROM board b 
 		WHERE b.category_id = #{categoryId}
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 
+	<select id="getBoard" resultType="HashMap">
+		SELECT b.*, m.nickname, c.name AS category_name
+		FROM board b 
+        LEFT JOIN member m 
+		ON b.member_id = m.id
+        LEFT JOIN category c
+        ON b.category_id = c.id
+		WHERE b.id = #{id}		
+	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 
 </mapper>

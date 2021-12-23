@@ -22,7 +22,7 @@ public interface BoardMapper {
 	public int countBoardList(SearchCriteria scri, @Param("categoryId") int categoryId);
 
 	// content view
-	public HashMap<String, Object> getBoard(long id);
+	public HashMap<String, Object> getBoard(@Param("id") long id);
 
 	// 글 insert
 	public void createBoard(BoardDTO boardDTO);

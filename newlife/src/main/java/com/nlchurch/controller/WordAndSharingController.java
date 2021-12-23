@@ -11,9 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
 import com.nlchurch.service.BoardService;
 import com.nlchurch.util.paging.PageMaker;
 import com.nlchurch.util.paging.SearchCriteria;
@@ -58,7 +58,7 @@ public class WordAndSharingController {
 		// model.attribute("scri", scri); // 를 자동으로 해준다.
 
 		logger.info("spring of life: 생명샘 말씀");
-		categoryId = 9;
+		categoryId = 27;
 
 		// 로그인 안되어있는 상태에서도 볼 수 있음
 		// if (principal != null) {
@@ -93,6 +93,32 @@ public class WordAndSharingController {
 
 		return "wordAndSharing/springOfLife";
 
+	}
+	
+	// content view
+	@RequestMapping(value = "/spring-of-life/{id}", method = RequestMethod.GET)
+	public String contentView(Model model, HttpServletRequest rq, @PathVariable long id) 
+			throws Exception {
+
+		logger.info("contentView: 글 내용 보기");	
+		
+		// 로그인 안되어있는 상태에서도 볼 수 있음
+		// if (principal != null) {
+		// String m_id = principal.getName();
+		// MemberVO memberVO = myPageService.mypage(m_id);
+		// model.addAttribute("memberVO", memberVO);
+		// }
+
+		// 쿼리 uri로 보낸 파라미터들 확인
+		// System.out.println("query: " + rq.getQueryString());
+		// System.out.println("s_content: " + rq.getParameter("s_content"));
+		// System.out.println("searchType: " + scri.getSearchType());
+
+		HashMap<String, Object> board = boardService.getBoard(id);
+		model.addAttribute("board", board);
+		
+		return "content/content-view";
+		// 디미토리 보니까 직장인 게시판 글이면 "work/글번호" 이렇게 되어있다.
 	}
 
 }

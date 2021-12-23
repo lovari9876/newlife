@@ -57,7 +57,7 @@
                 
                 <div class="logo"> <!-- logo font: BC card B -->
                   <a class="d-block" href="/">
-                    <img loading="lazy" src="images/logo.png" alt="Constra">
+                    <img loading="lazy" src="/images/logo.png" alt="새생활교회">
                   </a>
               </div><!-- logo end -->
 

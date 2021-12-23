@@ -13,7 +13,7 @@
       <div class="row justify-content-between">
         <div class="col-lg-4 col-md-6 footer-widget footer-about">
           <h3 class="widget-title">About Us</h3>
-          <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.png" alt="Constra">
+          <img loading="lazy" width="200px" class="footer-logo" src="/images/logo.png" alt="새생활교회">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
             labore et dolore magna aliqua.</p>
           <div class="footer-social">
