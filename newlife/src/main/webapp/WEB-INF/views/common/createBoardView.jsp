@@ -50,6 +50,8 @@
 	<link rel="stylesheet" href="/plugins/slick/slick-theme.css">
 	<!-- Colorbox -->
 	<link rel="stylesheet" href="/plugins/colorbox/colorbox.css">
+    <!-- summernote css -->
+    <link rel="stylesheet" href="/plugins/summernote/summernote-lite.css">
 	<!-- font-face -->
 	<link rel="stylesheet" href="/css/font-faces.css"> 
 	<!-- Template styles-->
@@ -73,28 +75,7 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <!-- 게시판 있는 페이지만 id 받아서 출력임/ 상세페이지는 하드코딩! -->
-                <h1 class="banner-title">${board['c_name']}</h1>
-                <nav aria-label="breadcrumb">
-                    <!-- breadcrumb 중간 카테고리 if문 -->
-                    <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-                      <c:set var = "category" value = "${board['c_name']}"/>
-                      <c:choose>                         
-                         <c:when test = "category == '예배 영상'}">
-                           <li class="breadcrumb-item">예배와 찬양</li>
-                         </c:when>
-                         <c:when test = "category == '청년 예배' || category == '고백 찬양'}">
-                           <li class="breadcrumb-item">청년 플랫폼</li>
-                         </c:when>
-                         <c:when test = "category == '헐몬의 시간' || category == '용디기의 생각' || category == '매일 묵상' || category == '생명샘 말씀'}">
-                           <li class="breadcrumb-item">말씀과 나눔</li>
-                         </c:when>
-                         <c:otherwise></c:otherwise>
-                      </c:choose>                      
-                      <li class="breadcrumb-item active" aria-current="page">${board['c_name']}</li>
-                    </ol>
-                </nav>
+                <h1 class="banner-title">글 쓰기</h1>
               </div>
           </div><!-- Col end -->
         </div><!-- Row end -->
@@ -142,7 +123,12 @@
               <h2 class="entry-title">${board['title']}</h2> <!-- 제목 -->
             </div><!-- header end -->
             <hr class="hr-m-20">
-            <div class="entry-content">${board['content']}</div> <!-- 내용 -->
+            <div class="entry-content">
+            
+            <!-- summernote -->
+            <form method="post">
+              <textarea id="summernote" name="editordata"></textarea>
+            </form></div> <!-- 내용 -->
             <hr>
             
             <!-- 버튼: 목록,수정,작성 -->
@@ -198,6 +184,9 @@
 <script src="/plugins/colorbox/jquery.colorbox.js"></script>
 <!-- shuffle -->
 <script src="/plugins/shuffle/shuffle.min.js" defer></script>
+<!-- summernote js -->
+<script src="/plugins/summernote/summernote-lite.js"></script>
+<script src="/plugins/summernote/lang/summernote-ko-KR.js"></script>
 
 <!-- Template custom -->
 <script src="/js/script.js"></script>
