@@ -55,7 +55,7 @@ public class BoardController {
 	}
 
 	// create board view
-	@RequestMapping(value = { "/create-board-view" }, method = RequestMethod.GET)
+	@RequestMapping(value = "/create-board-view", method = RequestMethod.GET)
 	public String createBoardView(Model model, HttpServletRequest rq) throws Exception {
 
 		logger.info("createBoardView: 글 쓰기");
