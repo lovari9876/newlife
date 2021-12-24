@@ -91,7 +91,7 @@
 
 
 <!-- 메인 컨테이너 -->
-<section id="main-container" class="main-container pb-2 video-board">
+<section class="pb-2 video-board">
   <div class="container">
     <div class="row">
     

@@ -90,25 +90,21 @@
 
 
 <!-- 메인 컨테이너 -->
-<section id="main-container" class="main-container pb-2 video-board">
+<section class="pb-2 plain-board">
   <div class="container">
     <div class="row">
     
 	  <!-- 게시판 item -->
-	  <!-- 반복 시작 -->
-	  <c:forEach items="${newsList}" var="news">
+	  <!-- 맨앞에 한두개는 공지 띄우기!! -->
 	  
+	  <!-- 반복 시작 -->
+	  <c:forEach items="${newsList}" var="news">	  
       <div class="col-lg-4 col-md-6 mb-5 board-item">
         <div class="ts-service-box h-100">
-            <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/video-thumbnails/video-thum-sample.jpg" alt="service-image">
-            </div>
             <div class="d-flex">              
               <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="/content_view?id=${news['id']}">${news['title']}</a></h3>
+                  <h3 class="service-box-title"><a href="/news/${news['id']}">${news['title']}</a></h3>
                   <p>
-                  	<span><i class="fas fa-bible"></i>데살로니가전서 1장 12-15절</span><br/>
-                  	<span><i class="far fa-calendar-check"></i>주일 2부 예배</span><br/>
                   	<span><i class="far fa-user"></i>${news['nickname']}</span><br/>
                   	<span class="board-time"><i class="far fa-clock small-i"></i>
 	               		<!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
@@ -123,15 +119,29 @@
 							</c:otherwise>
 						</c:choose>
                   	</span>
-                  	<span class="board-no">번호 0<!-- ${news['RNUM']} --></span><span class="board-tally">조회수 500</span>
+                  	<span class="board-no">번호 ${news['id']}</span><span class="board-tally">조회수 ${news['view_tally']}</span>
                   </p>              
               </div>
             </div>
         </div><!-- Service end -->
       </div><!-- Col end -->
-      </c:forEach>
-	</div><!-- Main row end -->
- 
+      </c:forEach>     
+      
+      <!-- 버튼: 목록, 작성 -->
+      <div class="col-12">
+      <div class="tags-area d-flex align-items-center justify-content-between">
+        <div class="post-tags">         
+          <a href="${board['c_path']}">목록</a>
+        </div>
+        <div class="post-tags">  
+          <a href="/create-board-view">글쓰기</a>
+        </div>
+      </div>
+      </div>
+        
+    </div><!-- Main row end -->
+
+
     <!-- paging 페이지 처리 -->
     <!-- pc는 10까지, 모바일은 5까지 -->
     <div class="row paging-row">
@@ -139,15 +149,17 @@
     	<nav class="paging" aria-label="Page navigation example">
     	  <ul class="pagination">
     	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
     	    <li class="page-item"><a class="page-link" href="#">1</a></li>
     	    <li class="page-item"><a class="page-link" href="#">2</a></li>
     	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
     	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
     	  </ul>
     	</nav>
       </div>
     </div><!-- end paging -->
- 
+    
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
 

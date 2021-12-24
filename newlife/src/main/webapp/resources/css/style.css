@@ -3294,6 +3294,7 @@ label {
 
 /* News Single
 ================================================== */
+/* 글 쓰기, 수정, 목록 버튼 */
 .tags-area {
 	margin: 20px 0;
 }
@@ -3302,10 +3303,15 @@ label {
 	border: 1px solid #dadada;
 	color: #666;
 	display: inline-block;
-	font-size: 12px;
+	font-size: 13px;
 	padding: 3px 10px;
 	margin-left: 3px;
 }
+
+/* list 뷰일 때 버튼 */
+.plain-board .post-tags a, .video-board .post-tags a {	
+	font-size: 14px;
+}	
 
 .post-tags a:hover {
 	background: #387fff;
@@ -4431,11 +4437,9 @@ table {
 
 
 /* ==================================================
-	content view
+	board view 글 상세 내용 보기
 ================================================== */
-.content-view-hr {
-	margin: 20px 0;
-}
+
 
 
 

@@ -1,8 +1,8 @@
 package com.nlchurch.controller;
 
+import java.lang.annotation.Repeatable;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -35,23 +36,17 @@ public class NewsController {
 
 	// 새생활뉴스
 	@RequestMapping(value = "/news", method = RequestMethod.GET)
-	public String weekly(Model model, @ModelAttribute("scri") SearchCriteria scri, HttpServletRequest rq)
+	public String news(Model model, @ModelAttribute("scri") SearchCriteria scri, HttpServletRequest rq)
 			throws Exception {
 		// 스프링 컨테이너가 // SearchCriteria scri = new SearchCriteria(); //
 		// model.attribute("scri", scri); // 를 자동으로 해준다.
 
 		logger.info("news: 새생활뉴스");
-		categoryId = 8;
-
-		// 로그인 안되어있는 상태에서도 볼 수 있음
-		// if (principal != null) {
-		// String m_id = principal.getName();
-		// MemberVO memberVO = myPageService.mypage(m_id);
-		// model.addAttribute("memberVO", memberVO);
-		// }
-
-		// 한 페이지에 글 15개씩 보이도록
-		scri.setPerPageNum(15);
+		categoryId = 27;
+		
+		// 한 페이지에 글 12개씩 보이도록
+		// list가 media query에 따라 3줄->2줄->1줄 로 변해서 6의 배수여야 함
+		scri.setPerPageNum(12); 
 
 		// 쿼리 uri로 보낸 파라미터들 확인
 		// System.out.println("query: " + rq.getQueryString());
@@ -72,12 +67,9 @@ public class NewsController {
 
 		model.addAttribute("pageMaker", pageMaker);
 
-		// System.out.println(((SearchCriteria)(pageMaker.getCri())).getSearchType());
+		// logger.info(((SearchCriteria)(pageMaker.getCri())).getSearchType());
 
 		return "news/news";
-
 	}
-
-
-
+	
 }

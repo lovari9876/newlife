@@ -29,7 +29,7 @@
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 
 	<select id="getBoard" resultType="HashMap">
-		SELECT b.*, m.nickname, c.name AS category_name
+		SELECT b.*, m.nickname, c.name AS c_name, c.path AS c_path
 		FROM board b 
         LEFT JOIN member m 
 		ON b.member_id = m.id

@@ -95,31 +95,8 @@ public class WordAndSharingController {
 
 	}
 	
-	// content view
-	@RequestMapping(value = "/spring-of-life/{id}", method = RequestMethod.GET)
-	public String contentView(Model model, HttpServletRequest rq, @PathVariable long id) 
-			throws Exception {
-
-		logger.info("contentView: 글 내용 보기");	
-		
-		// 로그인 안되어있는 상태에서도 볼 수 있음
-		// if (principal != null) {
-		// String m_id = principal.getName();
-		// MemberVO memberVO = myPageService.mypage(m_id);
-		// model.addAttribute("memberVO", memberVO);
-		// }
-
-		// 쿼리 uri로 보낸 파라미터들 확인
-		// System.out.println("query: " + rq.getQueryString());
-		// System.out.println("s_content: " + rq.getParameter("s_content"));
-		// System.out.println("searchType: " + scri.getSearchType());
-
-		HashMap<String, Object> board = boardService.getBoard(id);
-		model.addAttribute("board", board);
-		
-		return "content/content-view";
-		// 디미토리 보니까 직장인 게시판 글이면 "work/글번호" 이렇게 되어있다.
-	}
-
+	
+	
+	
 }
 

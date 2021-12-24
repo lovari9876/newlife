@@ -74,12 +74,25 @@
           <div class="col-lg-12">
               <div class="banner-heading">
                 <!-- 게시판 있는 페이지만 id 받아서 출력임/ 상세페이지는 하드코딩! -->
-                <h1 class="banner-title">${board['category_name']}</h1>
+                <h1 class="banner-title">${board['c_name']}</h1>
                 <nav aria-label="breadcrumb">
+                    <!-- breadcrumb 중간 카테고리 if문 -->
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-                      <li class="breadcrumb-item"><a href="#">말씀과 나눔(if문으로 id 땡땡이면 뭐뭐 이렇게..)</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">${board['category_name']}</li>
+                      <c:set var = "category" value = "${board['c_name']}"/>
+                      <c:choose>                         
+                         <c:when test = "category == '예배 영상'}">
+                           <li class="breadcrumb-item">예배와 찬양</li>
+                         </c:when>
+                         <c:when test = "category == '청년 예배' || category == '고백 찬양'}">
+                           <li class="breadcrumb-item">청년 플랫폼</li>
+                         </c:when>
+                         <c:when test = "category == '헐몬의 시간' || category == '용디기의 생각' || category == '매일 묵상' || category == '생명샘 말씀'}">
+                           <li class="breadcrumb-item">말씀과 나눔</li>
+                         </c:when>
+                         <c:otherwise></c:otherwise>
+                      </c:choose>                      
+                      <li class="breadcrumb-item active" aria-current="page">${board['c_name']}</li>
                     </ol>
                 </nav>
               </div>
@@ -102,13 +115,12 @@
 <!--           <div class="post-media post-image"> -->
 <!--             <img loading="lazy" src="/images/news/news1.jpg" class="img-fluid" alt="post-image"> -->
 <!--           </div> -->
-
           <div class="post-body">
             <div class="entry-header">
               <div class="post-meta">
                 <span class="post-id"><i class="far fa-sticky-note"></i> ${board['id']}</span>
                 <span class="post-category">
-                  <i class="far fa-folder-open"></i> ${board['category_name']}</span>
+                  <i class="far fa-folder-open"></i> ${board['c_name']}</span>
                 <span class="post-author">
                   <i class="far fa-user"></i> ${board['nickname']}</span>
                 <span class="post-meta-date"><i class="far fa-calendar"></i>                    
@@ -136,10 +148,10 @@
             <!-- 버튼: 목록,수정,작성 -->
             <div class="tags-area d-flex align-items-center justify-content-between">
               <div class="post-tags">         
-                <a href="/spring-of-life/${spring['id']}">목록</a>
+                <a href="${board['c_path']}">목록</a>
               </div>
               <div class="post-tags">  
-                <a href="#">글쓰기</a>
+                <a href="/write-view">글쓰기</a>
                 <a href="#">수정하기</a>
               </div>
             </div>
