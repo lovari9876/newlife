@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -58,7 +59,7 @@ public class BoardController {
 	@RequestMapping(value = "/create-board-view", method = RequestMethod.GET)
 	public String createBoardView(Model model, HttpServletRequest rq) throws Exception {
 
-		logger.info("createBoardView: 글 쓰기");
+		logger.info("createBoardView: 글 쓰기 뷰");
 
 		// 로그인 안되어있는 상태에서도 볼 수 있음
 		// if (principal != null) {
@@ -75,7 +76,27 @@ public class BoardController {
 		return "common/createBoardView";
 	}
 	
-	// create board 
+	// create board	
+	@RequestMapping(value = "/create-board", method = RequestMethod.POST)
+	public String createBoard(Model model, HttpServletRequest rq /*@ModelAttribute("")*/ ) throws Exception {
+
+		logger.info("createBoard: 글 쓰기");
+
+		// 로그인 안되어있는 상태에서도 볼 수 있음
+		// if (principal != null) {
+		// String m_id = principal.getName();
+		// MemberVO memberVO = myPageService.mypage(m_id);
+		// model.addAttribute("memberVO", memberVO);
+		// }
+
+		// 쿼리 uri로 보낸 파라미터들 확인
+		// System.out.println("query: " + rq.getQueryString());
+		// System.out.println("s_content: " + rq.getParameter("s_content"));
+		// System.out.println("searchType: " + scri.getSearchType());
+
+		return ""; //  c_path + "/" + id
+	} 
+	
 	// update board
 	// delete board
 	

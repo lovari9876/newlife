@@ -144,7 +144,7 @@ return /******/ (function(modules) { // webpackBootstrap
         dropImage: '텍스트 혹은 사진을 내려놓으세요',
         selectFromFiles: '파일 선택',
         maximumFileSize: '최대 파일 크기',
-        maximumFileSizeError: '최대 파일 크기를 초과했습니다.',
+        maximumFileSizeError: '최대 파일 크기를 초과했습니다',
         url: '사진 URL',
         remove: '사진 삭제',
         original: '원본'
@@ -217,7 +217,7 @@ return /******/ (function(modules) { // webpackBootstrap
         setTransparent: '투명으로 설정',
         reset: '취소',
         resetToDefault: '기본값으로 설정',
-        cpSelect: '고르다'
+        cpSelect: '고르기'
       },
       shortcut: {
         shortcuts: '키보드 단축키',

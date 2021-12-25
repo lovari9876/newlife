@@ -51,7 +51,7 @@
 	<!-- Colorbox -->
 	<link rel="stylesheet" href="/plugins/colorbox/colorbox.css">
     <!-- summernote css -->
-    <link rel="stylesheet" href="/plugins/summernote/summernote-lite.css">
+    <link rel="stylesheet" href="/plugins/summernote/summernote-bs4.css">
 	<!-- font-face -->
 	<link rel="stylesheet" href="/css/font-faces.css"> 
 	<!-- Template styles-->
@@ -81,85 +81,98 @@
         </div><!-- Row end -->
     </div><!-- Container end -->
   </div><!-- Banner text end -->
-</div><!-- Banner area end --> 
+</div><!-- Banner area end -->
 
 
-<!-- 내용 컨테이너 -->
-<section class="content-view-container">
+<!-- 컨테이너 -->
+<section class="create-board-view-container">
   <div class="container">
     <!-- justify-content-center가 row내부 박스가 하나밖에 업어도 가운데 정렬해줌 -->
     <div class="row justify-content-center"> 
       <div class="col-lg-8 mb-5 mb-lg-0">        
         <div class="post-content post-single">
-          <!-- 이미지 컨테이너 -->
-          <!-- 유튜브도 이 자리에 넣자.. -->
-<!--           <div class="post-media post-image"> -->
-<!--             <img loading="lazy" src="/images/news/news1.jpg" class="img-fluid" alt="post-image"> -->
-<!--           </div> -->
-          <div class="post-body">
-            <div class="entry-header">
-              <div class="post-meta">
-                <span class="post-id"><i class="far fa-sticky-note"></i> ${board['id']}</span>
-                <span class="post-category">
-                  <i class="far fa-folder-open"></i> ${board['c_name']}</span>
-                <span class="post-author">
-                  <i class="far fa-user"></i> ${board['nickname']}</span>
-                <span class="post-meta-date"><i class="far fa-calendar"></i>                    
-                  <!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
-                  <jsp:useBean id="today" class="java.util.Date" /> 
-                  <!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
-                  <fmt:formatDate value="${today}" pattern="yyyy. MM. dd" var="now"/>
-                  <fmt:formatDate value="${board['create_date']}" pattern="yyyy. MM. dd" var="date"/>
-                  <c:choose>
-                    <c:when test="${now ne date}">${date}</c:when> 
-                    <c:otherwise>
-                      <fmt:formatDate value="${board['create_date']}" pattern="HH:mm"/>
-                    </c:otherwise>
-                  </c:choose>
-                </span>
-                <span class="post-view">
-                  <i class="far fa-eye"></i> ${board['view_tally']}</span>
-              </div>
-              <h2 class="entry-title">${board['title']}</h2> <!-- 제목 -->
-            </div><!-- header end -->
-            <hr class="hr-m-20">
-            <div class="entry-content">
+          <div class="post-body">            
+            <!-- content part -->     
+            <div class="entry-content"> 
             
-            <!-- summernote -->
-            <form method="post">
-              <textarea id="summernote" name="editordata"></textarea>
-            </form></div> <!-- 내용 -->
-            <hr>
-            
-            <!-- 버튼: 목록,수정,작성 -->
-            <div class="tags-area d-flex align-items-center justify-content-between">
-              <div class="post-tags">         
-                <a href="${board['c_path']}">목록</a>
-              </div>
-              <div class="post-tags">  
-                <a href="/write-view">글쓰기</a>
-                <a href="#">수정하기</a>
-              </div>
-            </div>
+              <!-- !!!form!!! -->
+              <form class="needs-validation" method="post" novalidate>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom02">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">City</label>
+                    <input type="text" class="form-control" id="validationCustom03" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <!-- 게시판 선택 -->
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCategory">State</label>
+                    <select class="custom-select" id="validationCategory" required>
+                      <option selected disabled value="">게시판을 선택하세요</option>
+                      <option></option>
+                      <option></option>
+                      <option></option>
+                      <option></option>
+                      <option></option>
+                      <option></option>
+                      <option></option>
+                      <option></option>
+                      <option></option>
+                      <option></option>
+                      <option></option>
+                    </select>
+                    <div class="invalid-feedback">게시판을 선택하세요</div>
+                  </div>
+                </div>
+                <!-- 글 제목 -->
+                <div class="form-row">
+                  <div class="col">
+                    <label for="validationBoardName">글 제목</label>
+                    <input type="text" class="form-control" id="validationBoardName" placeholder="제목을 입력하세요" required>
+                    <div class="invalid-feedback">제목을 입력하세요</div>
+                  </div>
+                </div>
+                <hr class="hr-m-20">           
+                <!-- 글 내용: summernote -->
+                <div class="form-group"> 
+                  <textarea id="summernote" name="editordata"></textarea>
+                </div>
+<!--                 비밀글 만들때 사용; 글 작성 시 검토용으로!! -->
+<!--                 <div class="form-group"> -->
+<!--                   <div> -->
+<!--                     <input type="checkbox" value="" > -->
+<!--                     <label >나만 보기</label> -->
+<!--                   </div> -->
+<!--                 </div> -->
+                <hr>
+                                
+                <!-- 버튼: 목록,수정,작성 -->
+                <div class="tags-area d-flex align-items-center justify-content-end">
+                  <button class="post-tags" type="submit">등록</button>
+                </div>
+              </form><!-- form end -->
+            </div> <!-- content end-->            
 
           </div><!-- post-body end -->
         </div><!-- post content end -->
-
-<!-- 글쓴이 박스... -->
-<!--         <div class="author-box d-nlock d-sm-flex"> -->
-<!--           <div class="author-img mb-4 mb-md-0"> -->
-<!--             <img loading="lazy" src="/images/news/avator1.png" alt="author"> -->
-<!--           </div> -->
-<!--           <div class="author-info"> -->
-<!--             <h3>Elton Themen<span>Site Engineer</span></h3> -->
-<!--             <p class="mb-2">Lisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad vene minim -->
-<!--               veniam, quis nostrud exercitation nisi ex ea commodo.</p> -->
-<!--             <p class="author-url mb-0">Website: <span><a href="#">http://www.example.com</a></span></p> -->
-
-<!--           </div> -->
-<!--         </div> Author box end -->
-
-      </div><!-- Content Col end -->
+      </div><!-- Content Col end -->      
     </div><!-- Main row end -->
   </div><!-- Container end -->
 </section><!-- Main container end -->
@@ -175,6 +188,8 @@
 
 <!-- initialize jQuery Library -->
 <script src="/plugins/jQuery/jquery.min.js"></script>
+<!-- popper -->
+<script src="/plugins/bootstrap/popper.min.js"></script>
 <!-- Bootstrap jQuery -->
 <script src="/plugins/bootstrap/bootstrap.min.js" defer></script>
 <!-- Slick Carousel -->
@@ -185,11 +200,34 @@
 <!-- shuffle -->
 <script src="/plugins/shuffle/shuffle.min.js" defer></script>
 <!-- summernote js -->
-<script src="/plugins/summernote/summernote-lite.js"></script>
+<script src="/plugins/summernote/summernote-bs4.js"></script>
 <script src="/plugins/summernote/lang/summernote-ko-KR.js"></script>
 
 <!-- Template custom -->
 <script src="/js/script.js"></script>
+
+<!-- for Form validation =================================== -->
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
 
 </div><!-- Body inner end -->
 </body>

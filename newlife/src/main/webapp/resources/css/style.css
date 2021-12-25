@@ -3299,13 +3299,14 @@ label {
 	margin: 20px 0;
 }
 
-.post-tags a {
+.post-tags a, button.post-tags {
 	border: 1px solid #dadada;
 	color: #666;
 	display: inline-block;
-	font-size: 13px;
+	font-size: 14px;
 	padding: 3px 10px;
 	margin-left: 3px;
+	background-color: #fff;
 }
 
 /* list 뷰일 때 버튼 */
@@ -3313,7 +3314,7 @@ label {
 	font-size: 14px;
 }	
 
-.post-tags a:hover {
+.post-tags a:hover, button.post-tags:hover {
 	background: #387fff;
 	color: #fff;
 	border: 1px solid transparent;

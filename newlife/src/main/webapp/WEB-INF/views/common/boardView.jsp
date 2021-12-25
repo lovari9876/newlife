@@ -110,11 +110,6 @@
     <div class="row justify-content-center"> 
       <div class="col-lg-8 mb-5 mb-lg-0">        
         <div class="post-content post-single">
-          <!-- 이미지 컨테이너 -->
-          <!-- 유튜브도 이 자리에 넣자.. -->
-<!--           <div class="post-media post-image"> -->
-<!--             <img loading="lazy" src="/images/news/news1.jpg" class="img-fluid" alt="post-image"> -->
-<!--           </div> -->
           <div class="post-body">
             <div class="entry-header">
               <div class="post-meta">
