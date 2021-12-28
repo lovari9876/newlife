@@ -28,7 +28,7 @@
 		WHERE b.category_id = #{categoryId}
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 
-	<select id="getBoard" resultType="HashMap">
+	<select id="getBoard" resultType="hashMap">
 		SELECT b.*, m.nickname, c.name AS c_name, c.path AS c_path
 		FROM board b 
         LEFT JOIN member m 
@@ -37,5 +37,18 @@
         ON b.category_id = c.id
 		WHERE b.id = #{id}		
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
+	
+	<select id="listCategory" resultType="hashMap">
+		SELECT * 
+		FROM category
+	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
+	
+	<select id="getCategoryPath" resultType="string">
+		SELECT c.path 
+		FROM category c 
+		WHERE c.id = #{id}
+	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
+	
+	
 
 </mapper>

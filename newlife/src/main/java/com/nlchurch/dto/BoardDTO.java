@@ -112,4 +112,12 @@ public class BoardDTO {
 		this.memberVO = memberVO;
 	}
 
+	@Override
+	public String toString() {
+		return "BoardDTO [id=" + id + ", category_id=" + category_id + ", member_id=" + member_id + ", title=" + title
+				+ ", content=" + content + ", show_status=" + show_status + ", view_tally=" + view_tally
+				+ ", create_date=" + create_date + ", last_update=" + last_update + ", categoryVO=" + categoryVO
+				+ ", memberVO=" + memberVO + "]";
+	}
+
 }

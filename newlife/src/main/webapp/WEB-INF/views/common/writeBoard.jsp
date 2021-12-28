@@ -96,47 +96,40 @@
             <div class="entry-content"> 
             
               <!-- !!!form!!! -->
-              <form class="needs-validation" method="post" novalidate>
+              <form class="needs-validation" action="/create-board" 
+                    method="post" enctype="multipart/form-data" novalidate>
+                    <!-- enctype="multipart/form-data"는 <input type="file"> 있을 때 -->
+                    <!-- <input>의 name="" Attribute -->
+                    <!-- 1. Name of the form control. Submitted with the form as part of a name/value pair. -->
+                    <!-- 2. name/value로 Spring에서도 자동 매핑함! 즉 name == DtoClass variableName 이어야함! -->
+                    
+                <!-- form-row 남겨두기 -->
+<!--                 <div class="form-row"> -->
+<!--                   <div class="col-md-6 mb-3"> -->
+<!--                     <label for="validationCustom01">First name</label> -->
+<!--                     <input type="text" class="form-control" id="validationCustom01" value="Mark" required> -->
+<!--                     <div class="valid-feedback"> -->
+<!--                       Looks good! -->
+<!--                     </div> -->
+<!--                   </div> -->
+<!--                   <div class="col-md-6 mb-3"> -->
+<!--                     <label for="validationCustom02">Last name</label> -->
+<!--                     <input type="text" class="form-control" id="validationCustom02" value="Otto" required> -->
+<!--                     <div class="valid-feedback"> -->
+<!--                       Looks good! -->
+<!--                     </div> -->
+<!--                   </div> -->
+<!--                 </div> -->
                 <div class="form-row">
-                  <div class="col-md-6 mb-3">
-                    <label for="validationCustom01">First name</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-3">
-                    <label for="validationCustom02">Last name</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col-md-6 mb-3">
-                    <label for="validationCustom03">City</label>
-                    <input type="text" class="form-control" id="validationCustom03" required>
-                    <div class="invalid-feedback">
-                      Please provide a valid city.
-                    </div>
-                  </div>
-                  <!-- 게시판 선택 -->
-                  <div class="col-md-6 mb-3">
-                    <label for="validationCategory">State</label>
-                    <select class="custom-select" id="validationCategory" required>
-                      <option selected disabled value="">게시판을 선택하세요</option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
-                      <option></option>
+                  <div class="col">
+                    <!-- 게시판 선택 -->
+                    <label for="validationCategory">게시판</label>
+                    <select class="custom-select" id="validationCategory" name="category_id" required>
+                      <!-- member role에 따라 선택지 개수가 달라져야 함! -->
+                      <option selected disabled >게시판을 선택하세요</option>
+                      <c:forEach items="${categoryList}" var="category">    
+                      <option value="${category['id']}">${category['name']}</option>
+                      </c:forEach>
                     </select>
                     <div class="invalid-feedback">게시판을 선택하세요</div>
                   </div>
@@ -145,14 +138,15 @@
                 <div class="form-row">
                   <div class="col">
                     <label for="validationBoardName">글 제목</label>
-                    <input type="text" class="form-control" id="validationBoardName" placeholder="제목을 입력하세요" required>
+                    <input type="text" class="form-control" id="validationBoardName" 
+                           name="title" placeholder="제목을 입력하세요" required>
                     <div class="invalid-feedback">제목을 입력하세요</div>
                   </div>
                 </div>
                 <hr class="hr-m-20">           
                 <!-- 글 내용: summernote -->
                 <div class="form-group"> 
-                  <textarea id="summernote" name="editordata"></textarea>
+                  <textarea id="summernote" name="content"></textarea>
                 </div>
 <!--                 비밀글 만들때 사용; 글 작성 시 검토용으로!! -->
 <!--                 <div class="form-group"> -->

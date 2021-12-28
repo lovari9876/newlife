@@ -134,7 +134,7 @@
           <a href="${board['c_path']}">목록</a>
         </div>
         <div class="post-tags">  
-          <a href="/create-board-view">글쓰기</a>
+          <a href="/write">글쓰기</a>
         </div>
       </div>
       </div>

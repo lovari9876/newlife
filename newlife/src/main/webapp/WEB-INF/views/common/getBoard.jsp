@@ -77,6 +77,7 @@
                 <h1 class="banner-title">${board['c_name']}</h1>
                 <nav aria-label="breadcrumb">
                     <!-- breadcrumb 중간 카테고리 if문 -->
+                    <!-- 새생활뉴스일 땐 중간 breadcrump 없음(otherwise) -->
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
                       <c:set var = "category" value = "${board['c_name']}"/>

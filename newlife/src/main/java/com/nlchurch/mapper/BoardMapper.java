@@ -23,7 +23,13 @@ public interface BoardMapper {
 
 	// content view
 	public HashMap<String, Object> getBoard(@Param("id") long id);
+	
+	// 게시판 종류 가져오기 list categories
+	public ArrayList<HashMap<String, Object>> listCategory();
 
+	// 게시판 id로 path 가져오기
+	public String getCategoryPath(long id);	
+	
 	// 글 insert
 	public void createBoard(BoardDTO boardDTO);
 

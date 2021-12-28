@@ -8,6 +8,7 @@ public class CategoryDTO {
 	private long id; // 게시판 번호
 	private long parent_id; // 상위 게시판 번호: 상위가 없으면 0
 	private String name; // 게시판 이름
+	private String path; // 게시판 경로
 	private Timestamp create_date; // 생성일
 	private Timestamp last_update; // 수정일
 
@@ -38,6 +39,14 @@ public class CategoryDTO {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
 	}
 
 	public Timestamp getCreate_date() {

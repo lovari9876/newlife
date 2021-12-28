@@ -34,7 +34,19 @@ public class BoardServiceImpl implements BoardService {
 	public HashMap<String, Object> getBoard(long id) {
 		return boardMapper.getBoard(id);
 	}
+	
+	// 게시판 종류 가져오기 list categories
+	@Override
+	public ArrayList<HashMap<String, Object>> listCategory() {
+		return boardMapper.listCategory();		
+	}
 
+	// 게시판 id로 path 가져오기
+	@Override
+	public String getCategoryPath(long id) {
+		return boardMapper.getCategoryPath(id);
+	}
+	
 	// 글 insert
 	@Override
 	public void createBoard(BoardDTO boardDTO) { // 나중에 파라미터로 멤버 id 들어감
