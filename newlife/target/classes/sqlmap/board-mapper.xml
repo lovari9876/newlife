@@ -49,6 +49,12 @@
 		WHERE c.id = #{id}
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
-	
+	<insert id="createBoard" parameterType="com.nlchurch.dto.BoardDTO">
+		INSERT 
+		INTO board 
+		(category_id, member_id, title, content) 
+		VALUES 
+		(#{boardDTO.category_id}, #{boardDTO.member_id}, #{boardDTO.title}, #{boardDTO.content})
+	</insert> <!-- ;세미콜론 금지!!!!!!!!!! -->
 
 </mapper>

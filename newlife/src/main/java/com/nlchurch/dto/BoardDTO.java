@@ -23,6 +23,22 @@ public class BoardDTO {
 	public BoardDTO() {
 	}
 
+	public BoardDTO(long id, long category_id, long member_id, String title, String content, boolean show_status,
+			long view_tally, Timestamp create_date, Timestamp last_update, CategoryDTO categoryVO, MemberDTO memberVO) {
+		super();
+		this.id = id;
+		this.category_id = category_id;
+		this.member_id = member_id;
+		this.title = title;
+		this.content = content;
+		this.show_status = show_status;
+		this.view_tally = view_tally;
+		this.create_date = create_date;
+		this.last_update = last_update;
+		this.categoryVO = categoryVO;
+		this.memberVO = memberVO;
+	}
+
 	// getters and setters
 	public long getId() {
 		return id;

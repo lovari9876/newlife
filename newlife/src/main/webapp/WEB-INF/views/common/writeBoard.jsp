@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -96,12 +97,19 @@
             <div class="entry-content"> 
             
               <!-- !!!form!!! -->
+              <!-- spring form tag에서 modelAttribute="bean"는 controller에서 @ModelAttribute("bean") -->
               <form class="needs-validation" action="/create-board" 
-                    method="post" enctype="multipart/form-data" novalidate>
-                    <!-- enctype="multipart/form-data"는 <input type="file"> 있을 때 -->
-                    <!-- <input>의 name="" Attribute -->
-                    <!-- 1. Name of the form control. Submitted with the form as part of a name/value pair. -->
-                    <!-- 2. name/value로 Spring에서도 자동 매핑함! 즉 name == DtoClass variableName 이어야함! -->
+                    method="post" <%-- enctype="multipart/form-data" --%> novalidate>
+                <%-- ***************************************************** --%>
+                <%-- 모든게 틀림이 업는데 일주일 넘게 원인 모를 passing null data를 발생시킨 원인!!!!! --%>
+                <%-- enctype="multipart/form-data" --%>
+                <%-- 어떠한 처리 없이 그냥 저것만 쓰면.. 모든 data를 다 null값 가져옴.. --%>
+                <%-- mapping이 완벽해도 절대 값을 bind안하고 원인도 안뜸 그냥 null --%>
+                
+                <!-- enctype="multipart/form-data"는 ****ONLY FOR**** <input type="file"> 있을 때 -->
+                <!-- <input>의 name="" Attribute -->
+                <!-- 1. Name of the form control. Submitted with the form as part of a name/value pair. -->
+                <!-- 2. name/value로 Spring에서도 자동 매핑함! 즉 name == DtoClass variableName 이어야함! -->
                     
                 <!-- form-row 남겨두기 -->
 <!--                 <div class="form-row"> -->
@@ -123,14 +131,20 @@
                 <div class="form-row">
                   <div class="col">
                     <!-- 게시판 선택 -->
-                    <label for="validationCategory">게시판</label>
+                    <label for="validationCategory" >게시판</label>
                     <select class="custom-select" id="validationCategory" name="category_id" required>
                       <!-- member role에 따라 선택지 개수가 달라져야 함! -->
-                      <option selected disabled >게시판을 선택하세요</option>
-                      <c:forEach items="${categoryList}" var="category">    
-                      <option value="${category['id']}">${category['name']}</option>
+                      <option label="게시판을 선택하세요" disabled selected/>
+                      <c:forEach items="${categoryList}" var="category"> 
+                        <option value="${category['id']}">${category['name']}</option>
                       </c:forEach>
-                    </select>
+<%--                       <form:options items="${categoryList}" itemValue="id" itemLabel="name"/> --%>
+                   
+<%--                       <form:option value="-" selected disabled="true" >게시판을 선택하세요</form:option> --%>
+<%--                       <c:forEach items="${categoryList}" var="category">     --%>
+<%--                       <form:option value="${category['id']}">${category['name']}</form:option> --%>
+<%--                       </c:forEach> --%>         
+                    </select>             
                     <div class="invalid-feedback">게시판을 선택하세요</div>
                   </div>
                 </div>
@@ -202,6 +216,41 @@
 
 <!-- for Form validation =================================== -->
 <script>
+jQuery(function ($) {
+	'use strict';
+  
+	// 서머노트 run
+    $(document).ready(function() {
+      $('#summernote').summernote({
+        height: 300,                 // 에디터 높이
+        minHeight: null,             // 최소 높이
+        maxHeight: null,             // 최대 높이
+        focus: false,                // 에디터 로딩후 포커스를 맞출지 여부
+        lang: "ko-KR",         // 한글 설정
+        placeholder: '내용을 입력하세요', //placeholder 설정
+        toolbar: [
+          // [groupName, [list of button]]
+          ['fontname', ['fontname']],
+          ['fontsize', ['fontsize']],
+          ['style', ['bold', 'italic', 'underline','strikethrough', 'clear']],
+          ['color', ['forecolor','color']],
+          ['table', ['table']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['height', ['height']],
+          ['insert',['picture','link','video']],
+          ['view', ['help']]
+        ],
+        fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New','맑은 고딕','궁서','굴림체','굴림','돋움체','바탕체'],
+        fontSizes: ['8','9','10','11','12','14','16','18','20','22','24','28','30','36','50','72']              
+              
+      });
+  	});
+});
+</script>
+
+
+<!-- for Form validation =================================== -->
+<script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
@@ -219,7 +268,7 @@
       }, false);
     });
   }, false);
-})();
+});
 </script>
 
 

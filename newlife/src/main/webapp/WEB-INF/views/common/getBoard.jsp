@@ -147,9 +147,9 @@
                 <a href="${board['c_path']}">목록</a>
               </div>
               <div class="post-tags">  
-                <a href="/create-board-view">글쓰기</a>
-                <a href="#">수정</a>                
-                <a href="#">삭제</a>
+                <a href="/write">글쓰기</a>
+                <a href="/update">수정</a>                
+                <a href="/delete">삭제</a>
               </div>
             </div>
 

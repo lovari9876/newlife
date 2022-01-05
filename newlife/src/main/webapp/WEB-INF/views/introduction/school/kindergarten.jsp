@@ -94,10 +94,10 @@
 <section class="school-container kid">
   <div class="container">
     <div class="row justify-content-center"> <!-- justify-content-center 이거는 무조건 내부 박스친구를 center align !-->    
-    <div class="col-lg-4 col-md-7 col-sm-8 col-11"> <!-- 박스크기 설정 -->
+    <div class="col-lg-5 col-md-8 col-sm-10 col-11"> <!-- 박스크기 설정 -->
       <div class="call-wrap text-center">           
         <div class="title column-title">주제</div>
-        <p>하나님의 사람, 세상의 빛!!</p>
+        <p>새 날을 노래하는 새로워진 유치부 친구들</p>
       </div>
     </div><!-- Col end -->
   </div><!-- Content row end -->
@@ -128,15 +128,16 @@
 </section><!-- contact-container end -->
 
 <!-- 교회학교 컨테이너: 부서소개 -->
-<section class="school-container kid">
+<section class="school-container kid third">
   <div class="container">
     <div class="row justify-content-center"> <!-- justify-content-center 이거는 무조건 내부 박스친구를 center align !-->    
     <div class="col-lg-8 col-md-10 col-sm-11 col-12"> <!-- 박스크기 설정 -->
       <div class="call-wrap">                 
         <div class="title column-title text-center">부서 소개</div>
         <div class="call-text">
-          <p>유치부는 만 3세부터 7세까지의 아이들로 이루어진 공동체입니다. 아이들이 예수님을 믿고 말씀 안에서 믿음이 성장하도록 하며, 신나는 신체 활동을 통해 발달하도록 돕습니다.
-          <br/>왕의 자녀들이 뛰고 있는 유치부 예배에 어린이 여러분을 초대합니다.</p>
+          <p>유치부는 만 3세부터 7세까지의 아이들로 이루어진 공동체입니다. 
+                       아이들이 예수님을 믿고 말씀 안에서 믿음이 성장하도록 하며, 신나는 신체 활동을 통해 발달하도록 돕습니다.
+                       왕의 자녀들이 뛰고 있는 유치부 예배에 어린이 여러분을 초대합니다.</p>
         </div>
       </div>
     </div><!-- Col end -->

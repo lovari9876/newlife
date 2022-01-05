@@ -4253,6 +4253,17 @@ table {
 	color: #97ca28;
 }
 
+/* 3번째 박스 */
+.school-container.kid.third .call-text>p {
+	white-space: pre-line;	
+}
+
+@media (max-width: 520px) {
+	.school-container.kid.third .call-text>p {
+		white-space: normal;	
+	}
+}	
+	
 
 /* 초등부 elementary ================================================== */
 	

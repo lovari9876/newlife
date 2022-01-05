@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +36,7 @@ public class BoardController {
 	// board view
 	@RequestMapping(value = { "/worship/{id}", "/youth-worship/{id}", "/confession-praise/{id}", "/time-of-hermon/{id}",
 			"/yongdigi/{id}", "/meditation/{id}", "/spring-of-life/{id}", "/news/{id}" }, method = RequestMethod.GET)
-	public String getBoard(Model model, HttpServletRequest rq, @PathVariable long id) throws Exception {
+	public String getBoard(@PathVariable long id, Model model) throws Exception {
 
 		logger.info("getBoard: 글 내용 보기");
 
@@ -59,7 +60,7 @@ public class BoardController {
 
 	// 글쓰기 write board view
 	@RequestMapping(value = "/write", method = RequestMethod.GET)
-	public String writeBoard(Model model, HttpServletRequest rq) throws Exception {
+	public String writeBoard(@ModelAttribute("board") BoardDTO board, Model model) throws Exception {
 
 		logger.info("write: 글 쓰기 뷰");
 
@@ -67,6 +68,7 @@ public class BoardController {
 		// 유지보수가 편하려면!
 		ArrayList<HashMap<String, Object>> categoryList = boardService.listCategory();
 		model.addAttribute("categoryList", categoryList);
+		model.addAttribute("board", board);
 		
 		// 로그인 안되어있는 상태에서도 볼 수 있음
 		// if (principal != null) {
@@ -83,15 +85,18 @@ public class BoardController {
 		return "common/writeBoard";
 	}
 	
-	// insertBoard 글 db에 저장
+	// createBoard 글 db에 저장
 	@RequestMapping(value = "/create-board", method = RequestMethod.POST)
-	public String createBoard(Model model, HttpServletRequest rq, @ModelAttribute("board") BoardDTO board ) throws Exception {
+	public String createBoard(@ModelAttribute("board") BoardDTO board) throws Exception {
 
 		logger.info("createBoard: 글 쓰기");
 
+		logger.info("title: " + board.getTitle());
+		logger.info("category_id: " + board.getCategory_id());
+		
 		// 일단 가라로 member_id 써주기..
-		board.setMember_id(1);		
 		logger.info(board.toString());
+		board.setMember_id(1);		
 		
 		// 글 insert
 		boardService.createBoard(board);

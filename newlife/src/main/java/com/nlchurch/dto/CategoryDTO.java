@@ -15,6 +15,17 @@ public class CategoryDTO {
 	// constructors
 	public CategoryDTO() {
 	}
+	
+	public CategoryDTO(long id, long parent_id, String name, String path, Timestamp create_date,
+			Timestamp last_update) {
+		super();
+		this.id = id;
+		this.parent_id = parent_id;
+		this.name = name;
+		this.path = path;
+		this.create_date = create_date;
+		this.last_update = last_update;
+	}
 
 	// getters and setters
 	public long getId() {

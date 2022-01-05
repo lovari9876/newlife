@@ -3,6 +3,7 @@ package com.nlchurch.mapper;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.nlchurch.dto.BoardDTO;
@@ -13,6 +14,7 @@ import com.nlchurch.util.paging.SearchCriteria;
 // 이런 Access를 담당해주기 때문에 DAO가 필요없고, java class파일 내부에 sql문을 쓸 필요도 없음
 // 그래서 DAO 대신 data mapping 해준다는 의미로, Mapper 클래스 사용
 
+@Mapper
 public interface BoardMapper {
 
 	// list
@@ -31,7 +33,7 @@ public interface BoardMapper {
 	public String getCategoryPath(long id);	
 	
 	// 글 insert
-	public void createBoard(BoardDTO boardDTO);
+	public void createBoard(@Param("boardDTO") BoardDTO boardDTO);
 
 	// 글 update
 	public void update(BoardDTO boardDTO);

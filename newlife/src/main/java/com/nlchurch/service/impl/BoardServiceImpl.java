@@ -11,7 +11,7 @@ import com.nlchurch.mapper.BoardMapper;
 import com.nlchurch.service.BoardService;
 import com.nlchurch.util.paging.SearchCriteria;
 
-@Service("BoardService")
+@Service("boardService")
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
