@@ -90,9 +90,6 @@ public class BoardController {
 	public String createBoard(@ModelAttribute("board") BoardDTO board) throws Exception {
 
 		logger.info("createBoard: 글 쓰기");
-
-		logger.info("title: " + board.getTitle());
-		logger.info("category_id: " + board.getCategory_id());
 		
 		// 일단 가라로 member_id 써주기..
 		logger.info(board.toString());
@@ -113,11 +110,12 @@ public class BoardController {
 		// System.out.println("s_content: " + rq.getParameter("s_content"));
 		// System.out.println("searchType: " + scri.getSearchType());
 		
-		String path = boardService.getCategoryPath(categoryId);		
+		String path = boardService.getCategoryPath(board.getCategory_id());		
 		logger.info("게시판 경로: " + path);
 		
 		// 쓴 글 return
-		return path + "/" + board.getId(); //  c_path + "/" + id
+		// mapper.xml에서 useGeneratedKeys="true" keyProperty="id" 해줘서 getId()로 불러오기 가능
+		return "redirect:" + path + "/" + board.getId(); //  c_path + "/" + id
 	} 
 	
 	// update board

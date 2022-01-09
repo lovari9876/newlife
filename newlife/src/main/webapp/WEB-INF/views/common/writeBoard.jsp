@@ -98,8 +98,7 @@
             
               <!-- !!!form!!! -->
               <!-- spring form tag에서 modelAttribute="bean"는 controller에서 @ModelAttribute("bean") -->
-              <form class="needs-validation" action="/create-board" 
-                    method="post" <%-- enctype="multipart/form-data" --%> novalidate>
+              <form action="/create-board" method="post" <%-- enctype="multipart/form-data" --%> >
                 <%-- ***************************************************** --%>
                 <%-- 모든게 틀림이 업는데 일주일 넘게 원인 모를 passing null data를 발생시킨 원인!!!!! --%>
                 <%-- enctype="multipart/form-data" --%>
@@ -131,8 +130,8 @@
                 <div class="form-row">
                   <div class="col">
                     <!-- 게시판 선택 -->
-                    <label for="validationCategory" >게시판</label>
-                    <select class="custom-select" id="validationCategory" name="category_id" required>
+                    <label >게시판</label>
+                    <select class="custom-select" name="category_id" required>
                       <!-- member role에 따라 선택지 개수가 달라져야 함! -->
                       <option label="게시판을 선택하세요" disabled selected/>
                       <c:forEach items="${categoryList}" var="category"> 
@@ -151,9 +150,8 @@
                 <!-- 글 제목 -->
                 <div class="form-row">
                   <div class="col">
-                    <label for="validationBoardName">글 제목</label>
-                    <input type="text" class="form-control" id="validationBoardName" 
-                           name="title" placeholder="제목을 입력하세요" required>
+                    <label >글 제목</label>
+                    <input type="text" class="form-control" name="title" placeholder="제목을 입력하세요" required>
                     <div class="invalid-feedback">제목을 입력하세요</div>
                   </div>
                 </div>
@@ -248,28 +246,6 @@ jQuery(function ($) {
 });
 </script>
 
-
-<!-- for Form validation =================================== -->
-<script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-});
-</script>
 
 
 </div><!-- Body inner end -->

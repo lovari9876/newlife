@@ -49,7 +49,8 @@
 		WHERE c.id = #{id}
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
-	<insert id="createBoard" parameterType="com.nlchurch.dto.BoardDTO">
+	<!-- useGeneratedKeys="true" keyProperty="id"를 하면, id에 auto generated key가 자동 매핑된다! -->
+	<insert id="createBoard" parameterType="com.nlchurch.dto.BoardDTO" useGeneratedKeys="true" keyProperty="id">
 		INSERT 
 		INTO board 
 		(category_id, member_id, title, content) 
