@@ -116,6 +116,10 @@ public class BoardController {
 		// 쓴 글 return
 		// mapper.xml에서 useGeneratedKeys="true" keyProperty="id" 해줘서 getId()로 불러오기 가능
 		return "redirect:" + path + "/" + board.getId(); //  c_path + "/" + id
+		// redirect:를 해줘야 controller 거쳐간다.
+		// controller method 다시 호출하는 것!
+		// 내가 controller 매핑을 /로 시작하도록 해뒀기에 redirect:/로 시작해야 정상적 작동한다.
+		// DB에 path가 controller RequestMapping대로 /로 시작하도록 저장해둠
 	} 
 	
 	// update board
