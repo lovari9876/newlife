@@ -55,8 +55,8 @@ public class BoardServiceImpl implements BoardService {
 
 	// 글 update
 	@Override
-	public void update(BoardDTO boardDTO) {
-		boardMapper.update(boardDTO);
+	public void updateBoard(BoardDTO boardDTO) {
+		boardMapper.updateBoard(boardDTO);
 	}
 
 	// 글 delete

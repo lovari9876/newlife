@@ -28,8 +28,6 @@ public class BoardController {
 
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 
-	private int categoryId = 0;
-
 	@Autowired
 	private BoardService boardService;
 
@@ -52,10 +50,14 @@ public class BoardController {
 		// System.out.println("s_content: " + rq.getParameter("s_content"));
 		// System.out.println("searchType: " + scri.getSearchType());
 
+		// 조회수 +1
+		boardService.countView(id);
+		
+		// get board 글 내용 보기
 		HashMap<String, Object> board = boardService.getBoard(id);
 		model.addAttribute("board", board);
 
-		return "common/getBoard";
+		return "board/getBoard";
 	}
 
 	// 글쓰기 write board view
@@ -82,7 +84,7 @@ public class BoardController {
 		// System.out.println("s_content: " + rq.getParameter("s_content"));
 		// System.out.println("searchType: " + scri.getSearchType());
 
-		return "common/writeBoard";
+		return "board/writeBoard";
 	}
 	
 	// createBoard 글 db에 저장
@@ -121,8 +123,49 @@ public class BoardController {
 		// 내가 controller 매핑을 /로 시작하도록 해뒀기에 redirect:/로 시작해야 정상적 작동한다.
 		// DB에 path가 controller RequestMapping대로 /로 시작하도록 저장해둠
 	} 
+
+
+	// 글 수정 뷰  modify board view
+	@RequestMapping(value = "/modify/{id}", method = RequestMethod.GET)
+	public String modify(@PathVariable long id, Model model) throws Exception {
+
+		logger.info("modify: 글 수정 뷰");
+
+		// 게시판 category 선택하는 <select>의 <option> value 받아오기
+		// 유지보수가 편하려면!
+		ArrayList<HashMap<String, Object>> categoryList = boardService.listCategory();
+		model.addAttribute("categoryList", categoryList);
+		
+		// get board
+		HashMap<String, Object> board = boardService.getBoard(id);
+		model.addAttribute("board", board);
+		
+		return "board/modifyBoard";
+	}
+
 	
-	// update board
+	// update board 
+	@RequestMapping(value = "/update-board", method = RequestMethod.POST)
+	public String updateBoard(@ModelAttribute("board") BoardDTO board) throws Exception {
+
+		logger.info("updateBoard: 글 쓰기");
+		logger.info(board.toString());
+		
+		// 글 update
+		boardService.updateBoard(board);
+				
+		String path = boardService.getCategoryPath(board.getCategory_id());		
+		logger.info("게시판 경로: " + path);
+		
+		// 쓴 글 return
+		// mapper.xml에서 useGeneratedKeys="true" keyProperty="id" 해줘서 getId()로 불러오기 가능
+		return "redirect:" + path + "/" + board.getId(); //  c_path + "/" + id
+		// redirect:를 해줘야 controller 거쳐간다.
+		// controller method 다시 호출하는 것!
+		// 내가 controller 매핑을 /로 시작하도록 해뒀기에 redirect:/로 시작해야 정상적 작동한다.
+		// DB에 path가 controller RequestMapping대로 /로 시작하도록 저장해둠
+	} 
+	
 	// delete board
 	
 	

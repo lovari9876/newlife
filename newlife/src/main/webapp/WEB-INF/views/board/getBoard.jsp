@@ -148,8 +148,13 @@
               </div>
               <div class="post-tags">  
                 <a href="/write">글쓰기</a>
-                <a href="/update">수정</a>                
-                <a href="/delete">삭제</a>
+                
+<!--                 수정/삭제 버튼 조건 -->
+<%--                 <c:if test = "${content_view['M_NO'] eq memberVO.m_no}"> --%>
+<%--                   <a href="board_modify_view?bw_no=${content_view['BW_NO']}">수정</a> --%>
+<%--                 </c:if> --%>                
+                <a href="/modify/${board['id']}">수정</a>                
+                <a href="/delete-board">삭제</a>
               </div>
             </div>
 

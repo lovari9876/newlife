@@ -36,7 +36,7 @@ public interface BoardMapper {
 	public void createBoard(@Param("boardDTO") BoardDTO boardDTO);
 
 	// 글 update
-	public void update(BoardDTO boardDTO);
+	public void updateBoard(BoardDTO boardDTO);
 
 	// 글 delete
 	public void deleteBoard(BoardDTO boardDTO);

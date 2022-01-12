@@ -14,6 +14,12 @@
 
 <mapper namespace="com.nlchurch.mapper.BoardMapper">
 
+	<!-- resultType: -->
+	<!-- The fully qualified class name or alias for the expected type that 
+		will be returned from this statement. Note that in the case of collections, 
+		this SHOULD be the type that the collection CONTAINS, NOT the type of the 
+		collection itself. -->
+	
 	<select id="listBoard" resultType="hashmap">
 		SELECT b.*, m.nickname 
 		FROM board b LEFT JOIN member m
@@ -58,4 +64,16 @@
 		(#{boardDTO.category_id}, #{boardDTO.member_id}, #{boardDTO.title}, #{boardDTO.content})
 	</insert> <!-- ;세미콜론 금지!!!!!!!!!! -->
 
+	<update id="updateBoard" parameterType="com.nlchurch.dto.BoardDTO">
+		UPDATE board
+	    SET category_id = #{category_id}, title= #{title}, content = #{content}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="countView">		
+	    UPDATE board
+	    SET view_tally = view_tally + 1
+		WHERE id = #{id}
+	</update> <!-- ;세미콜론 금지!!!!!!!!!! -->
+	
 </mapper>
