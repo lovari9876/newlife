@@ -70,35 +70,27 @@
 <div id="banner-area" class="banner-area banner-fixed">
   <div class="banner-text">
     <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              <div class="banner-heading">
-                <!-- 게시판 있는 페이지만 id 받아서 출력임 -->
-                <h1 class="banner-title">${board.c_name}</h1>
-                <nav aria-label="breadcrumb">
-                    <!-- breadcrumb 중간 카테고리 if문 -->
-                    <!-- 새생활뉴스일 땐 중간 breadcrump 없음(otherwise) -->
-                    <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-                      <c:set var = "category" value = "${board.c_name}"/>
-                      <c:choose>                         
-                         <c:when test = "category == '예배 영상'}">
-                           <li class="breadcrumb-item">예배와 찬양</li>
-                         </c:when>
-                         <c:when test = "category == '청년 예배' || category == '고백 찬양'}">
-                           <li class="breadcrumb-item">청년 플랫폼</li>
-                         </c:when>
-                         <c:when test = "category == '헐몬의 시간' || category == '용디기의 생각' || category == '매일 묵상' || category == '생명샘 말씀'}">
-                           <li class="breadcrumb-item">말씀과 나눔</li>
-                         </c:when>
-                         <c:otherwise></c:otherwise>
-                      </c:choose>                      
-                      <li class="breadcrumb-item active" aria-current="page">${board.c_name}</li>
-                    </ol>
-                </nav>
-              </div>
-          </div><!-- Col end -->
-        </div><!-- Row end -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="banner-heading">
+            <h1 class="banner-title"><a href="${board.c_path}">${board.c_name}</a></h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
+                <c:choose> 
+                  <%-- 대메뉴 있으면 넣기 --%>
+                  <c:when test = "${board.c_name != board.c_parent_name}">
+                    <li class="breadcrumb-item">${board.c_parent_name}</li>
+                  </c:when>
+                  <%-- 새생활뉴스는 중간 breadcrumb 없어(테이블에서 name == parent_name) --%>
+                  <c:otherwise></c:otherwise>
+                </c:choose>                      
+                <li class="breadcrumb-item active" aria-current="page">${board.c_name}</li>
+              </ol>
+            </nav>
+          </div>
+        </div><!-- Col end -->
+      </div><!-- Row end -->
     </div><!-- Container end -->
   </div><!-- Banner text end -->
 </div><!-- Banner area end --> 

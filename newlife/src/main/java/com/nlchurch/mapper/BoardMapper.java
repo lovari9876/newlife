@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.nlchurch.dto.BoardDTO;
+import com.nlchurch.dto.CategoryDTO;
 import com.nlchurch.util.paging.SearchCriteria;
 
 // MyBatis는 Data Mapper의 한 종류
@@ -17,20 +18,23 @@ import com.nlchurch.util.paging.SearchCriteria;
 @Mapper
 public interface BoardMapper {
 
-	// list
-	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, @Param("categoryId") int categoryId);
+	// list boards
+	public ArrayList<HashMap<String, Object>> listBoards(SearchCriteria scri, @Param("categoryId") long categoryId);
 
-	// list count
-	public int countBoardList(SearchCriteria scri, @Param("categoryId") int categoryId);
+	// count boards
+	public long countBoards(SearchCriteria scri, @Param("categoryId") long categoryId);
 
 	// content view
 	public HashMap<String, Object> getBoard(@Param("id") long id);
 	
-	// 게시판 종류 가져오기 list categories
-	public ArrayList<HashMap<String, Object>> listCategory();
+	// list categories
+	public ArrayList<HashMap<String, Object>> listCategories();
 
-	// 게시판 id로 path 가져오기
-	public String getCategoryPath(long id);	
+	// category 하나를 id로 가져오기
+	public CategoryDTO getCategoryById(@Param("id") long id);
+
+	// category 하나를 path로 가져오기
+	public CategoryDTO getCategoryByPath(@Param("path") String path);
 	
 	// 글 insert
 	public void createBoard(@Param("boardDTO") BoardDTO boardDTO);
@@ -42,7 +46,7 @@ public interface BoardMapper {
 	public void deleteBoard(long id);
 
 	// 조회수
-	public void countView(long id);
+	public void countViews(long id);
 
 	///////////////////////////////////////////
 	// admin용 delete

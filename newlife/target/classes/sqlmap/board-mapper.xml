@@ -19,8 +19,9 @@
 		will be returned from this statement. Note that in the case of collections, 
 		this SHOULD be the type that the collection CONTAINS, NOT the type of the 
 		collection itself. -->
+	<!-- resultType은 반드시 명시해줘야 함!! -->
 	
-	<select id="listBoard" resultType="hashmap">
+	<select id="listBoards" resultType="hashmap">
 		SELECT 
 			b.*, m.nickname 
 		FROM 
@@ -35,7 +36,8 @@
 			b.id DESC
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
-	<select id="countBoardList" resultType="int">
+	
+	<select id="countBoards" resultType="long">
 		SELECT 
 			count(*) 
 		FROM 
@@ -44,9 +46,10 @@
 			b.category_id = #{categoryId}
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 
+
 	<select id="getBoard" resultType="hashMap">
 		SELECT 
-			b.*, m.nickname, c.name AS c_name, c.path AS c_path
+			b.*, m.nickname, c.name AS c_name, c.path AS c_path, c.parent_name AS c_parent_name
 		FROM 
 			board b 
         LEFT JOIN 
@@ -61,24 +64,41 @@
 			b.id = #{id}		
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
-	<select id="listCategory" resultType="hashMap">
+	
+	<select id="listCategories" resultType="category">
 		SELECT 
 			* 
 		FROM 
 			category
+		ORDER BY
+			parent_id
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
-	<select id="getCategoryPath" resultType="string">
+	
+	<!-- category 하나를 id로 가져오기 -->
+	<select id="getCategoryById" resultType="category">
 		SELECT 
-			c.path 
+			c.*
 		FROM 
-			category c 
+			category c
 		WHERE 
 			c.id = #{id}
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
+	
+	<!-- category 하나를 path로 가져오기 -->
+	<select id="getCategoryByPath" resultType="category">
+		SELECT 
+			c.* 
+		FROM 
+			category c 
+		WHERE 
+			c.path = #{path}
+	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
+	
+	
 	<!-- useGeneratedKeys="true" keyProperty="id"를 하면, id에 auto generated key가 자동 매핑된다! -->
-	<insert id="createBoard" parameterType="com.nlchurch.dto.BoardDTO" useGeneratedKeys="true" keyProperty="id">
+	<insert id="createBoard" parameterType="board" useGeneratedKeys="true" keyProperty="id">
 		INSERT 
 		INTO 
 			board 
@@ -87,7 +107,8 @@
 			(#{boardDTO.category_id}, #{boardDTO.member_id}, #{boardDTO.title}, #{boardDTO.content})
 	</insert> <!-- ;세미콜론 금지!!!!!!!!!! -->
 
-	<update id="updateBoard" parameterType="com.nlchurch.dto.BoardDTO">
+
+	<update id="updateBoard" parameterType="board">
 		UPDATE 
 			board
 	    SET 
@@ -95,6 +116,7 @@
 		WHERE 
 			id = #{id}
 	</update>
+	
 	
 	<delete id="deleteBoard">
 		DELETE 
@@ -104,7 +126,8 @@
     		id = #{id}
 	</delete>
 	
-	<update id="countView">		
+	
+	<update id="countViews">		
 	    UPDATE 
 	    	board
 	    SET 

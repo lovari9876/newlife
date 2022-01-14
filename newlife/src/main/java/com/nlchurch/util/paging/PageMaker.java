@@ -8,7 +8,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 public class PageMaker {
 
-	private int totalCount;
+	private long totalCount; // board id가 전부 long 이므로 (DB에서 unsigned integer)
 	private int startPage;
 	private int endPage;
 	private boolean prev;
@@ -20,12 +20,12 @@ public class PageMaker {
 		this.cri = cri;
 	}
 
-	public void setTotalCount(int totalCount) {
-		this.totalCount = totalCount;
+	public void setTotalCount(long l) {
+		this.totalCount = l;
 		calcData();
 	}
 
-	public int getTotalCount() {
+	public long getTotalCount() {
 		return totalCount;
 	}
 

@@ -59,6 +59,7 @@
 <body>
 <div class="body-inner">
   
+  
 <!-- header include start -->
 <%@ include file="/WEB-INF/views/parts/header.jsp" %>
 <!-- header include end -->
@@ -70,81 +71,103 @@
 <div id="banner-area" class="banner-area banner-fixed">
   <div class="banner-text">
     <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              <div class="banner-heading">
-                <h1 class="banner-title">매일 묵상</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-                      <li class="breadcrumb-item"><a href="#">말씀과 나눔</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">매일 묵상</li>
-                    </ol>
-                </nav>
-              </div>
-          </div><!-- Col end -->
-        </div><!-- Row end -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="banner-heading">
+            <h1 class="banner-title"><a href="${category.path}">${category.name}</a></h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
+                <c:choose> 
+                  <%-- 대메뉴 있으면 넣기 --%>
+                  <c:when test = "${category.name != category.parent_name}">
+                    <li class="breadcrumb-item">${category.parent_name}</li>
+                  </c:when>
+                  <%-- 새생활뉴스는 중간 breadcrumb 없어(테이블에서 name == parent_name) --%>
+                  <c:otherwise></c:otherwise>
+                </c:choose>                      
+                <li class="breadcrumb-item active" aria-current="page">${category.name}</li>
+              </ol>
+            </nav>
+          </div>
+        </div><!-- Col end -->
+      </div><!-- Row end -->
     </div><!-- Container end -->
   </div><!-- Banner text end -->
 </div><!-- Banner area end --> 
 
 
 <!-- 메인 컨테이너 -->
-<section id="main-container" class="main-container pb-2 plain-board">
+<section class="pb-2 video-board">
   <div class="container">
     <div class="row">
     
 	  <!-- 게시판 item -->
-	  <!-- 맨앞에 한두개는 공지 띄우기!! -->
-	  
 	  <!-- 반복 시작 -->
-	  <c:forEach items="${springOfLifeList}" var="spring">
-	  
-      <div class="col-lg-4 col-md-6 mb-5 board-item">
-        <div class="ts-service-box h-100">
+	  <c:forEach items="${boardList}" var="board">	  
+        <div class="col-lg-4 col-md-6 mb-5 board-item">
+          <div class="ts-service-box h-100">
+            <div class="ts-service-image-wrapper">
+              <img loading="lazy" class="w-100" src="images/video-thumbnails/video-thum-sample.jpg" alt="service-image">
+            </div>
             <div class="d-flex">              
               <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="/content_view?id=${spring['id']}">${spring['title']}</a></h3>
-                  <p>
-                  	<span><i class="far fa-user"></i>${spring['nickname']}</span><br/>
-                  	<span class="board-time"><i class="far fa-clock small-i"></i>
-	               		<!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
-						<jsp:useBean id="today" class="java.util.Date" /> 
-						<!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
-						<fmt:formatDate value="${today}" pattern="yyyy.MM.dd" var="now"/>
-						<fmt:formatDate value="${spring['create_date']}" pattern="yyyy.MM.dd" var="date"/>
-						<c:choose>
-							<c:when test="${now ne date}">${date}</c:when> 
-							<c:otherwise>
-								<fmt:formatDate value="${spring['create_date']}" pattern="HH:mm"/>
-							</c:otherwise>
-						</c:choose>
-                  	</span>
-                  	<span class="board-no">번호 0<!-- ${spring['RNUM']} --></span><span class="board-tally">조회수 ${spring['view_tally']}</span>
-                  </p>              
+                <h3 class="service-box-title"><a href="${category.path}/${board.id}">${board.title}</a></h3>
+                <p>
+                  <span><i class="fas fa-bible"></i>데살로니가전서 1장 12-15절</span><br/>
+                  <span><i class="far fa-calendar-check"></i>주일 2부 예배</span><br/>
+                  <span><i class="far fa-user"></i>${board.nickname}</span><br/>
+                  <span class="board-time"><i class="far fa-clock small-i"></i>
+                    <!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
+                    <jsp:useBean id="today" class="java.util.Date" /> 
+                    <!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
+                    <fmt:formatDate value="${today}" pattern="yyyy.MM.dd" var="now"/>
+                    <fmt:formatDate value="${board.create_date}" pattern="yyyy.MM.dd" var="date"/>
+                    <c:choose>
+                      <c:when test="${now ne date}">${date}</c:when> 
+                      <c:otherwise>
+                        <fmt:formatDate value="${board.create_date}" pattern="HH:mm"/>
+                      </c:otherwise>
+                    </c:choose>
+                  </span>
+                  <span class="board-no">번호 ${board.id}</span><span class="board-tally">조회수 ${board.view_tally}</span>
+                </p>              
               </div>
             </div>
-        </div><!-- Service end -->
-      </div><!-- Col end -->
-      </c:forEach>     
+          </div><!-- Service end -->
+        </div><!-- Col end -->
+      </c:forEach>
+      
+      <!-- 버튼: 목록, 작성 -->
+      <div class="col-12">
+      <div class="tags-area d-flex align-items-center justify-content-between">
+        <div class="post-tags">         
+          <a href="${category.path}">목록</a>
+        </div>
+        <div class="post-tags">  
+          <a href="/write">글쓰기</a>
+        </div>
+      </div>
+      </div>
+        
     </div><!-- Main row end -->
-    
-<!-- paging 페이지 처리 -->
-<!-- pc는 10까지, 모바일은 5까지 -->
-<div class="row paging-row">
-  <div class="paging-row-inner" >
-	<nav class="paging" aria-label="Page navigation example">
-	  <ul class="pagination">
-	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-	    <li class="page-item"><a class="page-link" href="#">1</a></li>
-	    <li class="page-item"><a class="page-link" href="#">2</a></li>
-	    <li class="page-item"><a class="page-link" href="#">3</a></li>
-	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-	  </ul>
-	</nav>
-  </div>
-</div><!-- end paging -->
-    
+ 
+    <!-- paging 페이지 처리 -->
+    <!-- pc는 10까지, 모바일은 5까지 -->
+    <div class="row paging-row">
+      <div class="paging-row-inner" >
+    	<nav class="paging" aria-label="Page navigation example">
+    	  <ul class="pagination">
+    	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
+    	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    	    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
+    	  </ul>
+    	</nav>
+      </div>
+    </div><!-- end paging -->
+ 
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
 

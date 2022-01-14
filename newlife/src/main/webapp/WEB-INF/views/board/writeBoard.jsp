@@ -135,7 +135,7 @@
                       <!-- member role에 따라 선택지 개수가 달라져야 함! -->
                       <option label="게시판을 선택하세요" disabled selected/>
                       <c:forEach items="${categoryList}" var="category"> 
-                        <option value="${category['id']}">${category['name']}</option>
+                        <option value="${category.id}">${category.name}</option>
                       </c:forEach>
 <%--                       <form:options items="${categoryList}" itemValue="id" itemLabel="name"/> --%>
                    

@@ -4,25 +4,29 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.nlchurch.dto.BoardDTO;
+import com.nlchurch.dto.CategoryDTO;
 import com.nlchurch.util.paging.SearchCriteria;
 
 public interface BoardService {
 
-	// list
-	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, int categoryId);
+	// list boards
+	public ArrayList<HashMap<String, Object>> listBoards(SearchCriteria scri, long categoryId);
 
-	// list count
-	public int countBoardList(SearchCriteria scri, int categoryId);
+	// count boards
+	public long countBoards(SearchCriteria scri, long categoryId);
 
 	// content view
 	public HashMap<String, Object> getBoard(long id);
-	
-	// 게시판 종류 가져오기 list categories
-	public ArrayList<HashMap<String, Object>> listCategory();
-	
-	// 게시판 id로 path 가져오기
-	public String getCategoryPath(long id);
-	
+
+	// list categories
+	public ArrayList<HashMap<String, Object>> listCategories();
+
+	// category 하나를 id로 가져오기
+	public CategoryDTO getCategoryById(long id);
+
+	// category 하나를 path로 가져오기
+	public CategoryDTO getCategoryByPath(String path);
+
 	// 글 insert
 	public void createBoard(BoardDTO boardDTO);
 
@@ -33,7 +37,7 @@ public interface BoardService {
 	public void deleteBoard(long id);
 
 	// 조회수
-	public void countView(long id);
+	public void countViews(long id);
 
 	///////////////////////////////////////////
 	// admin용 delete

@@ -2782,6 +2782,10 @@ banner-fixed {
 		margin-bottom: 3px;
 	}	
 }	
+
+.banner-title>a:hover {
+    color: #127495;
+}
 	
 .banner-text {
 	position: absolute;

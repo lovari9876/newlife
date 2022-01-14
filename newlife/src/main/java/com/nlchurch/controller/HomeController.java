@@ -16,24 +16,22 @@ import com.nlchurch.service.BoardService;
 @Controller
 public class HomeController {
 
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+
 	@Autowired
 	private BoardService boardService;
-	/*
-	 * 
-	 * 
-	 * @Autowired private AdminService adminService;
-	 * 
-	 * @Autowired private ContentService contentService;
-	 * 
-	 * @Autowired private MyPageService myPageService;
-	 */
-
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	// 메인화면
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model/* , Principal principal */) throws Exception {
+	public String home(Model model/* , Principal principal */) throws Exception {
 
+		logger.info("home: 메인 화면");
+
+		// ArrayList 로 가져오니까 categoryList로 명명
+		// odel.addAttribute("categoryList", boardService.listCategories());
+		
+		
+		
 		/*
 		 * // 히트다 히트 model.addAttribute("hit", boardService.selectHitList()); // 베스트
 		 * model.addAttribute("best", boardService.selectBestList()); // 랭킹(글 많이 쓴)
@@ -50,11 +48,10 @@ public class HomeController {
 
 		return "index";
 	}
-	
+
 	// 에러 페이지 일단 임시로!
 	@RequestMapping(value = "/error", method = RequestMethod.GET)
 	public String error(Locale locale, Model model/* , Principal principal */) throws Exception {
-
 
 		return "error/errorNullPointer";
 	}

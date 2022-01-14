@@ -2,26 +2,28 @@ package com.nlchurch.dto;
 
 import java.sql.Timestamp;
 
-// 게시글
+// 게시판
 public class CategoryDTO {
 
 	private long id; // 게시판 번호
-	private long parent_id; // 상위 게시판 번호: 상위가 없으면 0
+	private long parent_id; // 대메뉴 번호: default 0
 	private String name; // 게시판 이름
-	private String path; // 게시판 경로
+	private String parent_name; // 대메뉴 이름
+	private String path; // 게시판 경로 (/somewhere 로 매핑했기 때문에 /부터 들어있다)
 	private Timestamp create_date; // 생성일
 	private Timestamp last_update; // 수정일
 
 	// constructors
 	public CategoryDTO() {
 	}
-	
-	public CategoryDTO(long id, long parent_id, String name, String path, Timestamp create_date,
+
+	public CategoryDTO(long id, long parent_id, String name, String parent_name, String path, Timestamp create_date,
 			Timestamp last_update) {
 		super();
 		this.id = id;
 		this.parent_id = parent_id;
 		this.name = name;
+		this.parent_name = parent_name;
 		this.path = path;
 		this.create_date = create_date;
 		this.last_update = last_update;
@@ -51,7 +53,15 @@ public class CategoryDTO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
+	public String getParent_name() {
+		return parent_name;
+	}
+
+	public void setParent_name(String parent_name) {
+		this.parent_name = parent_name;
+	}
+
 	public String getPath() {
 		return path;
 	}
@@ -74,6 +84,12 @@ public class CategoryDTO {
 
 	public void setLast_update(Timestamp last_update) {
 		this.last_update = last_update;
+	}
+
+	@Override
+	public String toString() {
+		return "CategoryDTO [id=" + id + ", parent_id=" + parent_id + ", name=" + name + ", parent_name=" + parent_name
+				+ ", path=" + path + ", create_date=" + create_date + ", last_update=" + last_update + "]";
 	}
 
 }

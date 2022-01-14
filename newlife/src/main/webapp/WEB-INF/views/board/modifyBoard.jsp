@@ -76,7 +76,7 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <h1 class="banner-title">글 쓰기</h1>
+                <h1 class="banner-title">글 수정하기</h1>
               </div>
           </div><!-- Col end -->
         </div><!-- Row end -->

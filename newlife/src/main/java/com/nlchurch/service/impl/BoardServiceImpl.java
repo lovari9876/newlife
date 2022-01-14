@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.nlchurch.dto.BoardDTO;
+import com.nlchurch.dto.CategoryDTO;
 import com.nlchurch.mapper.BoardMapper;
 import com.nlchurch.service.BoardService;
 import com.nlchurch.util.paging.SearchCriteria;
@@ -17,16 +18,16 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	BoardMapper boardMapper;
 
-	// list
+	// list boards
 	@Override
-	public ArrayList<HashMap<String, Object>> listBoard(SearchCriteria scri, int categoryId) {
-		return boardMapper.listBoard(scri, categoryId);
+	public ArrayList<HashMap<String, Object>> listBoards(SearchCriteria scri, long categoryId) {
+		return boardMapper.listBoards(scri, categoryId);
 	}
 
-	// list count
+	// count boards
 	@Override
-	public int countBoardList(SearchCriteria scri, int categoryId) {
-		return boardMapper.countBoardList(scri, categoryId);
+	public long countBoards(SearchCriteria scri, long categoryId) {
+		return boardMapper.countBoards(scri, categoryId);
 	}
 
 	// content view
@@ -34,19 +35,23 @@ public class BoardServiceImpl implements BoardService {
 	public HashMap<String, Object> getBoard(long id) {
 		return boardMapper.getBoard(id);
 	}
-	
-	// 게시판 종류 가져오기 list categories
+
+	// list categories
 	@Override
-	public ArrayList<HashMap<String, Object>> listCategory() {
-		return boardMapper.listCategory();		
+	public ArrayList<HashMap<String, Object>> listCategories() {
+		return boardMapper.listCategories();
 	}
 
-	// 게시판 id로 path 가져오기
-	@Override
-	public String getCategoryPath(long id) {
-		return boardMapper.getCategoryPath(id);
+	// category 하나를 id로 가져오기
+	public CategoryDTO getCategoryById(long id) {
+		return boardMapper.getCategoryById(id);
 	}
-	
+
+	// category 하나를 path로 가져오기
+	public CategoryDTO getCategoryByPath(String path) {
+		return boardMapper.getCategoryByPath(path);
+	}
+
 	// 글 insert
 	@Override
 	public void createBoard(BoardDTO boardDTO) { // 나중에 파라미터로 멤버 id 들어감
@@ -67,8 +72,9 @@ public class BoardServiceImpl implements BoardService {
 
 	// 조회수
 	@Override
-	public void countView(long id) {
-		boardMapper.countView(id);
+	public void countViews(long id) {
+		boardMapper.countViews(id);
 	}
+
 
 }
