@@ -184,6 +184,7 @@ public class BoardController {
 		return returnString;
 	}
 
+	// ==========================================================================
 	// 글 상세보기 get board
 	// ==========================================================================
 	@GetMapping(value = { "/worship/{id}", "/youth-worship/{id}", "/confession-praise/{id}", "/time-of-hermon/{id}",
@@ -220,7 +221,8 @@ public class BoardController {
 
 		return "board/getBoard";
 	}
-
+	
+	// ==========================================================================
 	// 글쓰기 write board view
 	// ==========================================================================
 	@GetMapping(value = "/write")
@@ -229,26 +231,14 @@ public class BoardController {
 		logger.info("writeBoard: 글 쓰기 뷰");
 
 		// 게시판 category 선택하는 <select>의 <option> value 받아오기
-		// 유지보수가 편하려면!
 		ArrayList<HashMap<String, Object>> categoryList = boardService.listCategories();
 		model.addAttribute("categoryList", categoryList);
 		model.addAttribute("board", board);
 
-		// 로그인 안되어있는 상태에서도 볼 수 있음
-		// if (principal != null) {
-		// String m_id = principal.getName();
-		// MemberVO memberVO = myPageService.mypage(m_id);
-		// model.addAttribute("memberVO", memberVO);
-		// }
-
-		// 쿼리 uri로 보낸 파라미터들 확인
-		// System.out.println("query: " + rq.getQueryString());
-		// System.out.println("s_content: " + rq.getParameter("s_content"));
-		// System.out.println("searchType: " + scri.getSearchType());
-
 		return "board/writeBoard";
 	}
 
+	// ==========================================================================
 	// createBoard 글 db에 저장
 	// ==========================================================================
 	@PostMapping(value = "/create-board")
@@ -263,18 +253,6 @@ public class BoardController {
 		// 글 insert
 		boardService.createBoard(board);
 
-		// 로그인 안되어있는 상태에서도 볼 수 있음
-		// if (principal != null) {
-		// String m_id = principal.getName();
-		// MemberVO memberVO = myPageService.mypage(m_id);
-		// model.addAttribute("memberVO", memberVO);
-		// }
-
-		// 쿼리 uri로 보낸 파라미터들 확인
-		// System.out.println("query: " + rq.getQueryString());
-		// System.out.println("s_content: " + rq.getParameter("s_content"));
-		// System.out.println("searchType: " + scri.getSearchType());
-
 		String path = boardService.getCategoryById(board.getCategory_id()).getPath();
 		logger.info("게시판 경로: " + path);
 
@@ -287,6 +265,7 @@ public class BoardController {
 		// DB에 path가 controller RequestMapping대로 /로 시작하도록 저장해둠
 	}
 
+	// ==========================================================================
 	// 글 수정 뷰 modify board view
 	// ==========================================================================
 	@GetMapping(value = "/modify/{id}")
@@ -306,6 +285,7 @@ public class BoardController {
 		return "board/modifyBoard";
 	}
 
+	// ==========================================================================
 	// 글 수정 update board
 	// ==========================================================================
 	@PostMapping(value = "/update-board")
@@ -329,6 +309,7 @@ public class BoardController {
 		// DB에 path가 controller RequestMapping대로 /로 시작하도록 저장해둠
 	}
 
+	// ==========================================================================
 	// 글 삭제 delete board
 	// ==========================================================================
 	@GetMapping(value = "/delete-board/{path}/{id}")
