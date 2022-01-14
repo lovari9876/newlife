@@ -73,14 +73,14 @@
         <div class="row">
           <div class="col-lg-12">
               <div class="banner-heading">
-                <!-- 게시판 있는 페이지만 id 받아서 출력임/ 상세페이지는 하드코딩! -->
-                <h1 class="banner-title">${board['c_name']}</h1>
+                <!-- 게시판 있는 페이지만 id 받아서 출력임 -->
+                <h1 class="banner-title">${board.c_name}</h1>
                 <nav aria-label="breadcrumb">
                     <!-- breadcrumb 중간 카테고리 if문 -->
                     <!-- 새생활뉴스일 땐 중간 breadcrump 없음(otherwise) -->
                     <ol class="breadcrumb justify-content-center">
                       <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
-                      <c:set var = "category" value = "${board['c_name']}"/>
+                      <c:set var = "category" value = "${board.c_name}"/>
                       <c:choose>                         
                          <c:when test = "category == '예배 영상'}">
                            <li class="breadcrumb-item">예배와 찬양</li>
@@ -93,7 +93,7 @@
                          </c:when>
                          <c:otherwise></c:otherwise>
                       </c:choose>                      
-                      <li class="breadcrumb-item active" aria-current="page">${board['c_name']}</li>
+                      <li class="breadcrumb-item active" aria-current="page">${board.c_name}</li>
                     </ol>
                 </nav>
               </div>
@@ -114,37 +114,37 @@
           <div class="post-body">
             <div class="entry-header">
               <div class="post-meta">
-                <span class="post-id"><i class="far fa-sticky-note"></i> ${board['id']}</span>
+                <span class="post-id"><i class="far fa-sticky-note"></i> ${board.id}</span>
                 <span class="post-category">
-                  <i class="far fa-folder-open"></i> ${board['c_name']}</span>
+                  <i class="far fa-folder-open"></i> ${board.c_name}</span>
                 <span class="post-author">
-                  <i class="far fa-user"></i> ${board['nickname']}</span>
+                  <i class="far fa-user"></i> ${board.nickname}</span>
                 <span class="post-meta-date"><i class="far fa-calendar"></i>                    
                   <!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
                   <jsp:useBean id="today" class="java.util.Date" /> 
                   <!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
                   <fmt:formatDate value="${today}" pattern="yyyy. MM. dd" var="now"/>
-                  <fmt:formatDate value="${board['create_date']}" pattern="yyyy. MM. dd" var="date"/>
+                  <fmt:formatDate value="${board.create_date}" pattern="yyyy. MM. dd" var="date"/>
                   <c:choose>
                     <c:when test="${now ne date}">${date}</c:when> 
                     <c:otherwise>
-                      <fmt:formatDate value="${board['create_date']}" pattern="HH:mm"/>
+                      <fmt:formatDate value="${board.create_date}" pattern="HH:mm"/>
                     </c:otherwise>
                   </c:choose>
                 </span>
                 <span class="post-view">
-                  <i class="far fa-eye"></i> ${board['view_tally']}</span>
+                  <i class="far fa-eye"></i> ${board.view_tally}</span>
               </div>
-              <h2 class="entry-title">${board['title']}</h2> <!-- 제목 -->
+              <h2 class="entry-title">${board.title}</h2> <!-- 제목 -->
             </div><!-- header end -->
             <hr class="hr-m-20">
-            <div class="entry-content">${board['content']}</div> <!-- 내용 -->
+            <div class="entry-content">${board.content}</div> <!-- 내용 -->
             <hr>
             
             <!-- 버튼: 목록,수정,작성 -->
             <div class="tags-area d-flex align-items-center justify-content-between">
               <div class="post-tags">         
-                <a href="${board['c_path']}">목록</a>
+                <a href="${board.c_path}">목록</a>
               </div>
               <div class="post-tags">  
                 <a href="/write">글쓰기</a>
@@ -153,8 +153,8 @@
 <%--                 <c:if test = "${content_view['M_NO'] eq memberVO.m_no}"> --%>
 <%--                   <a href="board_modify_view?bw_no=${content_view['BW_NO']}">수정</a> --%>
 <%--                 </c:if> --%>                
-                <a href="/modify/${board['id']}">수정</a>                
-                <a href="/delete-board">삭제</a>
+                <a href="/modify/${board.id}">수정</a>                
+                <a href="/delete-board${board.c_path}/${board.id}">삭제</a>
               </div>
             </div>
 

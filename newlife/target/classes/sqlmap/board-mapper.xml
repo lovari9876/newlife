@@ -21,59 +21,96 @@
 		collection itself. -->
 	
 	<select id="listBoard" resultType="hashmap">
-		SELECT b.*, m.nickname 
-		FROM board b LEFT JOIN member m
-		ON b.member_id = m.id
-		WHERE b.category_id = #{categoryId}
-		ORDER BY b.id DESC
+		SELECT 
+			b.*, m.nickname 
+		FROM 
+			board b 
+		LEFT JOIN 
+			member m
+		ON 
+			b.member_id = m.id
+		WHERE 
+			b.category_id = #{categoryId}
+		ORDER BY 
+			b.id DESC
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
 	<select id="countBoardList" resultType="int">
-		SELECT count(*) 
-		FROM board b 
-		WHERE b.category_id = #{categoryId}
+		SELECT 
+			count(*) 
+		FROM 
+			board b 
+		WHERE 
+			b.category_id = #{categoryId}
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 
 	<select id="getBoard" resultType="hashMap">
-		SELECT b.*, m.nickname, c.name AS c_name, c.path AS c_path
-		FROM board b 
-        LEFT JOIN member m 
-		ON b.member_id = m.id
-        LEFT JOIN category c
-        ON b.category_id = c.id
-		WHERE b.id = #{id}		
+		SELECT 
+			b.*, m.nickname, c.name AS c_name, c.path AS c_path
+		FROM 
+			board b 
+        LEFT JOIN 
+        	member m 
+		ON 
+			b.member_id = m.id
+        LEFT JOIN 
+        	category c
+        ON 
+        	b.category_id = c.id
+		WHERE 
+			b.id = #{id}		
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
 	<select id="listCategory" resultType="hashMap">
-		SELECT * 
-		FROM category
+		SELECT 
+			* 
+		FROM 
+			category
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
 	<select id="getCategoryPath" resultType="string">
-		SELECT c.path 
-		FROM category c 
-		WHERE c.id = #{id}
+		SELECT 
+			c.path 
+		FROM 
+			category c 
+		WHERE 
+			c.id = #{id}
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
 	<!-- useGeneratedKeys="true" keyProperty="id"를 하면, id에 auto generated key가 자동 매핑된다! -->
 	<insert id="createBoard" parameterType="com.nlchurch.dto.BoardDTO" useGeneratedKeys="true" keyProperty="id">
 		INSERT 
-		INTO board 
-		(category_id, member_id, title, content) 
+		INTO 
+			board 
+			(category_id, member_id, title, content) 
 		VALUES 
-		(#{boardDTO.category_id}, #{boardDTO.member_id}, #{boardDTO.title}, #{boardDTO.content})
+			(#{boardDTO.category_id}, #{boardDTO.member_id}, #{boardDTO.title}, #{boardDTO.content})
 	</insert> <!-- ;세미콜론 금지!!!!!!!!!! -->
 
 	<update id="updateBoard" parameterType="com.nlchurch.dto.BoardDTO">
-		UPDATE board
-	    SET category_id = #{category_id}, title= #{title}, content = #{content}
-		WHERE id = #{id}
+		UPDATE 
+			board
+	    SET 
+	    	category_id = #{category_id}, title= #{title}, content = #{content}
+		WHERE 
+			id = #{id}
 	</update>
 	
+	<delete id="deleteBoard">
+		DELETE 
+		FROM 
+			board
+    	WHERE 
+    		id = #{id}
+	</delete>
+	
 	<update id="countView">		
-	    UPDATE board
-	    SET view_tally = view_tally + 1
-		WHERE id = #{id}
+	    UPDATE 
+	    	board
+	    SET 
+	    	view_tally = view_tally + 1
+		WHERE 
+			id = #{id}
 	</update> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
 </mapper>

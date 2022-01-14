@@ -97,7 +97,7 @@
             <div class="entry-content"> 
             
               <!-- !!!form!!! -->
-              <!-- spring form tag에서 modelAttribute="bean"는 controller에서 @ModelAttribute("bean") -->
+              <%--  spring form tag에서 modelAttribute="bean"는 controller에서 @ModelAttribute("bean") --%>
               <form action="/update-board" method="post" <%-- enctype="multipart/form-data" --%> >
                 <%-- ***************************************************** --%>
                 <%-- 모든게 틀림이 업는데 일주일 넘게 원인 모를 passing null data를 발생시킨 원인!!!!! --%>
@@ -105,10 +105,12 @@
                 <%-- 어떠한 처리 없이 그냥 저것만 쓰면.. 모든 data를 다 null값 가져옴.. --%>
                 <%-- mapping이 완벽해도 절대 값을 bind안하고 원인도 안뜸 그냥 null --%>
                 
-                <!-- enctype="multipart/form-data"는 ****ONLY FOR**** <input type="file"> 있을 때 -->
-                <!-- <input>의 name="" Attribute -->
-                <!-- 1. Name of the form control. Submitted with the form as part of a name/value pair. -->
-                <!-- 2. name/value로 Spring에서도 자동 매핑함! 즉 name == DtoClass variableName 이어야함! -->
+                <%-- 
+                enctype="multipart/form-data"는 ****ONLY FOR**** <input type="file"> 있을 때
+                <input>의 name="" Attribute
+                1. Name of the form control. Submitted with the form as part of a name/value pair.
+                2. name/value로 Spring에서도 자동 매핑함! 즉 name == DtoClass variableName 이어야함! 
+                --%>
                     
                 <!-- form-row 남겨두기 -->
 <!--                 <div class="form-row"> -->
@@ -127,23 +129,25 @@
 <!--                     </div> -->
 <!--                   </div> -->
 <!--                 </div> -->
+                
+                <%-- board.id hidden으로 넘기기 --%>
+                <input type="hidden" name="id" value="${board.id}" />
+                
                 <div class="form-row">
                   <div class="col">
                     <!-- 게시판 선택 -->
-                    <label >게시판</label>
+                    <label >게시판</label>                   
                     <select class="custom-select" name="category_id" required>
-                      <!-- member role에 따라 선택지 개수가 달라져야 함! -->
+                      <%-- member role에 따라 선택지 개수가 달라져야 함! --%>
                       <c:forEach items="${categoryList}" var="category">
-                        <!-- 원래 게시판에 selected --> 
-                        <c:choose>
-                          <c:when test="${category.id} eq ${board['category_id']}">
-                            <option value="${category.id}" selected>${category.name}</option>
-                          </c:when>
-                          <c:otherwise>
-                            <option value="${category.id}">${category['name']}</option>
-                          </c:otherwise>
-                        </c:choose>
-                      </c:forEach>
+                        <c:set var="c_id" value="${category.id}"/>
+                        <c:set var="c_name" value="${category.name}"/>
+                        <%-- 원래 게시판에 selected --%>                         
+                        <option value="${c_id}" <c:if test="${c_id == board.category_id}">selected</c:if>>${c_name}</option>
+                        <%-- 위아래 둘다 가능! --%>
+                        <%-- 다만 EL은 표현식 덩어리 안에 들어가야해!! ${}안에  == 등의 연산자가 다 들어가야지, 분할하면 읽어들이지 못함! --%>
+                        <%-- <option value="${c_id}" <c:out value="${c_id == board.category_id ? 'selected' : ''}"/>>${category.name}</option> --%>
+                     </c:forEach>
                     </select>  
                   </div>
                 </div>
@@ -151,7 +155,7 @@
                 <div class="form-row">
                   <div class="col">
                     <label >글 제목</label>
-                    <input type="text" class="form-control" name="title" value="${board['title']}" required>
+                    <input type="text" class="form-control" name="title" value="${board.title}" required>
                   </div>
                 </div>
                 <hr class="hr-m-20">           

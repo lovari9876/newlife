@@ -50,5 +50,13 @@ public class HomeController {
 
 		return "index";
 	}
+	
+	// 에러 페이지 일단 임시로!
+	@RequestMapping(value = "/error", method = RequestMethod.GET)
+	public String error(Locale locale, Model model/* , Principal principal */) throws Exception {
+
+
+		return "error/errorNullPointer";
+	}
 
 }

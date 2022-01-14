@@ -39,7 +39,7 @@ public interface BoardMapper {
 	public void updateBoard(BoardDTO boardDTO);
 
 	// 글 delete
-	public void deleteBoard(BoardDTO boardDTO);
+	public void deleteBoard(long id);
 
 	// 조회수
 	public void countView(long id);

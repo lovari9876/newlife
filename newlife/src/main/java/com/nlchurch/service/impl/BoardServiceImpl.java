@@ -61,8 +61,8 @@ public class BoardServiceImpl implements BoardService {
 
 	// 글 delete
 	@Override
-	public void deleteBoard(BoardDTO boardDTO) {
-		boardMapper.deleteBoard(boardDTO);
+	public void deleteBoard(long id) {
+		boardMapper.deleteBoard(id);
 	}
 
 	// 조회수
