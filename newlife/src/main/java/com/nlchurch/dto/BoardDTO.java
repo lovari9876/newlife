@@ -16,15 +16,16 @@ public class BoardDTO {
 	private Timestamp last_update; // 수정일
 
 	// for resultMap
-	private CategoryDTO categoryVO;
-	private MemberDTO memberVO;
+	private CategoryDTO categoryDTO;
+	private MemberDTO memberDTO;
 
 	// constructors
 	public BoardDTO() {
 	}
 
 	public BoardDTO(long id, long category_id, long member_id, String title, String content, boolean show_status,
-			long view_tally, Timestamp create_date, Timestamp last_update, CategoryDTO categoryVO, MemberDTO memberVO) {
+			long view_tally, Timestamp create_date, Timestamp last_update, CategoryDTO categoryDTO,
+			MemberDTO memberDTO) {
 		super();
 		this.id = id;
 		this.category_id = category_id;
@@ -35,8 +36,8 @@ public class BoardDTO {
 		this.view_tally = view_tally;
 		this.create_date = create_date;
 		this.last_update = last_update;
-		this.categoryVO = categoryVO;
-		this.memberVO = memberVO;
+		this.categoryDTO = categoryDTO;
+		this.memberDTO = memberDTO;
 	}
 
 	// getters and setters
@@ -112,28 +113,28 @@ public class BoardDTO {
 		this.last_update = last_update;
 	}
 
-	public CategoryDTO getCategoryVO() {
-		return categoryVO;
+	public CategoryDTO getCategoryDTO() {
+		return categoryDTO;
 	}
 
-	public void setCategoryVO(CategoryDTO categoryVO) {
-		this.categoryVO = categoryVO;
+	public void setCategoryDTO(CategoryDTO categoryDTO) {
+		this.categoryDTO = categoryDTO;
 	}
 
-	public MemberDTO getMemberVO() {
-		return memberVO;
+	public MemberDTO getMemberDTO() {
+		return memberDTO;
 	}
 
-	public void setMemberVO(MemberDTO memberVO) {
-		this.memberVO = memberVO;
+	public void setMemberDTO(MemberDTO memberDTO) {
+		this.memberDTO = memberDTO;
 	}
 
 	@Override
 	public String toString() {
 		return "BoardDTO [id=" + id + ", category_id=" + category_id + ", member_id=" + member_id + ", title=" + title
 				+ ", content=" + content + ", show_status=" + show_status + ", view_tally=" + view_tally
-				+ ", create_date=" + create_date + ", last_update=" + last_update + ", categoryVO=" + categoryVO
-				+ ", memberVO=" + memberVO + "]";
+				+ ", create_date=" + create_date + ", last_update=" + last_update + ", categoryDTO=" + categoryDTO
+				+ ", memberDTO=" + memberDTO + "]";
 	}
 
 }

@@ -112,10 +112,10 @@
 		UPDATE 
 			board
 	    SET 
-	    	category_id = #{category_id}, title= #{title}, content = #{content}
+	    	category_id = #{category_id}, title= #{title}, content = #{content}, last_update = sysdate()
 		WHERE 
 			id = #{id}
-	</update>
+	</update> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
 	
 	<delete id="deleteBoard">

@@ -7,14 +7,15 @@ public class Board_fileDTO {
 	private long board_id; // 게시글 번호
 
 	// for resultMap
-	private FileDTO fileVO;
-	private BoardDTO boardVO;
+	private FileDTO fileDTO;
+	private BoardDTO boardDTO;
 
 	// constructors
 	public Board_fileDTO() {
 	}
-
+	
 	// getters and setters
+	
 	public long getFile_id() {
 		return file_id;
 	}
@@ -31,20 +32,22 @@ public class Board_fileDTO {
 		this.board_id = board_id;
 	}
 
-	public FileDTO getFileVO() {
-		return fileVO;
+	public FileDTO getFileDTO() {
+		return fileDTO;
 	}
 
-	public void setFileVO(FileDTO fileVO) {
-		this.fileVO = fileVO;
+	public void setFileDTO(FileDTO fileDTO) {
+		this.fileDTO = fileDTO;
 	}
 
-	public BoardDTO getBoardVO() {
-		return boardVO;
+	public BoardDTO getBoardDTO() {
+		return boardDTO;
 	}
 
-	public void setBoardVO(BoardDTO boardVO) {
-		this.boardVO = boardVO;
+	public void setBoardDTO(BoardDTO boardDTO) {
+		this.boardDTO = boardDTO;
 	}
+
+	
 
 }

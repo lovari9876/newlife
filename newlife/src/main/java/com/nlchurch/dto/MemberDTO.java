@@ -19,7 +19,7 @@ public class MemberDTO {
 	private Timestamp withdraw_date; // 탈퇴일
 
 	// for resultMap
-	private RoleDTO roleVO;
+	private RoleDTO roleDTO;
 
 	// constructors
 	public MemberDTO() {
@@ -122,12 +122,12 @@ public class MemberDTO {
 		this.withdraw_date = withdraw_date;
 	}
 
-	public RoleDTO getRoleVO() {
-		return roleVO;
+	public RoleDTO getRoleDTO() {
+		return roleDTO;
 	}
 
-	public void setRoleVO(RoleDTO roleVO) {
-		this.roleVO = roleVO;
+	public void setRoleDTO(RoleDTO roleDTO) {
+		this.roleDTO = roleDTO;
 	}
 
 }
