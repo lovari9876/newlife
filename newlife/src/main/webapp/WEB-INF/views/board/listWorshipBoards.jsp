@@ -114,19 +114,19 @@
               <div class="ts-service-info">
                 <h3 class="service-box-title"><a href="${category.path}/${board.id}">${board.title}</a></h3>
                 <p>
-                  <span><i class="fas fa-bible"></i>데살로니가전서 1장 12-15절</span><br/>
-                  <span><i class="far fa-calendar-check"></i>주일 2부 예배</span><br/>
-                  <span><i class="far fa-user"></i>${board.nickname}</span><br/>
-                  <span class="board-time"><i class="far fa-clock small-i"></i>
-                    <!-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 -->
+                  <span><i class="fas fa-bible"></i>${board.bible}</span><br/><!-- 말씀 -->
+                  <span><i class="far fa-calendar-check"></i>${board.w_name}</span><br/><!-- 예배 -->
+                  <span><i class="far fa-user"></i>${board.minister}</span><br/><!-- 설교자 -->
+                  <span class="board-time"><i class="far fa-clock small-i"></i><!-- 해당날짜 -->
+                    <%-- 작성일이 오늘이면 시간, 아니면 날짜 출력 jstl로 구현 --%>
                     <jsp:useBean id="today" class="java.util.Date" /> 
-                    <!-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 -->
+                    <%-- Date() 생성자가 가장 가까운 millisecond의 date 객체 하나를 생성 --%>
                     <fmt:formatDate value="${today}" pattern="yyyy.MM.dd" var="now"/>
-                    <fmt:formatDate value="${board.create_date}" pattern="yyyy.MM.dd" var="date"/>
+                    <fmt:formatDate value="${board.w_date}" pattern="yyyy.MM.dd" var="date"/>
                     <c:choose>
                       <c:when test="${now ne date}">${date}</c:when> 
                       <c:otherwise>
-                        <fmt:formatDate value="${board.create_date}" pattern="HH:mm"/>
+                        <fmt:formatDate value="${board.w_date}" pattern="HH:mm"/>
                       </c:otherwise>
                     </c:choose>
                   </span>

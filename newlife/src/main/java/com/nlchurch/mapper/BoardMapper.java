@@ -21,6 +21,9 @@ public interface BoardMapper {
 	// list boards
 	public ArrayList<HashMap<String, Object>> listBoards(SearchCriteria scri, @Param("categoryId") long categoryId);
 
+	// list worship(video) boards
+	public ArrayList<HashMap<String, Object>> listWorshipBoards(SearchCriteria scri, @Param("categoryId") long categoryId);
+	
 	// count boards
 	public long countBoards(SearchCriteria scri, @Param("categoryId") long categoryId);
 
@@ -40,13 +43,13 @@ public interface BoardMapper {
 	public void createBoard(@Param("boardDTO") BoardDTO boardDTO);
 
 	// 글 update
-	public void updateBoard(BoardDTO boardDTO);
+	public void updateBoard(@Param("boardDTO") BoardDTO boardDTO);
 
 	// 글 delete
-	public void deleteBoard(long id);
+	public void deleteBoard(@Param("id") long id);
 
 	// 조회수
-	public void countViews(long id);
+	public void countViews(@Param("id") long id);
 
 	///////////////////////////////////////////
 	// admin용 delete

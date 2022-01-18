@@ -10,23 +10,12 @@ public class CategoryDTO {
 	private String name; // 게시판 이름
 	private String parent_name; // 대메뉴 이름
 	private String path; // 게시판 경로 (/somewhere 로 매핑했기 때문에 /부터 들어있다)
+	private boolean is_worship; // worship or video에 해당하는지: true=1, false=0
 	private Timestamp create_date; // 생성일
 	private Timestamp last_update; // 수정일
 
 	// constructors
 	public CategoryDTO() {
-	}
-
-	public CategoryDTO(long id, long parent_id, String name, String parent_name, String path, Timestamp create_date,
-			Timestamp last_update) {
-		super();
-		this.id = id;
-		this.parent_id = parent_id;
-		this.name = name;
-		this.parent_name = parent_name;
-		this.path = path;
-		this.create_date = create_date;
-		this.last_update = last_update;
 	}
 
 	// getters and setters
@@ -70,6 +59,14 @@ public class CategoryDTO {
 		this.path = path;
 	}
 
+	public boolean isIs_worship() {
+		return is_worship;
+	}
+
+	public void setIs_worship(boolean is_worship) {
+		this.is_worship = is_worship;
+	}
+
 	public Timestamp getCreate_date() {
 		return create_date;
 	}
@@ -89,7 +86,8 @@ public class CategoryDTO {
 	@Override
 	public String toString() {
 		return "CategoryDTO [id=" + id + ", parent_id=" + parent_id + ", name=" + name + ", parent_name=" + parent_name
-				+ ", path=" + path + ", create_date=" + create_date + ", last_update=" + last_update + "]";
+				+ ", path=" + path + ", is_worship=" + is_worship + ", create_date=" + create_date + ", last_update="
+				+ last_update + "]";
 	}
 
 }

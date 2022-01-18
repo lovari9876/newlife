@@ -356,6 +356,11 @@ a:focus {
 	border: 0;
 }
 
+/* form */
+.form-row {
+	margin-bottom: 5px;
+}
+
 /* Input form */
 .form-control {
 	box-shadow: none;
@@ -371,6 +376,11 @@ a:focus {
 .form-control:focus {
 	box-shadow: none;
 	border: 1px solid #387fff;
+}
+
+/* help text */
+.text-muted {
+    color: #6f9ef2 !important;
 }
 
 hr {

@@ -12,6 +12,9 @@ public interface BoardService {
 	// list boards
 	public ArrayList<HashMap<String, Object>> listBoards(SearchCriteria scri, long categoryId);
 
+	// list worship(video) boards
+	public ArrayList<HashMap<String, Object>> listWorshipBoards(SearchCriteria scri, long categoryId);
+	
 	// count boards
 	public long countBoards(SearchCriteria scri, long categoryId);
 

@@ -109,51 +109,51 @@ public class BoardController {
 	}
 
 	// ==========================================================================
-	// 영상 게시판 불러오기 listVideoBoards
+	// 영상 게시판 불러오기 listWorshipBoards: 영상게시판은 worship 테이블까지 같이 가져옴
 	// 글 게시판, 영상 게시판만 분리
 	// ==========================================================================
 	@GetMapping(value = { "/worship", "/youth-worship", "/confession-praise", "/time-of-hermon", "/tower-of-david" })
-	public String listVideoBoards(HttpServletRequest request, @ModelAttribute("scri") SearchCriteria scri, Model model)
+	public String listWorshipBoards(HttpServletRequest request, @ModelAttribute("scri") SearchCriteria scri, Model model)
 			throws Exception {
 
-		logger.info("listVideoBoards: 영상 게시판 글 목록");
+		logger.info("listWorshipBoards: 영상 게시판 글 목록");
 		logger.info("request.getServletPath(): " + request.getServletPath());
 
 		// 필요한 변수 선언
 		String returnString = ""; // return값
 		CategoryDTO category = null; // view에서 필요한 해당 게시판 정보
-		long categoryId = 0; // getId() 반복 막기
+		long categoryId = 0; 
 
 		// path를 category별 분기 처리
 		if (request.getServletPath().equals("/worship")) {
 			logger.info("worship 게시판");
 			category = boardService.getCategoryByPath("/worship");
 			categoryId = category.getId();
-			returnString = "board/listVideoBoards";
+			returnString = "board/listWorshipBoards";
 
 		} else if (request.getServletPath().equals("/youth-worship")) {
 			logger.info("youth-worship 게시판");
 			category = boardService.getCategoryByPath("/youth-worship");
 			categoryId = category.getId();
-			returnString = "board/listVideoBoards";
+			returnString = "board/listWorshipBoards";
 
 		} else if (request.getServletPath().equals("/confession-praise")) {
 			logger.info("confession-praise 게시판");
 			category = boardService.getCategoryByPath("/confession-praise");
 			categoryId = category.getId();
-			returnString = "board/listVideoBoards";
+			returnString = "board/listWorshipBoards";
 
 		} else if (request.getServletPath().equals("/time-of-hermon")) {
 			logger.info("time-of-hermon 게시판");
 			category = boardService.getCategoryByPath("/time-of-hermon");
 			categoryId = category.getId();
-			returnString = "board/listVideoBoards";
+			returnString = "board/listWorshipBoards";
 
 		} else if (request.getServletPath().equals("/tower-of-david")) {
 			logger.info("tower-of-david 게시판");
 			category = boardService.getCategoryByPath("/tower-of-david");
 			categoryId = category.getId();
-			returnString = "board/listVideoBoards";
+			returnString = "board/listWorshipBoards";
 		}
 
 		// 한 페이지에 글 12개씩 보이도록
@@ -167,7 +167,7 @@ public class BoardController {
 
 		model.addAttribute("category", category);
 
-		ArrayList<HashMap<String, Object>> boardList = boardService.listBoards(scri, categoryId);
+		ArrayList<HashMap<String, Object>> boardList = boardService.listWorshipBoards(scri, categoryId);
 		model.addAttribute("boardList", boardList);
 
 		PageMaker pageMaker = new PageMaker();

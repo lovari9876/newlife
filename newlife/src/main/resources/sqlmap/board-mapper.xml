@@ -37,6 +37,27 @@
 	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
 	
+	<!-- worship(video) 게시글 list -->
+	<select id="listWorshipBoards" resultType="hashmap">
+		SELECT 
+			b.*, m.nickname, w.id AS w_id, w.service_name AS w_name, w.service_date AS w_date, w.minister, w.bible
+		FROM 
+			board b 
+		LEFT JOIN 
+			member m
+		ON 
+			b.member_id = m.id
+		LEFT JOIN 
+			worship w
+		ON 
+			b.id = w.board_id
+		WHERE 
+			b.category_id = #{categoryId}
+		ORDER BY 
+			b.id DESC
+	</select> <!-- ;세미콜론 금지!!!!!!!!!! -->
+	
+	
 	<select id="countBoards" resultType="long">
 		SELECT 
 			count(*) 
@@ -124,7 +145,7 @@
 			board
     	WHERE 
     		id = #{id}
-	</delete>
+	</delete> <!-- ;세미콜론 금지!!!!!!!!!! -->
 	
 	
 	<update id="countViews">		

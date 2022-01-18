@@ -131,12 +131,12 @@
                   <div class="col">
                     <!-- 게시판 선택 -->
                     <label >게시판</label>
-                    <select class="custom-select" name="category_id" required>
+                    <select id="categorySelect" class="custom-select" name="category_id" required>
                       <!-- member role에 따라 선택지 개수가 달라져야 함! -->
                       <option label="게시판을 선택하세요" disabled selected/>
                       <c:forEach items="${categoryList}" var="category"> 
-                        <option value="${category.id}">${category.name}</option>
-                      </c:forEach>
+                        <option value="${category.id}" value2="${category.is_worship}" >${category.name}</option>
+                      </c:forEach>                      
 <%--                       <form:options items="${categoryList}" itemValue="id" itemLabel="name"/> --%>
                    
 <%--                       <form:option value="-" selected disabled="true" >게시판을 선택하세요</form:option> --%>
@@ -145,6 +145,52 @@
 <%--                       </c:forEach> --%>         
                     </select>             
                     <div class="invalid-feedback">게시판을 선택하세요</div>
+                  </div>
+                </div>
+                
+                <%-- category에 따른 hide/show block --%>
+                <div id="worshipInputs">
+                  <!-- 예배/ 해당날짜 -->
+                  <div class="form-row">
+                    <div class="col">
+                      <label >예배</label>
+                      <input type="text" class="form-control" name="service_name" aria-describedby="serviceNameHelpBlock" required>
+                      <!-- help 블럭 -->
+                      <small id="serviceNameHelpBlock" class="form-text text-muted">
+                                                  해당하는 예배를 쉼표(,)로 나누어 입력해주세요. (예) 주일 2부 예배, 성회
+                      </small>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col">
+                      <label >날짜</label>
+                      <input type="text" class="form-control" name="service_date" aria-describedby="serviceDateHelpBlock" required>
+                      <!-- help 블럭 -->
+                      <small id="serviceDateHelpBlock" class="form-text text-muted">
+                                                  해당하는 날짜를 입력해주세요. (예) format
+                      </small>
+                    </div>
+                  </div>
+                  <!-- 설교자/ 말씀 -->
+                  <div class="form-row">
+                    <div class="col">
+                      <label >설교자</label>
+                      <input type="text" class="form-control" name="minister" aria-describedby="ministerHelpBlock" required>
+                      <!-- help 블럭 -->
+                      <small id="ministerHelpBlock" class="form-text text-muted">
+                                                  설교자를 입력해주세요. (예) 김용덕 목사
+                      </small>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col">
+                      <label >말씀</label>
+                      <input type="text" class="form-control" name="bible" aria-describedby="bibleHelpBlock" required>
+                      <!-- help 블럭 -->
+                      <small id="bibleHelpBlock" class="form-text text-muted">
+                                                  성경 말씀을 예시와 같이 입력해주세요. (예) 베드로전서 1장 1절-5절
+                      </small>
+                    </div>
                   </div>
                 </div>
                 <!-- 글 제목 -->
@@ -246,6 +292,38 @@ jQuery(function ($) {
 });
 </script>
 
+<script type="text/javascript">
+  
+//<option>에서 임의로 value2="${category.is_worship}"으로 주어서 
+//worship 관련 input show/hide 여부를 결정하기
+$(document).ready(function() {
+
+  // 숨긴 상태로 시작
+  $('#worshipInputs').hide();  
+  
+  $('#categorySelect').change(function() {
+	
+	// 임의로 지정한 attribute인 value2="${category.is_worship}" 가져오기
+    var isWorship = $('#categorySelect option:selected').attr('value2');
+	// console.log(isWorship);
+	// 찍어보니깐 놀랍게도 false: boolean이 아니고 string이었다..
+	// console.log(isWorship instanceof Boolean);
+
+	
+	// worship일 때만 관련 input 보이게 하기
+    if (isWorship == 'true') { // string이라서
+      $('#worshipInputs').show();
+      console.log("done");
+    } else {
+      $('#worshipInputs').hide();
+    }
+  }); 
+  
+}); 
+
+// $("select[name=selectBox]").val();
+
+</script>
 
 
 </div><!-- Body inner end -->

@@ -23,6 +23,12 @@ public class BoardServiceImpl implements BoardService {
 	public ArrayList<HashMap<String, Object>> listBoards(SearchCriteria scri, long categoryId) {
 		return boardMapper.listBoards(scri, categoryId);
 	}
+	
+	// list worship(video) boards
+	@Override
+	public ArrayList<HashMap<String, Object>> listWorshipBoards(SearchCriteria scri, long categoryId) {
+		return boardMapper.listWorshipBoards(scri, categoryId);
+	}
 
 	// count boards
 	@Override
