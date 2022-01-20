@@ -136,8 +136,11 @@
                 <div class="form-row">
                   <div class="col">
                     <!-- 게시판 선택 -->
-                    <label >게시판</label>                   
-                    <select class="custom-select" name="category_id" required>
+                    <%-- label은 for로 지정한 id의 element를 대상으로 한다! --%>
+                    <%-- 없어도 되지만 있는 것이 정보성 측면에서 바람직해 --%>
+                    <%-- 그리고 label이 있고 연결되어있으면, label을 클릭할때 해당 입력란에 커서가 위치하게 된다!! --%>
+                    <label for="categorySelect" >게시판</label>
+                    <select id="categorySelect" class="custom-select" name="category_id" required>
                       <%-- member role에 따라 선택지 개수가 달라져야 함! --%>
                       <c:forEach items="${categoryList}" var="category">
                         <c:set var="c_id" value="${category.id}"/>
@@ -154,11 +157,12 @@
                 <!-- 글 제목 -->
                 <div class="form-row">
                   <div class="col">
-                    <label >글 제목</label>
-                    <input type="text" class="form-control" name="title" value="${board.title}" required>
+                    <label for="title">글 제목</label>
+                    <input type="text" id="title" class="form-control" name="title" value="${board.title}" required>
                   </div>
                 </div>
-                <hr class="hr-m-20">           
+                <hr class="hr-m-20">      
+                     
                 <!-- 글 내용: summernote -->
                 <div class="form-group"> 
                   <textarea id="summernote" name="content">${board.content}</textarea>
@@ -215,7 +219,7 @@
 <!-- Template custom -->
 <script src="/js/script.js"></script>
 
-<!-- for Form validation =================================== -->
+<!-- 서머노트 -->
 <script>
 jQuery(function ($) {
 	'use strict';

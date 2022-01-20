@@ -105,11 +105,13 @@
                 <%-- 어떠한 처리 없이 그냥 저것만 쓰면.. 모든 data를 다 null값 가져옴.. --%>
                 <%-- mapping이 완벽해도 절대 값을 bind안하고 원인도 안뜸 그냥 null --%>
                 
-                <!-- enctype="multipart/form-data"는 ****ONLY FOR**** <input type="file"> 있을 때 -->
-                <!-- <input>의 name="" Attribute -->
-                <!-- 1. Name of the form control. Submitted with the form as part of a name/value pair. -->
-                <!-- 2. name/value로 Spring에서도 자동 매핑함! 즉 name == DtoClass variableName 이어야함! -->
-                    
+                <%-- 
+                enctype="multipart/form-data"는 ****ONLY FOR**** <input type="file"> 있을 때
+                <input>의 name="" Attribute
+                1. Name of the form control. Submitted with the form as part of a name/value pair.
+                2. name/value로 Spring에서도 자동 매핑함! 즉 name == DtoClass variableName 이어야함! 
+                --%>
+                   
                 <!-- form-row 남겨두기 -->
 <!--                 <div class="form-row"> -->
 <!--                   <div class="col-md-6 mb-3"> -->
@@ -127,10 +129,14 @@
 <!--                     </div> -->
 <!--                   </div> -->
 <!--                 </div> -->
+
                 <div class="form-row">
                   <div class="col">
                     <!-- 게시판 선택 -->
-                    <label >게시판</label>
+                    <%-- label은 for로 지정한 id의 element를 대상으로 한다! --%>
+                    <%-- 없어도 되지만 있는 것이 정보성 측면에서 바람직해 --%>
+                    <%-- 그리고 label이 있고 연결되어있으면, label을 클릭할때 해당 입력란에 커서가 위치하게 된다!! --%>
+                    <label for="categorySelect" >게시판</label>
                     <select id="categorySelect" class="custom-select" name="category_id" required>
                       <!-- member role에 따라 선택지 개수가 달라져야 함! -->
                       <option label="게시판을 선택하세요" disabled selected/>
@@ -153,8 +159,8 @@
                   <!-- 예배/ 해당날짜 -->
                   <div class="form-row">
                     <div class="col">
-                      <label >예배</label>
-                      <input type="text" class="form-control" name="service_name" aria-describedby="serviceNameHelpBlock" required>
+                      <label for="serviceName">예배</label>
+                      <input type="text" id="serviceName" class="form-control" name="service_name" aria-describedby="serviceNameHelpBlock" required>
                       <!-- help 블럭 -->
                       <small id="serviceNameHelpBlock" class="form-text text-muted">
                                                   해당하는 예배를 쉼표(,)로 나누어 입력해주세요. (예) 주일 2부 예배, 성회
@@ -163,7 +169,7 @@
                   </div>
                   <div class="form-row">
                     <div class="col">
-                      <label >날짜</label>
+                      <label for="serviceDate">날짜</label>
                       <input type="text" id="serviceDate" class="form-control" name="service_date" 
                              aria-describedby="serviceDateHelpBlock" required>
                       <!-- help 블럭 -->
@@ -175,8 +181,9 @@
                   <!-- 설교자/ 말씀 -->
                   <div class="form-row">
                     <div class="col">
-                      <label >설교자</label>
-                      <input type="text" class="form-control" name="minister" aria-describedby="ministerHelpBlock" required>
+                      <label for="minister">설교자</label>
+                      <input type="text" id="minister" class="form-control" name="minister" 
+                             aria-describedby="ministerHelpBlock" required>
                       <!-- help 블럭 -->
                       <small id="ministerHelpBlock" class="form-text text-muted">
                                                   설교자를 입력해주세요. (예) 김용덕 목사
@@ -185,8 +192,9 @@
                   </div>
                   <div class="form-row">
                     <div class="col">
-                      <label >말씀</label>
-                      <input type="text" class="form-control" name="bible" aria-describedby="bibleHelpBlock" required>
+                      <label for="bible">말씀</label>
+                      <input type="text" id="bible" class="form-control" name="bible" 
+                             aria-describedby="bibleHelpBlock" required>
                       <!-- help 블럭 -->
                       <small id="bibleHelpBlock" class="form-text text-muted">
                                                   성경 말씀을 예시와 같이 입력해주세요. (예) 베드로전서 1장 1절-5절
@@ -197,8 +205,8 @@
                 <!-- 글 제목 -->
                 <div class="form-row">
                   <div class="col">
-                    <label >글 제목</label>
-                    <input type="text" class="form-control" name="title" placeholder="제목을 입력하세요" required>
+                    <label for="title">글 제목</label>
+                    <input type="text" id="title" class="form-control" name="title" placeholder="제목을 입력하세요" required>
                     <div class="invalid-feedback">제목을 입력하세요</div>
                   </div>
                 </div>
