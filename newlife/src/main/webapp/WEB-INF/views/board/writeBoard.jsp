@@ -164,10 +164,11 @@
                   <div class="form-row">
                     <div class="col">
                       <label >날짜</label>
-                      <input type="text" class="form-control" name="service_date" aria-describedby="serviceDateHelpBlock" required>
+                      <input type="text" id="serviceDate" class="form-control" name="service_date" 
+                             aria-describedby="serviceDateHelpBlock" required>
                       <!-- help 블럭 -->
                       <small id="serviceDateHelpBlock" class="form-text text-muted">
-                                                  해당하는 날짜를 입력해주세요. (예) format
+                                                  해당하는 날짜를 예시와 같이 입력해주세요. (예) 2022-01-01
                       </small>
                     </div>
                   </div>
@@ -201,10 +202,11 @@
                     <div class="invalid-feedback">제목을 입력하세요</div>
                   </div>
                 </div>
-                <hr class="hr-m-20">           
+                <hr class="hr-m-20">       
+                    
                 <!-- 글 내용: summernote -->
                 <div class="form-group"> 
-                  <textarea id="summernote" name="content"></textarea>
+                  <textarea id="summernote" name="content" required></textarea>
                 </div>
 <!--                 비밀글 만들때 사용; 글 작성 시 검토용으로!! -->
 <!--                 <div class="form-group"> -->
@@ -239,7 +241,7 @@
 ================================================== -->
 
 <!-- initialize jQuery Library -->
-<script src="/plugins/jQuery/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- popper -->
 <script src="/plugins/bootstrap/popper.min.js"></script>
 <!-- Bootstrap jQuery -->
@@ -258,7 +260,7 @@
 <!-- Template custom -->
 <script src="/js/script.js"></script>
 
-<!-- for Form validation =================================== -->
+<!-- 서머노트 -->
 <script>
 jQuery(function ($) {
 	'use strict';
@@ -292,8 +294,9 @@ jQuery(function ($) {
 });
 </script>
 
-<script type="text/javascript">
-  
+
+<!-- category 선택에 따른 input -->
+<script type="text/javascript">  
 //<option>에서 임의로 value2="${category.is_worship}"으로 주어서 
 //worship 관련 input show/hide 여부를 결정하기
 $(document).ready(function() {
@@ -301,14 +304,12 @@ $(document).ready(function() {
   // 숨긴 상태로 시작
   $('#worshipInputs').hide();  
   
-  $('#categorySelect').change(function() {
-	
+  $('#categorySelect').change(function() {	
 	// 임의로 지정한 attribute인 value2="${category.is_worship}" 가져오기
     var isWorship = $('#categorySelect option:selected').attr('value2');
 	// console.log(isWorship);
 	// 찍어보니깐 놀랍게도 false: boolean이 아니고 string이었다..
 	// console.log(isWorship instanceof Boolean);
-
 	
 	// worship일 때만 관련 input 보이게 하기
     if (isWorship == 'true') { // string이라서
@@ -317,14 +318,35 @@ $(document).ready(function() {
     } else {
       $('#worshipInputs').hide();
     }
-  }); 
-  
+  });   
 }); 
 
 // $("select[name=selectBox]").val();
-
 </script>
 
+
+<!-- validation -->
+<script type="text/javascript">
+$(document).ready(function() {
+  
+	function checkDate() {
+	  	// serviceDate 정규식 literal
+	  	let dateRE = /^(19[0-9]{2}|2[0-9]{3})-(0[1-9]|1[012])-([123]0|[012][1-9]|31)$/;
+	  	let serviceDate = $('serviceDate').val();
+	  	console.log(serviceDate);
+	  	
+		if (dateRE.test(serviceDate)) {
+			$('#serviceDateHelpBlock').css('color', 'red');
+		} else {
+			$('#serviceDateHelpBlock').css('color', '#6f9ef2');
+		}
+   };
+   
+   checkDate();
+   
+   
+});
+</script>
 
 </div><!-- Body inner end -->
 </body>

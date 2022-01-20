@@ -196,7 +196,7 @@
 ================================================== -->
 
 <!-- initialize jQuery Library -->
-<script src="/plugins/jQuery/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- popper -->
 <script src="/plugins/bootstrap/popper.min.js"></script>
 <!-- Bootstrap jQuery -->
