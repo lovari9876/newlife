@@ -9,12 +9,13 @@
 	<!-- Basic Page Needs
 ================================================== -->
 	<meta charset="utf-8">
-	<title>새생활교회</title>
+	<title>새생활디딤돌: 젖과 꿀이 흐르는 새생활교회</title>
+    <%-- index.jsp만 이렇게 title 정하고 나머지 페이지들은 '새생활교회 - 페이지이름 어쩌구'로 통일 --%>
 
 	<!-- Mobile Specific Metas
 ================================================== -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Construction Html5 Template">
+	<meta name="description" content="한 걸음 더 나아가는 신앙 생활과 그 다음을 위해 한 걸음 더 나아가는 예배 생활!!">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
 	<!-- Favicon

@@ -9,12 +9,12 @@
 	<!-- Basic Page Needs
 ================================================== -->
 	<meta charset="utf-8">
-	<title>새생활교회</title>
+	<title>새생활교회 - 예배 안내</title>
 
 	<!-- Mobile Specific Metas
 ================================================== -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Construction Html5 Template">
+	<meta name="description" content="한 걸음 더 나아가는 신앙 생활과 그 다음을 위해 한 걸음 더 나아가는 예배 생활!!">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
 	<!-- Favicon
