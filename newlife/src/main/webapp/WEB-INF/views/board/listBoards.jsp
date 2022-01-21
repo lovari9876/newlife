@@ -77,7 +77,7 @@
             <h1 class="banner-title"><a href="${category.path}">${category.name}</a></h1>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
+                <li class="breadcrumb-item"><a href="/">새생활교회</a></li>
                 <c:choose> 
                   <%-- 대메뉴 있으면 넣기 --%>
                   <c:when test = "${category.name != category.parent_name}">

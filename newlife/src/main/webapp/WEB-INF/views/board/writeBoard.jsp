@@ -265,7 +265,6 @@
 <!-- summernote js -->
 <script src="/plugins/summernote/summernote-bs4.js"></script>
 <script src="/plugins/summernote/lang/summernote-ko-KR.js"></script>
-
 <!-- Template custom -->
 <script src="/js/script.js"></script>
 
@@ -305,7 +304,8 @@ jQuery(function ($) {
 
 
 <!-- category 선택에 따른 input -->
-<script type="text/javascript">  
+<%-- HTML5 부터는 type="text/javascript" 안써도 돼! 쓰지말자 --%>
+<script>  
 //<option>에서 임의로 value2="${category.is_worship}"으로 주어서 
 //worship 관련 input show/hide 여부를 결정하기
 $(document).ready(function() {
@@ -335,7 +335,7 @@ $(document).ready(function() {
 
 
 <!-- validation -->
-<script type="text/javascript">
+<script>
 $(document).ready(function() {
   
 	function checkDate() {

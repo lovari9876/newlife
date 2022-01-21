@@ -76,7 +76,7 @@
             <h1 class="banner-title"><a href="${board.c_path}">${board.c_name}</a></h1>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
+                <li class="breadcrumb-item"><a href="/">새생활교회</a></li>
                 <c:choose> 
                   <%-- 대메뉴 있으면 넣기 --%>
                   <c:when test = "${board.c_name != board.c_parent_name}">
@@ -192,7 +192,6 @@
 <script src="/plugins/colorbox/jquery.colorbox.js"></script>
 <!-- shuffle -->
 <script src="/plugins/shuffle/shuffle.min.js" defer></script>
-
 <!-- Template custom -->
 <script src="/js/script.js"></script>
 

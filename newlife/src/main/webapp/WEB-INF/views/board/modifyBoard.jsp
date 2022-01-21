@@ -215,7 +215,6 @@
 <!-- summernote js -->
 <script src="/plugins/summernote/summernote-bs4.js"></script>
 <script src="/plugins/summernote/lang/summernote-ko-KR.js"></script>
-
 <!-- Template custom -->
 <script src="/js/script.js"></script>
 

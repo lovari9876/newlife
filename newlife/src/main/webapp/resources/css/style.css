@@ -2815,16 +2815,19 @@ banner-fixed {
 }
 
 .breadcrumb {
-	padding: 0;
-	background: none;
-	font-weight: normal;
-	text-transform: uppercase;
-	font-size: 14px;
+  padding: 0;
+  background: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
-.breadcrumb li a, .breadcrumb .breadcrumb-item, .breadcrumb li a:focus,
-	.breadcrumb li a:hover {
-	color: #46636c !important;
+.breadcrumb li a, .breadcrumb .breadcrumb-item {
+  color: #46636c !important;
+}
+
+.breadcrumb li a:focus, .breadcrumb li a:hover {
+  color: #127495 !important;
 }
 
 /* 배너 높이 150px로 조정하면서 마진 없앰 */

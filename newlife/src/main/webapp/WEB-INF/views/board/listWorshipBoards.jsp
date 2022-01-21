@@ -77,7 +77,7 @@
             <h1 class="banner-title"><a href="${category.path}">${category.name}</a></h1>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a href="#">새생활교회</a></li>
+                <li class="breadcrumb-item"><a href="/">새생활교회</a></li>
                 <c:choose> 
                   <%-- 대메뉴 있으면 넣기 --%>
                   <c:when test = "${category.name != category.parent_name}">
@@ -108,7 +108,9 @@
         <div class="col-lg-4 col-md-6 mb-5 board-item">
           <div class="ts-service-box h-100">
             <div class="ts-service-image-wrapper">
-              <img loading="lazy" class="w-100" src="images/video-thumbnails/video-thum-sample.jpg" alt="service-image">
+              <a href="${category.path}/${board.id}">
+                <img loading="lazy" class="w-100" src="images/video-thumbnails/video-thum-sample.jpg" alt="${category.name} 썸네일">
+              </a>
             </div>
             <div class="d-flex">              
               <div class="ts-service-info">

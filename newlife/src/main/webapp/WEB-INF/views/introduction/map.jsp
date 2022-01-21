@@ -152,7 +152,7 @@
 
 
 <!-- for Kakao Map =================================== -->
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7beca5220b3ab027350ea2c53690f5c2"></script>
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=7beca5220b3ab027350ea2c53690f5c2"></script>
 <script>
 
 	// 새생활교회 37.500599, 126.888240
